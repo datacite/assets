@@ -5,8 +5,11 @@ cache:
   directories:
     - frontend/node_modules
     - frontend/bower_components
+
 before_script:
   - cd frontend && npm install
+
+after_script:
   - cd ../
 
 deploy:
