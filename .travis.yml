@@ -7,6 +7,7 @@ cache:
     - frontend/bower_components
 before_script:
   - cd frontend && npm install
+  - cd ../
 
 deploy:
   provider: s3
@@ -17,7 +18,7 @@ deploy:
   bucket: assets.datacite.org
   region: eu-west-1
   skip_cleanup: true
-  #local_dir: assets
+  local_dir: assets
   acl: public_read
   on:
     repo: datacite/segugio
