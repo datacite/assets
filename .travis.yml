@@ -3,11 +3,11 @@ node_js:
   - "0.12"
 cache:
   directories:
-    - frontend/node_modules
-    - frontend/bower_components
+    - _frontend/node_modules
+    - _frontend/bower_components
 
 before_script:
-  - cd frontend && npm install
+  - cd _frontend && npm install
 
 before_deploy:
   - cd ../

@@ -1,0 +1,8 @@
+{
+  "name": "frontend",
+  "dependencies": {
+    "bootstrap-sass": "~3.3.6",
+    "font-awesome": "~4.6.0",
+    "fitvids": "~1.1.0"
+  }
+}
