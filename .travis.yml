@@ -1,6 +1,10 @@
 language: node_js
 node_js:
   - "0.12"
+cache:
+  directories:
+    - frontend/node_modules
+    - frontend/bower_components
 before_script:
   - cd frontend && npm install
 
@@ -11,6 +15,7 @@ deploy:
   secret_access_key:
     secure: e6AffNRJW08fvrL24U/aoYesm/zM0e+CjPCJQDmhYx6KdP5rs1Hk+QUAHuBUUdxfhBJStoYDms8s5jcYBwTqd99nqD9Ku4kseU/8Dzt4UBBHiWUl1fKENUdoEUsPlfgqsPZpZwZwRb19rqNMKZhaVXbvzscPNNQb8d1NsdI2wdHDQwJNIpEGsKGs39G2pRnfV5VoAs+xliPgPMQxQrC1J0PTamm/7Ub8LhRL4MgnRSWwuKyQ5euxJuoWxjQWM4TPgQ/fmOps27ZoXcXMfPo/VAmWFuMA4Y60wa2x+KFaS/w5s1rOEQ2upPqSwwH/MYLsWk15Do9HeELexyn7NiTmE/6ZOQNa6CpbqpvL0fdbkiSLzmQTj0S9+KU5iw0K8tImFMkdckUgJ37xFdZP+j8bxxNlKgVz4Tpa26adLRzl8x0RszfKlQmBc+NEdYyEggRvG8u58VprpRbSkxRvti3xCUIeByUwxHrq7zxFucAktivHRDleeTrygntWHSiLIOT9LB0QmhVpZ+esLCxt+w5Aglp/52PbVRKx3bSPzCa6+2G1AbVHwqJiEb5VKHT/HFxJDKrQcWs2HgNMJ9/fIQO7XXaySm+ANQTJwqKaeuRL0kPUaqi5JsxKQnLrgUdVTSuVuG4QjXivvfYtXon3j7oEW5zdbsbDcaFiOqpvkr2LUPY=
   bucket: assets.datacite.org
+  regio: eu-west-1
   acl: public_read
   on:
     repo: datacite/segugio
