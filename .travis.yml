@@ -9,7 +9,7 @@ cache:
 before_script:
   - cd frontend && npm install
 
-after_script:
+before_deploy:
   - cd ../
 
 deploy:
