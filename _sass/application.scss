@@ -1,3 +1,109 @@
+/*doc
+---
+title: Colors
+name: colors
+category: Styleguide
+---
+
+Lagotto uses a color palette from [Flat UI Colors](http://flatuicolors.com/). **wet-asphalt** is used as primary color (body text, navbar, etc.), <span style="color:#3498db"><b>peter-river</b></span> for links, and <span style="color:#f1c40f"><b>sun-flower</b></span> as warning color.
+
+<div class="row">
+  <div class="col-sm-3">
+    <div class="thumbnail" style="background-color:#1abc9c">
+      <div class="caption">
+        <h4 style="color:white">turquoise</h4>
+        <p style="color:white">#1abc9c</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="thumbnail" style="background-color:#2ecc71">
+      <div class="caption">
+        <h4 style="color:white">emerald</h4>
+        <p style="color:white">#2ecc71</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="thumbnail" style="background-color:#3498db">
+      <div class="caption">
+        <h4 style="color:white">peter-river</h4>
+        <p style="color:white">#3498db</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="thumbnail" style="background-color:#9b59b6">
+      <div class="caption">
+        <h4 style="color:white">amethyst</h4>
+        <p style="color:white">#9b59b6</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-3">
+    <div class="thumbnail" style="background-color:#f1c40f">
+      <div class="caption">
+        <h4 style="color:white">sun-flower</h4>
+        <p style="color:white">#f1c40f</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="thumbnail" style="background-color:#e67e22">
+      <div class="caption">
+        <h4 style="color:white">carrot</h4>
+        <p style="color:white">#e67e22</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="thumbnail" style="background-color:#e74c3c">
+      <div class="caption">
+        <h4 style="color:white">alizarin</h4>
+        <p style="color:white">#e74c3c</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-3">
+    <div class="thumbnail" style="background-color:#f4f6f7">
+      <div class="caption">
+        <h4>clouds</h4>
+        <p>#f4f6f7</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="thumbnail" style="background-color:#bfc5c9">
+      <div class="caption">
+        <h4 style="color:white">silver</h4>
+        <p style="color:white">#bfc5c9</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="thumbnail" style="background-color:#6c797a">
+      <div class="caption">
+        <h4 style="color:white">asbestos</h4>
+        <p style="color:white">#6c797a</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="thumbnail" style="background-color:#34495e">
+      <div class="caption">
+        <h4 style="color:white">wet-asphalt</h4>
+        <p style="color:white">#34495e</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+*/
+
 $turquoise:     #1abc9c;
 $emerald:       #2ecc71;
 $peter-river:   #3498db;
@@ -55,10 +161,11 @@ Lagotto uses the Adobe open source font [Source Sans Pro](https://www.google.com
 
 */
 
+$font-family-base:      'Source Sans Pro', Helvetica, Arial, sans-serif;
+$font-family-demo:      'Source Sans Pro', Helvetica, Arial, sans-serif;
+$font-family-monospace: 'Source Code Pro', Monaco, "Courier New", monospace;
 $font-family-sans-serif: 'Source Sans Pro', Helvetica, Arial, sans-serif !default;
 $font-family-serif:     'Source Serif Pro', Georgia, "Times New Roman", Times, serif !default;
-$font-family-monospace: 'Source Code Pro', Monaco, "Courier New", monospace;
-$font-family-base:      $font-family-sans-serif !default;
 $font-size-base:        18px;
 $font-size-large:       ceil(($font-size-base * 1.278));
 $font-size-small:       ceil(($font-size-base * 0.853));
@@ -85,7 +192,7 @@ $pre-color:             black;
 //$pre-bg:                $body-bg;
 // $pre-border-color:      $gray-light;
 
-$text-muted:            $gray-dark;
+$text-muted:            $gray-darker;
 
 // Components
 // -------------------------
@@ -103,6 +210,7 @@ $component-active-bg:    $brand-primary;
 $btn-font-weight:       normal;
 
 $btn-default-color:     $brand-primary;
+$btn-warning-color:     $brand-primary;
 $btn-default-bg:        $gray;
 $btn-default-border:    $gray;
 $btn-hover-bg:          mix($gray-light, white, 80%);
@@ -282,7 +390,6 @@ $panel-warning-heading-bg:       $brand-warning;
 .panel-heading small { font-weight: normal; margin-top: 3px; }
 .panel-heading .label-report { border: 1px solid white; font-size: $font-size-base; }
 .panel-list { font-weight: normal; }
-.panel-source { min-height: 284px; }
 
 /*doc
 ---
@@ -371,7 +478,7 @@ $input-height-base:              ($line-height-computed + ($padding-base-vertica
 $input-height-large:             (floor($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2);
 $input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2);
 $input-color:                    black;
-$input-color-placeholder:        $gray-dark;
+$input-color-placeholder:        $gray-darker;
 
 
 $bar-color-1: $turquoise;
@@ -383,6 +490,8 @@ $bar-color-5: $wet-asphalt;
 $bar-color-6: darken($bar-color-1, 10%);
 $bar-color-7: lighten($bar-color-1, 20%);
 
+@import "almviz";
+@import "github";
 @import "../assets/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
 @import "../assets/bootstrap-sass/assets/stylesheets/bootstrap";
 
@@ -424,11 +533,12 @@ select.form-control.date { display: inline; }
 .form-group.has-error input, .form-group.has-error span.help-block, .form-group.has-error label, .has-error { color: $brand-danger; }
 .form-group.has-error input, .form-group.has-error textarea, .form-group.has-error select { border: 1px solid $brand-danger; }
 h1 { margin-top: 0; }
-h5, h4.work { margin-bottom: 0; }
-.loading {margin: 1em; color: $gray; }
+h5, h4.work { margin-top: 0; margin-bottom: 0; }
+.notification-inner h5, .user-list h5, .deposit h5, .metadata h5 { margin-top: 12.5px; margin-bottom: 0; }
+.loading {margin: 1em; color: $gray-darker; }
 td h4 { margin-top: 0; }
 div.search { padding-top: 10px; padding-bottom: 10px; width: 400px; margin-left: auto; margin-right: auto; }
-div.search-wide { padding-top: 20px; padding-bottom: 20px; margin-bottom: 20px; margin-left: auto; margin-right: auto; }
+div.search-wide { padding-top: 10px; padding-bottom: 20px; margin-bottom: 20px; margin-left: auto; margin-right: auto; }
 div.search-orcid { padding-top: 20px; padding-bottom: 0px; margin-left: auto; margin-right: auto; }
 dt, dd { line-height: 1.5; }
 .border-bottom { border-bottom: 1px solid #eee; }
@@ -440,6 +550,8 @@ dt, dd { line-height: 1.5; }
 .swagger-ui-wrap, .swagger-ui-wrap p, form.sandbox table, form.sandbox table .model-signature, .swagger-ui-wrap .container #resources .resource .heading h2, .swagger-ui-wrap .container #resources .resource .heading .options { font-family: $font-family-base; }
 .container .container { padding: 0; }
 .container #swagger-ui-container { margin: 0; }
+.container-fluid .container { padding: 0; }
+.container-fluid #swagger-ui-container { margin: 0 1em; }
 #api_info .info_title { font-size: $font-size-h1; }
 #api_info .info_description { font-size: $font-size-base; line-height: $line-height-base; }
 #api_info .info_description a { color: $link-color; }
@@ -587,4 +699,81 @@ html {
 .meta {
   text-align:center;
   max-width: 150px;
+}
+.col-md-9.panel-list {
+  padding-bottom: .75em;
+}
+.col-md-9 .panel {
+  margin-bottom: .25em;
+}
+.panel-footer {
+  margin-top: 0;
+  line-height: 1.4em;
+  color: $gray-darker;
+
+  i {
+    padding-right: .2em;
+    font-size: .85em;
+  }
+
+  img {
+    margin-top: -0.33em;
+  }
+  a {
+    color: $gray-darker;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  span a {
+    margin-right: .2em;
+  }
+  .btn-xs {
+    font-size: .75em;
+    border: 1px solid black;
+    background-color: $inverse;
+  }
+}
+.facets {
+  color: $gray-darker;
+  font-size: 1em;
+  padding: 0;
+  margin: 0;
+  border: 0 !important;
+  box-shadow: none !important;
+
+  .panel-body {
+    background-color: $gray-light;
+  }
+
+  ul {
+    list-style: none;
+    list-style-position: outside;
+    padding-left: 0;
+  }
+  h4 {
+    font-weight: normal;
+    font-size: 1.25em;
+    border-bottom: 1px solid $gray-darker;
+    padding-bottom: .15em;
+    margin: 0 0 .5em 0;
+  }
+  .link {
+    border-bottom: 0;
+
+    a {
+      color: $brand-primary;
+    }
+  }
+  div {
+    border: 0;
+  }
+  li a, li.active a, li a:hover, li.active a:hover {
+    font-size: 1em;
+    display: inline;
+    color: $gray-darker;
+    background-color: $gray-light;
+    padding: 0 .5em 0 0;
+    margin-left: 0;
+  }
 }
