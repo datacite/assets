@@ -130,7 +130,7 @@ $brand-warning:         $sun-flower;
 $brand-danger:          $carrot;
 $brand-info:            $peter-river;
 
-$body-bg:               $gray-light;
+$body-bg:               $gray-lighter;
 $text-color:            $brand-primary;
 
 $link-color:            $peter-river;
@@ -265,7 +265,7 @@ $navbar-height:         60px;
 $navbar-inverse-bg:     $brand-primary;
 
 $navbar-default-color:  $brand-primary;
-$navbar-default-bg:     $inverse;
+$navbar-default-bg:     $gray-lighter;
 $navbar-default-border: $gray-lighter;
 
 $navbar-default-link-color:                #777;
@@ -538,7 +538,7 @@ h5, h4.work { margin-top: 0; margin-bottom: 0; }
 .loading {margin: 1em; color: $gray-darker; }
 td h4 { margin-top: 0; }
 div.search { padding-top: 10px; padding-bottom: 10px; width: 400px; margin-left: auto; margin-right: auto; }
-div.search-wide { padding-top: 10px; padding-bottom: 20px; margin-bottom: 20px; margin-left: auto; margin-right: auto; }
+div.search-wide { padding-top: 20px; padding-bottom: 20px; margin-bottom: 20px; margin-left: auto; margin-right: auto; }
 div.search-orcid { padding-top: 20px; padding-bottom: 0px; margin-left: auto; margin-right: auto; }
 dt, dd { line-height: 1.5; }
 .border-bottom { border-bottom: 1px solid #eee; }
@@ -662,9 +662,9 @@ html {
   bottom: 0;
   height: 300px;
   width: 100%;
-  color: $inverse;
+  color: $brand-primary;
   font-weight: 300;
-  background-color: #393939;
+  background-color: $gray-dark;
   padding: .75em 0;
   margin: 0;
 
@@ -679,10 +679,10 @@ html {
     padding-left: 0;
   }
   a, a:hover, a:visited {
-    color: $inverse;
+    color: $brand-primary;
   }
   .share h4 {
-    color: $inverse;
+    color: $brand-primary;
     margin-bottom: .5em;
   }
   .share a {
@@ -694,7 +694,6 @@ html {
   height: 20px;
 }
 .navbar-static-top {
-  border-bottom: 1px solid $gray;
 }
 .meta {
   text-align:center;
