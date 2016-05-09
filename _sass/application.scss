@@ -664,7 +664,7 @@ html {
   width: 100%;
   color: $brand-primary;
   font-weight: 300;
-  background-color: $gray-dark;
+  background-color: $gray;
   padding: .75em 0;
   margin: 0;
 
@@ -742,7 +742,7 @@ html {
   box-shadow: none !important;
 
   .panel-body {
-    background-color: $gray-light;
+    background-color: $gray-lighter;
   }
 
   ul {
@@ -771,8 +771,16 @@ html {
     font-size: 1em;
     display: inline;
     color: $gray-darker;
-    background-color: $gray-light;
+    background-color: $gray-lighter;
     padding: 0 .5em 0 0;
     margin-left: 0;
   }
+}
+
+#sign-in {
+  border: 1px solid $gray-darker;
+  padding: 6px 8px;
+  margin-top: 10px;
+  margin-right: 16px;
+  background-color: $gray-lighter;
 }
