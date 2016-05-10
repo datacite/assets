@@ -60,71 +60,55 @@
   border: 2px solid $wet-asphalt;
 }
 
-.viewed {
+.relations {
   border: 2px solid $peter-river;
 }
 
-.bar.viewed {
+.bar.relations {
   fill: $peter-river;
 }
 
-.bar.viewed-alt {
+.bar.relations-alt {
   fill: darken($peter-river, 15%);
 }
 
-.alm-label.viewed p, .alm-label.viewed a {
+.alm-label.relations p, .alm-label.relations a {
   color: $peter-river;
 }
 
-.saved {
-  border: 2px solid $emerald;
-}
-
-.bar.saved {
-  fill: $emerald;
-}
-
-.bar.saved-alt {
-  fill: darken($emerald, 15%);
-}
-
-.alm-label.saved p, .alm-label.saved a {
-  color: $emerald;
-}
-
-.discussed {
+.alm-label.results {
   border: 2px solid $turquoise;
 }
 
-.bar.discussed {
+.bar.results {
   fill: $turquoise;
 }
 
-.discussed_event {
-  color: $turquoise;
-}
-
-.bar.discussed-alt {
+.bar.results-alt {
   fill: darken($turquoise, 15%);
 }
 
-.alm-label.discussed p, .alm-label.discussed a {
+.alm-label.results p, .alm-label.results a {
   color: $turquoise;
 }
 
-.cited {
+.contributions {
   border: 2px solid $amethyst;
 }
 
-.bar.cited {
+.bar.contributions {
   fill: $amethyst;
 }
 
-.bar.cited-alt {
+.contributions_event {
+  color: $amethyst;
+}
+
+.bar.contributions-alt {
   fill: darken($amethyst, 15%);
 }
 
-.alm-label.cited p, .alm-label.cited a {
+.alm-label.contributions p, .alm-label.contributions a {
   color: $amethyst;
 }
 
@@ -155,11 +139,12 @@
 .alm-control-label {
   text-align: right;
   margin-top: -10px;
+  padding-right: 10px;
 }
 
 .alm-control {
   color: $link-color;
-  font-size: 16px;;
+  font-size: 16px;
 }
 
 .alm-control.active {
@@ -198,7 +183,6 @@
   fill: $link_color;
 }
 
-.chart .title-only { font-size: 32px; font-weight: bold; }
 .chart .title { font-size: 24px; }
 .chart .subtitle { fill: grey; }
 
