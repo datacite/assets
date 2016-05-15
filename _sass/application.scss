@@ -495,6 +495,7 @@ $bar-color-7: lighten($bar-color-1, 20%);
 @import "github";
 @import "../assets/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
 @import "../assets/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "../assets/bootstrap-social/bootstrap-social";
 
 // Fix inconsistencies
 // small span.label { vertical-align: bottom; font-size: 66%; margin-left: 0.5em; }
@@ -810,24 +811,6 @@ html {
   margin-right: 16px;
   background-color: $gray-lighter;
 }
-#sign-in-orcid {
-  width: 100%;
-  border: 1px solid $gray-darker;
-  padding: 6px 8px 6px 16px;
-  margin-top: 10px;
-  margin-right: 8px;
-  text-align: left;
-  background-color: white;
-}
-#sign-in-github {
-  width: 100%;
-  border: 1px solid black;
-  padding: 6px 8px 6px 16px;
-  margin-top: 10px;
-  margin-right: 8px;
-  text-align: left;
-  background-color: white;
-}
 
 .centered, .search {
   margin: auto;
@@ -947,4 +930,12 @@ html {
     font-size: 1em;
     white-space: normal;
   }
+}
+.btn-github {
+  width: 100%;
+}
+.btn-orcid {
+  width: 100%;
+  @include btn-social(#96ca1e);
+  margin-bottom: 6px;
 }
