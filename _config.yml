@@ -4,6 +4,7 @@ highlighter: rogue
 gems:
   - jekyll-pandoc
   - jemoji
+  - jekyll-paginate
 
 exclude:
   - README.md

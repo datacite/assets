@@ -810,6 +810,24 @@ html {
   margin-right: 16px;
   background-color: $gray-lighter;
 }
+#sign-in-orcid {
+  width: 100%;
+  border: 1px solid $gray-darker;
+  padding: 6px 8px 6px 16px;
+  margin-top: 10px;
+  margin-right: 8px;
+  text-align: left;
+  background-color: white;
+}
+#sign-in-github {
+  width: 100%;
+  border: 1px solid black;
+  padding: 6px 8px 6px 16px;
+  margin-top: 10px;
+  margin-right: 8px;
+  text-align: left;
+  background-color: white;
+}
 
 .centered, .search {
   margin: auto;
