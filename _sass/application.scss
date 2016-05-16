@@ -855,6 +855,10 @@ html {
     line-height: $line-height-base;
     margin-bottom: 4px;
   }
+  .claim-ok-btn, .claim-close-btn {
+    padding: 5px 10px 5px 10px;
+    border: 1px solid $gray-darker;
+  }
   span.claim-ok {
     color: rgb(167, 204, 145);
   }
