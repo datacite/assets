@@ -143,7 +143,7 @@ body {
     table-layout:fixed
   }
   tr {
-    .header {
+    .header td,th {
       font-size: 1em;
       color: white;
       background: $gray-darker;
