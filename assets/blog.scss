@@ -144,7 +144,9 @@ body {
   }
   tr {
     .header {
-
+      font-size: 1em;
+      color: white;
+      background: $gray-darker;
     }
   }
   td,th {
