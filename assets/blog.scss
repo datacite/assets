@@ -142,17 +142,29 @@ body {
     padding:0;
     table-layout:fixed
   }
+  tr {
+    .header {
+
+    }
+  }
   td,th {
+    font-family: $font-family-sans-serif;
+    font-size: 1em;
+    line-height: 1.2;
     padding-top: 6px;
     padding-bottom: 6px;
     padding-left: 13px;
     padding-right: 13px;
+
+    p {
+      padding: 0;
+    }
   }
   table tr:nth-child(odd) {
-    background: $gray;
+    background: white;
   }
   table tr:nth-child(even) {
-    background: $gray-light;
+    background: $gray-lighter;
   }
 }
 
