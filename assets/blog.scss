@@ -170,6 +170,8 @@ body {
   }
 }
 .panel-table {
+  margin-bottom: 0;
+
   table {
     border:1px solid $gray;
     border-collapse:collapse;
