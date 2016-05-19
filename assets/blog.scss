@@ -170,16 +170,14 @@ body {
   }
 }
 .panel-table {
-  margin-bottom: 0;
-
   table {
-    border:1px solid $gray;
-    border-collapse:collapse;
-    display:table;
-    empty-cells:hide;
-    margin:-1px 0 23px;
-    padding:0;
-    table-layout:fixed
+    border: 1px solid $gray;
+    border-collapse: collapse;
+    display: table;
+    empty-cells: hide;
+    margin: -1px 0;
+    padding: 0;
+    table-layout: fixed
   }
   tr {
     .header td,th {
