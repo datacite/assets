@@ -74,6 +74,9 @@ body {
     -moz-hyphens: auto;
     hyphens: auto;
   }
+  .description {
+    padding-bottom: 0;
+  }
   a {
     color: $peter-river;
     text-decoration: none;
