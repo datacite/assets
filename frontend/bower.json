@@ -1,6 +1,12 @@
 {
   "name": "frontend",
   "dependencies": {
+    "jquery-ujs": "~1.0.3",
+    "jquery-bootpag": "~1.0.7",
+    "lodash": "~3.10.0",
+    "d3": "~3.5.5",
+    "queue-async": "~1.0.7",
+    "es5-shim": "~4.1.0",
     "bootstrap-sass": "~3.3.6",
     "font-awesome": "~4.5.0",
     "bootstrap-social": "~5.0.0",
