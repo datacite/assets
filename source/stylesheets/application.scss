@@ -1030,3 +1030,38 @@ html {
     }
   }
 }
+.tags {
+  color: $gray-darker;
+  font-size: 1em;
+  padding: 0;
+  border: 0 !important;
+  box-shadow: none !important;
+
+  .panel-body {
+    background-color: $gray-lighter;
+  }
+
+  ul {
+    list-style: none;
+    list-style-position: outside;
+    padding-left: 0;
+  }
+  h4 {
+    font-weight: normal;
+    font-size: 1.25em;
+    border-bottom: 1px solid $gray-darker;
+    padding-bottom: .15em;
+    margin: 0 0 .5em 0;
+  }
+  div {
+    border: 0;
+  }
+  li a, li.active a, li a:hover, li.active a:hover {
+    font-size: 1em;
+    display: inline;
+    color: $gray-darker;
+    background-color: $gray-lighter;
+    padding: 0 .5em 0 0;
+    margin-left: 0;
+  }
+}
