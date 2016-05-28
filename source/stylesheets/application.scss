@@ -562,6 +562,17 @@ h5, h4.work, h3.work { margin-top: 0; margin-bottom: 0; }
   border: 1px solid $gray-darker;
   margin: -3px 0 0 5px;
 }
+.nav-pills .badge {
+  color: $gray-darker;
+  font-weight: normal;
+  background-color: white;
+  border: 1px solid $gray-darker;
+  margin: -3px 0 0 5px;
+}
+.nav-pills li.active .badge {
+  color: $brand-primary;
+  border: 1px solid $brand-primary;
+}
 h4.results { font-weight: normal; font-size: 1.25em; margin: 0 0 .5em .75em; }
 .loading {margin: 1em; color: $gray-darker; }
 td h4 { margin-top: 0; }
