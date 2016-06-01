@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "vendor",
   "dependencies": {
     "jquery-ujs": "~1.0.3",
     "jquery-bootpag": "~1.0.7",
@@ -10,6 +10,11 @@
     "bootstrap-sass": "~3.3.6",
     "font-awesome": "~4.5.0",
     "bootstrap-social": "~5.0.0",
-    "fitvids": "~1.1.0"
+    "fitvids": "~1.1.0",
+    "swagger-ui": "~2.1.0",
+    "swagger-ui-themes": "~ 2.0.0",
+    "highlightjs": "~9.4.0",
+    "js-yaml": "~3.6.1",
+    "object-assign": "~4.1.0"
   }
 }

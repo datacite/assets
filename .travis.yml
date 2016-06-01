@@ -4,7 +4,7 @@ rvm:
 cache: bundler
 
 before_script:
-  - cd frontend && npm install
+  - cd vendor && npm install
   - cd ../
 
 script:
