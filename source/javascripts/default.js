@@ -17,6 +17,7 @@
 //= require jquery-bootpag/lib/jquery.bootpag.js
 //= require d3/d3.js
 //= require queue-async/queue.js
+//= require fitvids/jquery.fitvids.js
 //
 // Load common d3 helper functions
 //= require bar_chart
