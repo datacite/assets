@@ -8,7 +8,7 @@ before_script:
   - cd ../
 
 script:
-  - bundle exec middleman build
+  - bundle exec middleman build -e production
 
 deploy:
   provider: s3
