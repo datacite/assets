@@ -16,6 +16,7 @@
 //= require jquery-ujs/src/rails.js
 //= require jquery-bootpag/lib/jquery.bootpag.js
 //= require d3/d3.js
+//= require crossfilter/crossfilter.js
 //= require queue-async/queue.js
 //= require fitvids/jquery.fitvids.js
 //
@@ -23,4 +24,3 @@
 //= require bar_chart
 //= require donut_chart
 //= require d3_helpers
-
