@@ -11,6 +11,9 @@ development_links:
  - name: Event Data
    url: http://localhost:8050
    icon: link
+ - name: Homepage
+   url: http://localhost:8060
+   icon: globe
  - name: Profiles
    url: http://localhost:8080
    icon: user
