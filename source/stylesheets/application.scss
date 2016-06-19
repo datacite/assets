@@ -687,7 +687,7 @@ html {
 .footer {
   position: absolute;
   bottom: 0;
-  height: 300px;
+  height: 340px;
   width: 100%;
   color: $gray-darkest;
   font-weight: 300;
@@ -708,13 +708,15 @@ html {
   a, a:hover, a:visited {
     color: $gray-darkest;
   }
-  .share h4 {
-    color: $gray-darkest;
+  h4.share {
     margin-bottom: .5em;
   }
-  .share a {
+  a.share {
     margin-right: 1em;
     font-size: 16px;
+  }
+  ul.share {
+    margin-top: .5em;
   }
 }
 .user {
