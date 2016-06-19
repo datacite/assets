@@ -7,7 +7,7 @@ services:
   assets:
     env_file:
       - .env
-    image: datacite1/segugio
+    image: datacite/segugio
     ports:
       - "8010:4567"
     volumes:
