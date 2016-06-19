@@ -18,7 +18,7 @@ end
 
 # Use sprockets for asset compilation
 activate :sprockets
-sprockets.append_path File.join(root, 'vendor', 'assets', 'bower_components')
+sprockets.append_path File.join(root, 'vendor', 'bower_components')
 
 # put configuration variables into .env file
 activate :dotenv
