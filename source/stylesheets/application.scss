@@ -801,11 +801,16 @@ html {
   }
   li a, li.active a, li a:hover, li.active a:hover {
     font-size: 1em;
+    float: left;
     display: inline;
     color: $gray-darker;
     background-color: $gray-lighter;
     padding: 0 .5em 0 0;
     margin-left: 0;
+  }
+  .facet-title {
+    float: left;
+    max-width: 180px;
   }
 }
 
