@@ -666,11 +666,22 @@ html {
   padding-left: 13px;
   padding-right: 13px;
 }
+.markdown thead tr {
+  background: $gray-light;
+}
 .markdown table tr:nth-child(odd) {
   background: white;
+
+  code {
+    background: white;
+  }
 }
 .markdown table tr:nth-child(even) {
   background: $gray-light;
+
+  code {
+    background: $gray-light;
+  }
 }
 
 .markdown .panel table tr {
