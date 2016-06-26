@@ -667,20 +667,20 @@ html {
   padding-right: 13px;
 }
 .markdown thead tr {
-  background: $gray-light;
+  background: #F5F5F5;
 }
 .markdown table tr:nth-child(odd) {
-  background: white;
+  background: #F5F5F5;
 
   code {
-    background: white;
+    background: #F5F5F5;
   }
 }
 .markdown table tr:nth-child(even) {
-  background: $gray-light;
+  background: #F5F5F5;
 
   code {
-    background: $gray-light;
+    background: #F5F5F5;
   }
 }
 
