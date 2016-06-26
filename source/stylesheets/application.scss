@@ -666,21 +666,18 @@ html {
   padding-left: 13px;
   padding-right: 13px;
 }
-.markdown thead tr {
-  background: #F5F5F5;
-}
 .markdown table tr:nth-child(odd) {
-  background: white;
-
-  code {
-    background: white;
-  }
-}
-.markdown table tr:nth-child(even) {
   background: #F5F5F5;
 
   code {
     background: #F5F5F5;
+  }
+}
+.markdown table tr:nth-child(even) {
+  background: white;
+
+  code {
+    background: white;
   }
 }
 
