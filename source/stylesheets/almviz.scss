@@ -183,7 +183,7 @@
   fill: $link_color;
 }
 
-.chart .title { font-size: 24px; }
+.chart .title, .title-only { font-size: 24px; }
 .chart .subtitle { fill: grey; }
 
 .chart .line {
