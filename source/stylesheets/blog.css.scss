@@ -168,6 +168,9 @@ body {
   table tr:nth-child(even) {
     background: $gray-lighter;
   }
+  code {
+    font-size: 16px;
+  }
 }
 .panel-table {
   table {
