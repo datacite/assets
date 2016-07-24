@@ -20,6 +20,10 @@ end
 activate :sprockets
 sprockets.append_path File.join(root, 'vendor', 'bower_components')
 
+# Set markdown template engine
+set :markdown_engine, :kramdown
+set :markdown, :fenced_code_blocks => true, :smartypants => true
+
 # put configuration variables into .env file
 activate :dotenv
 
