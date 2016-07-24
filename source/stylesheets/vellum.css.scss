@@ -1,4 +1,7 @@
-$font-size-base:          16px !default;
+$font-size-base:          18px !default;
+$font-paragraph:          18px !default;
+$font-size-small:         16px !default;
+
 $grid-float-breakpoint:   480px;
 
 @import "bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
@@ -21,22 +24,26 @@ $grid-float-breakpoint:   480px;
     padding-top: 25%;
     text-align: center;
     color: white;
-
-    p {
-      font-size: $font-size-large;
-    }
   }
 }
 .row-section {
   margin: 0;
 }
+pre {
+  font-size: $font-size-small;
+}
+.dropdown-menu li a {
+  font-size: $font-size-small;
+}
 .section-light-blue {
   a {
     color: #FFFFFF;
+    font-weight: bold;
   }
 }
 
 .footer {
+  font-size: $font-size-small;
   width: 100%;
   color: $dark-gray;
   background-color: $light-gray;
