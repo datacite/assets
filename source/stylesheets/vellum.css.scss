@@ -17,14 +17,31 @@ $grid-float-breakpoint:   480px;
 
 .landing-header {
   background-size: cover;
-  min-height: 500px;
-  margin-top: -110px;
+  min-height: 400px;
+  margin-top: -122px;
 
   .motto{
-    padding-top: 25%;
+    padding-top: 15%;
     text-align: center;
     color: white;
   }
+}
+.landing-alert-header {
+  background-size: cover;
+  min-height: 400px;
+  margin-top: -25px;
+
+  .motto{
+    padding-top: 15%;
+    text-align: center;
+    color: white;
+  }
+}
+.landing-section {
+  margin-top: -122px;
+}
+.landing-alert {
+  margin-top: -25px;
 }
 .row-section {
   margin: 0;
@@ -32,10 +49,15 @@ $grid-float-breakpoint:   480px;
 pre {
   font-size: $font-size-small;
 }
+ul li {
+  font-weight: normal;
+  line-height: $line-height-general;
+  text-align: start;
+}
 .dropdown-menu li a {
   font-size: $font-size-small;
 }
-.section-light-blue {
+.section-light-blue, .section-dark-blue, .section-light-brown {
   a {
     color: #FFFFFF;
     font-weight: bold;
