@@ -18,7 +18,6 @@
 //= require swagger-ui/dist/lib/handlebars-2.0.0.js
 //= require js-yaml/dist/js-yaml.min.js
 //= require lodash/lodash.min.js
-//= require swagger-ui/dist/lib/highlight.7.3.pack.js
 //= require swagger-ui/dist/lib/backbone-min.js
 //= require swagger-ui/dist/swagger-ui.min.js
 //= require swagger-ui/dist/lib/jsoneditor.min.js
