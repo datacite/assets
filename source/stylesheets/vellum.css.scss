@@ -14,7 +14,7 @@ $grid-float-breakpoint:   480px;
 
 .landing-header {
   background-size: cover;
-  min-height: 960px;
+  min-height: 570px;
   margin-top: -110px;
 
   .motto{
@@ -27,6 +27,12 @@ $grid-float-breakpoint:   480px;
     }
   }
 }
+.section-light-blue {
+  a {
+    color: #FFFFFF;
+  }
+}
+
 .footer {
   width: 100%;
   color: $dark-gray;

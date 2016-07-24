@@ -1,13 +1,54 @@
 ---
-title: Home
+title: DataCite Assets
+description: Backend service for CSS, javascripts and images used by DataCite.
 ---
 <div class="wrapper">
   <!-- https://www.pexels.com/photo/camera-old-vintage-photos-35107/ -->
   <div class="landing-header" style="background-image: url('../images/assets/landing.jpg');">
     <div class="container">
       <div class="motto">
-        <h1>DataCite Assets</h1>
-        <p>CSS, javascripts and images used by DataCite services.</p>
+        <h1><%= current_page.data.title %></h1>
+        <p><%= current_page.data.description %></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section-light-blue landing-section">
+    <div class="row">
+      <div class="container-fluid">
+        <div class="col-md-4 column">
+          <h3>CSS</h3>
+          <p>DataCite uses custom CSS based on</p>
+            <ul>
+              <li><a href="https://getbootstrap.com/">Bootstrap framework</a></li>
+              <li><a href="http://sass-lang.com/">SCSS CSS extension</a></li>
+              <li><a href="http://fontawesome.io/">Font Awesome icon font</a></li>
+              <li><a href="http://www.creative-tim.com/product/paper-kit">Paper Kit Bootstrap theme</a></li>
+              <li><a href="https://www.theleagueofmoveabletype.com/raleway">Raleway font</a></li>
+            </ul>
+        </div>
+        <div class="col-md-4 column">
+          <h3>Javascripts</h3>
+          <p>DataCite Assets provides a custom javascript for all DataCite services that includes the following</p>
+          <pre>
+{
+  "name": "vendor",
+  "dependencies": {
+    "jquery-ujs": "~1.0.3",
+    "jquery-bootpag": "~1.0.7",
+    "lodash": "~3.10.0",
+    "d3": "~3.5.5",
+    "crossfilter": "~1.3.11",
+    "queue-async": "~1.0.7",
+    "fitvids": "~1.1.0"
+  }
+}</pre>
+        </div>
+        <div class="col-md-4 column">
+          <h3>Images</h3>
+          <p>DataCite Assets stores all images needed by DataCite services, for example member logos.</p>
+          <img src="/images/members/bgi.jpg" alt="Member Image" class="img-rounded img-responsive"/>
+        </div>
       </div>
     </div>
   </div>
