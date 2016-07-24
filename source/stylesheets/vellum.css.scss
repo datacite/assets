@@ -1,0 +1,60 @@
+$font-size-base:          16px !default;
+
+@import "bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
+@import "bootstrap-sass/assets/stylesheets/bootstrap";
+@import "bootstrap-social/bootstrap-social";
+
+@import "ct-paper";
+
+.container-fluid {
+  max-width: 1420px;
+  padding: 0 1em;
+}
+
+.landing-header {
+  background-size: cover;
+  min-height: 570px;
+  margin-top: -110px;
+
+  .motto{
+    padding-top: 180px;
+    text-align: center;
+    color: white;
+
+    p {
+      font-size: $font-size-large;
+    }
+  }
+}
+.footer {
+  bottom: 0;
+  min-height: 270px;
+  width: 100%;
+  color: $dark-gray;
+  background-color: $light-gray;
+  padding: .75em 0;
+  margin: 0;
+
+  h4, h5 {
+    font-size: $font-size-large;
+    margin-top: .5em;
+    margin-bottom: .1em;
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  a, a:hover, a:visited {
+    color: $dark-gray;
+  }
+  h4.share {
+    margin-bottom: .5em;
+  }
+  a.share {
+    margin-right: .5em;
+    font-size: 24px;
+  }
+  ul.share {
+    margin-top: .5em;
+  }
+}
