@@ -13,11 +13,11 @@ $font-size-base:          16px !default;
 
 .landing-header {
   background-size: cover;
-  min-height: 570px;
+  min-height: 960px;
   margin-top: -110px;
 
   .motto{
-    padding-top: 180px;
+    padding-top: 25%;
     text-align: center;
     color: white;
 
@@ -27,8 +27,6 @@ $font-size-base:          16px !default;
   }
 }
 .footer {
-  bottom: 0;
-  min-height: 270px;
   width: 100%;
   color: $dark-gray;
   background-color: $light-gray;
