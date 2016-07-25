@@ -12,7 +12,7 @@
     font-size: $font-size-navbar;
     padding: 10px;
     z-index: 3;
-    
+
     .navbar-brand{
         font-weight: $font-weight-bold;
         margin: $navbar-margin-brand;
@@ -134,7 +134,7 @@
 }
 
 .navbar-default {
-    background-color: $bg-nude;
+    background-color: $white-color;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
     .brand{
