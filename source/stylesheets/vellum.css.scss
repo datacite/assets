@@ -11,13 +11,6 @@ $grid-float-breakpoint:   480px;
   max-width: 1420px;
   padding: 0 1em;
 }
-.alert {
-  margin-top: -20px;
-
-  h4 {
-    margin-bottom: 4px;
-  }
-}
 .landing-header {
   background-size: cover;
   min-height: 450px;
@@ -29,22 +22,16 @@ $grid-float-breakpoint:   480px;
     color: white;
   }
 }
-.landing-alert-header {
-  background-size: cover;
-  min-height: 450px;
-  margin-top: -20px;
-
-  .motto{
-    padding-top: 15%;
-    text-align: center;
-    color: white;
-  }
-}
 .landing-section {
   margin-top: -122px;
 }
 .landing-alert {
-  margin-top: -25px;
+  margin: 0;
+
+  h5 {
+    font-weight: bold;
+    font-size: 16px;
+  }
 }
 .row-section {
   margin: 0;
