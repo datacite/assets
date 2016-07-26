@@ -1,20 +1,23 @@
-$font-size-base:          18px !default;
-$font-paragraph:          18px !default;
-$font-size-small:         16px !default;
-
 $grid-float-breakpoint:   480px;
 
 @import "bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
 @import "bootstrap-sass/assets/stylesheets/bootstrap";
-@import "bootstrap-social/bootstrap-social";
 
 @import "ct-paper";
+
+@import "bootstrap-social/bootstrap-social";
 
 .container-fluid {
   max-width: 1420px;
   padding: 0 1em;
 }
+.alert {
+  margin-top: -20px;
 
+  h4 {
+    margin-bottom: 4px;
+  }
+}
 .landing-header {
   background-size: cover;
   min-height: 450px;
@@ -29,7 +32,7 @@ $grid-float-breakpoint:   480px;
 .landing-alert-header {
   background-size: cover;
   min-height: 450px;
-  margin-top: -25px;
+  margin-top: -20px;
 
   .motto{
     padding-top: 15%;
@@ -51,11 +54,12 @@ pre {
 }
 ul li {
   font-weight: normal;
+  font-size: 16px;
   line-height: $line-height-general;
   text-align: start;
 }
 .dropdown-menu li a {
-  font-size: $font-size-small;
+  font-size: 16px;
 }
 .section-light-blue, .section-dark-blue, .section-light-brown {
   a {
@@ -63,9 +67,43 @@ ul li {
     font-weight: bold;
   }
 }
+.register-background {
+  background-size: cover;
+  min-height: 1000px;
+  overflow: hidden;
+  width: 100%;
+  margin-top: -122px;
+
+  .container{
+    margin-top: 12%;
+    position: relative;
+    z-index: 3;
+  }
+}
+.register-card {
+  background-color: $white-color;
+  border-radius: 8px;
+  max-width: 350px;
+  margin: 20px 0 70px;
+  min-height: 420px;
+  padding: 30px;
+
+  .title {
+    text-align: center;
+  }
+  .btn {
+    margin-top: 20px;
+    padding-left: 50px;
+    font-size: 16px;
+  }
+}
+
+.btn-orcid {
+  @include btn-social(#9dc33a);
+}
 
 .footer {
-  font-size: $font-size-small;
+  font-size: 16px;
   width: 100%;
   color: $dark-gray;
   background-color: $light-gray;
