@@ -14,8 +14,8 @@
 //= require es5-shim/es5-shim.js
 //= require lodash/lodash.js
 //= require jquery-ujs/src/rails.js
-//= require jquery-bootpag/lib/jquery.bootpag.js
 //= require jquery.remotipart/src/jquery.remotipart.js
+//= require jquery-bootpag/lib/jquery.bootpag.js
 //= require d3/d3.js
 //= require crossfilter/crossfilter.js
 //= require queue-async/queue.js
