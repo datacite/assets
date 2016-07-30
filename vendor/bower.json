@@ -3,6 +3,7 @@
   "dependencies": {
     "jquery-ujs": "~1.0.3",
     "jquery-bootpag": "~1.0.7",
+    "jquery.remotipart": "~1.2.1",
     "lodash": "~3.10.0",
     "d3": "~3.5.5",
     "crossfilter": "~1.3.11",
