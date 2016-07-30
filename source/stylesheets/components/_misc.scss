@@ -1,9 +1,4 @@
 /*     General overwrite     */
-body{
-    color: $font-color;
-    font-size: $font-size-base;
-    font-family: 'Raleway', "Helvetica", Arial, sans-serif;
-}
 a{
   color: $info-color;
 
@@ -124,4 +119,12 @@ input.ct-red + span.switch-left,
 input.ct-red + span + label + span.switch-right{
     background-color:  $danger-color;
 }
-
+ul li {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: $line-height-general;
+  text-align: start;
+}
+.dl-horizontal {
+  margin-bottom: 0;
+}

@@ -1,3 +1,25 @@
+/*doc
+---
+title: Typography
+name: typography
+category: Styleguide
+---
+
+DataCite uses the font [Raleway](https://www.theleagueofmoveabletype.com/raleway) as base font with a 18px base font size. [Font-Awesome](http://fortawesome.github.io/Font-Awesome/) is used for icons.
+
+### Headings
+
+```html_example
+<h1>h1.Heading <small>36 px</small></h1>
+<h2>h2.Heading <small>32.4 px</small></h2>
+<h3>h3.Heading <small>28.8 px</small></h3>
+<h4>h4.Heading <small>25.2 px</small></h4>
+<h5>h5.Heading <small>18 px</small></h5>
+<h6>h6.Heading <small>18 px</small></h6>
+```
+
+*/
+
 /*           Font Smoothing      */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, a, .td-name, td{
     -moz-osx-font-smoothing: grayscale;
@@ -80,4 +102,7 @@ blockquote small{
 }
 .glyphicon{
     line-height: 1;
+}
+pre {
+  font-size: $font-size-small;
 }

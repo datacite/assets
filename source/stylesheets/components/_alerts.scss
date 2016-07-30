@@ -1,13 +1,21 @@
+/*doc
+---
+title: Alerts
+name: alerts
+category: Components
+---
+*/
+
 .alert{
     border: 0;
     border-radius: 0;
     color: #FFFFFF;
     padding: 10px 15px;
     font-size: 14px;
-    
+
     .container &{
         border-radius: 4px;
-    
+
     }
     .navbar &{
         border-radius: 0;
@@ -39,3 +47,7 @@
     color: $danger-states-color;
 }
 
+.alert-simple-info {
+  background-color: $lighter-gray;
+  color: $info-states-color;
+}

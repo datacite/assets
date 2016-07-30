@@ -1,3 +1,23 @@
+/*doc
+---
+title: Navigation
+name: navbars
+category: Styleguide
+---
+
+For navigation within a page we use pills.
+
+### Pills
+
+```html_example
+<ul class="nav nav-pills">
+  <li role="presentation" class="active"><a href="#">Home</a></li>
+  <li role="presentation"><a href="#">Profile</a></li>
+  <li role="presentation"><a href="#">Messages</a></li>
+</ul>
+```
+
+*/
 
 .nav {
     > li{
@@ -31,7 +51,7 @@
 //              line-height: $line-height;
          }
          > li > a [class^="fa"]{
-             font-size: $font-size-large + 1;
+             font-size: $font-size-base;
              position: relative;
              top: 1px;
         }
@@ -134,8 +154,7 @@
 }
 
 .navbar-default {
-    background-color: $white-color;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: $lighter-gray;
 
     .brand{
         color: $font-color !important;

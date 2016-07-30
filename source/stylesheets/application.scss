@@ -1,109 +1,3 @@
-/*doc
----
-title: Colors
-name: colors
-category: Styleguide
----
-
-Lagotto uses a color palette from [Flat UI Colors](http://flatuicolors.com/). **wet-asphalt** is used as primary color (body text, navbar, etc.), <span style="color:#3498db"><b>peter-river</b></span> for links, and <span style="color:#f1c40f"><b>sun-flower</b></span> as warning color.
-
-<div class="row">
-  <div class="col-sm-3">
-    <div class="thumbnail" style="background-color:#1abc9c">
-      <div class="caption">
-        <h4 style="color:white">turquoise</h4>
-        <p style="color:white">#1abc9c</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-3">
-    <div class="thumbnail" style="background-color:#2ecc71">
-      <div class="caption">
-        <h4 style="color:white">emerald</h4>
-        <p style="color:white">#2ecc71</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-3">
-    <div class="thumbnail" style="background-color:#3498db">
-      <div class="caption">
-        <h4 style="color:white">peter-river</h4>
-        <p style="color:white">#3498db</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-3">
-    <div class="thumbnail" style="background-color:#9b59b6">
-      <div class="caption">
-        <h4 style="color:white">amethyst</h4>
-        <p style="color:white">#9b59b6</p>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-sm-3">
-    <div class="thumbnail" style="background-color:#f1c40f">
-      <div class="caption">
-        <h4 style="color:white">sun-flower</h4>
-        <p style="color:white">#f1c40f</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-3">
-    <div class="thumbnail" style="background-color:#e67e22">
-      <div class="caption">
-        <h4 style="color:white">carrot</h4>
-        <p style="color:white">#e67e22</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-3">
-    <div class="thumbnail" style="background-color:#e74c3c">
-      <div class="caption">
-        <h4 style="color:white">alizarin</h4>
-        <p style="color:white">#e74c3c</p>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-sm-3">
-    <div class="thumbnail" style="background-color:#f4f6f7">
-      <div class="caption">
-        <h4>clouds</h4>
-        <p>#f4f6f7</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-3">
-    <div class="thumbnail" style="background-color:#bfc5c9">
-      <div class="caption">
-        <h4 style="color:white">silver</h4>
-        <p style="color:white">#bfc5c9</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-3">
-    <div class="thumbnail" style="background-color:#6c797a">
-      <div class="caption">
-        <h4 style="color:white">asbestos</h4>
-        <p style="color:white">#6c797a</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-3">
-    <div class="thumbnail" style="background-color:#34495e">
-      <div class="caption">
-        <h4 style="color:white">wet-asphalt</h4>
-        <p style="color:white">#34495e</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-*/
-
 $turquoise:     #1abc9c;
 $emerald:       #2ecc71;
 $peter-river:   #3498db;
@@ -139,28 +33,6 @@ $link-hover-color:      mix($peter-river, black, 85%);
 
 $hr-border:             $gray;
 $brand-primary-light:   lighten($wet-asphalt, 20%);
-
-/*doc
----
-title: Typography
-name: typography
-category: Styleguide
----
-
-Lagotto uses the Adobe open source font [Source Sans Pro](https://www.google.com/fonts/specimen/Source+Sans+Pro) as base font with a 18px base font size. [Source Code Pro](https://www.google.com/fonts/specimen/Source+Code+Pro) is used for monospaced text, and [Font-Awesome](http://fortawesome.github.io/Font-Awesome/) for icons.
-
-### Headings
-
-```html_example
-<h1>h1.Heading <small>36 px</small></h1>
-<h2>h2.Heading <small>32.4 px</small></h2>
-<h3>h3.Heading <small>28.8 px</small></h3>
-<h4>h4.Heading <small>25.2 px</small></h4>
-<h5>h5.Heading <small>18 px</small></h5>
-<h6>h6.Heading <small>18 px</small></h6>
-```
-
-*/
 
 $font-family-base:           Raleway, Helvetica, Arial, sans-serif;
 $font-family-demo:           Raleway, Helvetica, Arial, sans-serif;
@@ -240,27 +112,6 @@ $btn-inverse-active-bg: mix($brand-primary, black, 85%);
 
 $btn-link-disabled-color: $gray-light;
 
-/*doc
----
-title: Navigation
-name: navigation
-category: Styleguide
----
-
-Lagotto uses a fixed navbar on top, avoiding submenus if possible. For navigation within a page we are using pills.
-
-### Pills
-
-```html_example
-<ul class="nav nav-pills">
-  <li role="presentation" class="active"><a href="#">Home</a></li>
-  <li role="presentation"><a href="#">Profile</a></li>
-  <li role="presentation"><a href="#">Messages</a></li>
-</ul>
-```
-
-*/
-
 $navbar-link-space:     20px;
 $navbar-sublink-space:  9px;
 $navbar-height:         60px;
@@ -299,84 +150,6 @@ $close-color:       $inverse;
 $close-text-shadow: 0;
 
 
-/*doc
----
-title: Panels
-name: panels
-category: Styleguide
----
-
-Panels are the primary way in which content is organized in Lagotto.
-
-### Panels
-
-```html_example
-<div class="panel panel-default">
-  <div class="panel-heading"><h3 class="panel-title">Panel title</h3></div>
-  <div class="panel-body">Panel content</div>
-</div>
-```
-
-### Panels with context
-
-```html_example
-<div class="panel panel-success">
-  <div class="panel-heading"><h3 class="panel-title">Panel title</h3></div>
-  <div class="panel-body">Panel content</div>
-</div>
-<div class="panel panel-info">
-  <div class="panel-heading"><h3 class="panel-title">Panel title</h3></div>
-  <div class="panel-body">Panel content</div>
-</div>
-<div class="panel panel-warning">
-  <div class="panel-heading"><h3 class="panel-title">Panel title</h3></div>
-  <div class="panel-body">Panel content</div>
-</div>
-<div class="panel panel-danger">
-  <div class="panel-heading"><h3 class="panel-title">Panel title</h3></div>
-  <div class="panel-body">Panel content</div>
-</div>
-```
-
-### Panel with tables
-
-```html_example
-<div class="panel panel-default">
-  <div class="panel-heading">Panel heading</div>
-  <table class="table">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Username</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-```
-*/
-
 $panel-footer-bg:                white;
 $panel-inner-border:             $gray;
 
@@ -393,46 +166,6 @@ $panel-warning-heading-bg:       $brand-warning;
 .panel-heading .label-report { border: 1px solid white; font-size: $font-size-base; }
 .panel-list { font-weight: normal; }
 
-/*doc
----
-title: Labels, badges and alerts
-name: labels
-category: Styleguide
----
-
-### Labels
-
-```html_example
-<span class="label label-default">Default</span>
-<span class="label label-primary">Primary</span>
-<span class="label label-success">Success</span>
-<span class="label label-info">Info</span>
-<span class="label label-warning">Warning</span>
-<span class="label label-danger">Danger</span>
-```
-
-### Badges
-
-```html_example
-<a href="#">Inbox <span class="badge">42</span></a>
-```
-
-```html_example
-<button class="btn btn-primary" type="button">
-  Messages <span class="badge">4</span>
-</button>
-```
-
-### Alerts
-
-```html_example
-<div class="alert alert-success" role="alert">You successfully read this important alert message.</div>
-<div class="alert alert-info" role="alert">This alert needs your attention, but it&#39;s not super important.</div>
-<div class="alert alert-warning" role="alert">Better check yourself, you&#39;re not looking too good.</div>
-<div class="alert alert-danger" role="alert">Change a few things up and try submitting again.</div>
-```
-
-*/
 
 $state-warning-text:             $brand-primary;
 $state-warning-border:           $brand-warning;

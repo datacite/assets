@@ -1,0 +1,66 @@
+/*doc
+---
+title: Labels, badges and alerts
+name: labels
+category: Styleguide
+---
+
+### Labels
+
+```html_example
+<span class="label label-default">Default</span>
+<span class="label label-primary">Primary</span>
+<span class="label label-success">Success</span>
+<span class="label label-info">Info</span>
+<span class="label label-warning">Warning</span>
+<span class="label label-danger">Danger</span>
+```
+
+### Badges
+
+```html_example
+<a href="#">Inbox <span class="badge">42</span></a>
+```
+
+```html_example
+<button class="btn btn-primary" type="button">
+  Messages <span class="badge">4</span>
+</button>
+```
+
+### Alerts
+
+```html_example
+<div class="alert alert-success" role="alert">You successfully read this important alert message.</div>
+<div class="alert alert-info" role="alert">This alert needs your attention, but it&#39;s not super important.</div>
+<div class="alert alert-warning" role="alert">Better check yourself, you&#39;re not looking too good.</div>
+<div class="alert alert-danger" role="alert">Change a few things up and try submitting again.</div>
+```
+
+*/
+
+.label{
+    padding: 0.4em 0.6em;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 3px;
+}
+.label-primary{
+    background-color: $primary-color;
+}
+.label-info{
+    background-color: $info-color;
+}
+.label-success{
+    background-color: $success-color;
+}
+.label-warning{
+    background-color: $warning-color;
+}
+.label-danger{
+    background-color: $danger-color;
+}

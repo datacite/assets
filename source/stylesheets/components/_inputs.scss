@@ -3,37 +3,37 @@
 }
 .form-control:-moz-placeholder{
    @include placeholder($medium-gray,1);
-}  
+}
 .form-control::-webkit-input-placeholder{
-   @include placeholder($medium-gray,1); 
-} 
+   @include placeholder($medium-gray,1);
+}
 .form-control:-ms-input-placeholder{
    @include placeholder($medium-gray,1);
 }
 
 .form-control {
     background-color: $gray-input-bg;
-    border: medium none;
+    border: 1px solid $light-gray;
     border-radius: $border-radius-base;
     color: $font-color;
     font-size: $font-size-base;
     transition: background-color 0.3s ease 0s;
     @include input-size($padding-base-vertical, $padding-base-horizontal, $height-base);
     @include box-shadow(none);
-    
+
     &:focus{
            background-color: $white-bg;
            @include box-shadow(none);
-           outline: 0 !important;       
+           outline: 0 !important;
     }
-    
+
     .has-success &,
     .has-error &,
     .has-success &:focus,
     .has-error &:focus{
         @include box-shadow(none);
     }
-    
+
     .has-success &{
         background-color: $success-input-bg;
         color: $success-color;
@@ -48,7 +48,7 @@
     .has-error &:focus{
         background-color: $white-bg;
     }
-    
+
     & + .form-control-feedback{
         border-radius: $border-radius-large;
         font-size: $font-size-base;
@@ -58,7 +58,7 @@
         top: 50%;
         vertical-align: middle;
     }
-    
+
     .open &{
         border-radius: $border-radius-base $border-radius-base 0 0;
         border-bottom-color: transparent;
@@ -86,8 +86,8 @@
     background-color: $gray-input-bg;
     border: medium none;
     border-radius: $border-radius-base;
-    
-    
+
+
     .has-success &,
     .has-error &{
         background-color: $white-color;
@@ -104,15 +104,15 @@
     }
 }
 
-.input-group .form-control:first-child, 
-.input-group-addon:first-child,  
-.input-group-btn:first-child > .dropdown-toggle, 
+.input-group .form-control:first-child,
+.input-group-addon:first-child,
+.input-group-btn:first-child > .dropdown-toggle,
 .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle) {
     border-right: 0 none;
 }
-.input-group .form-control:last-child, 
-.input-group-addon:last-child,  
-.input-group-btn:last-child > .dropdown-toggle, 
+.input-group .form-control:last-child,
+.input-group-addon:last-child,
+.input-group-btn:last-child > .dropdown-toggle,
 .input-group-btn:first-child > .btn:not(:first-child) {
     border-left: 0 none;
 }
@@ -135,4 +135,22 @@
 }
 textarea.form-control{
     padding: 10px 18px;
+}
+
+.search-wide { padding-bottom: 20px; margin-bottom: 20px; margin-left: auto; margin-right: auto; }
+.search-wide #query {
+  height: 45px;
+  border-right: none;
+
+  &:focus {
+    border-color: #7A9E9F;
+  }
+}
+.form-group {
+  abbr { border: none; }
+  .help-block { font-size: $font-size-small; }
+}
+.form-group.has-error {
+  input, select { border-color: $danger-color; }
+  .help-block { color: $danger-color; }
 }

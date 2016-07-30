@@ -1,0 +1,41 @@
+//
+// Registration Page
+// --------------------------------------------------
+
+.register-background {
+  background-size: cover;
+  min-height: 1000px;
+  overflow: hidden;
+  width: 100%;
+  margin-top: -122px;
+
+  .container{
+    margin-top: 12%;
+    position: relative;
+    z-index: 3;
+  }
+}
+.register-card {
+  background-color: $white-color;
+  border-radius: 8px;
+  max-width: 350px;
+  margin: 20px 0 70px;
+  min-height: 375px;
+  padding: 30px;
+
+  .title {
+    text-align: center;
+  }
+  .btn {
+    margin-top: 20px;
+    padding-left: 50px;
+    font-size: 16px;
+  }
+  #link-orcid {
+    margin-top: 40px;
+    font-size: 16px;
+  }
+  p {
+    margin: 20px 10px;
+  }
+}

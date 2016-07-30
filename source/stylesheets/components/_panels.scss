@@ -1,0 +1,178 @@
+/*doc
+---
+title: Panels
+name: panels
+category: Styleguide
+---
+
+### Panels
+
+```html_example
+<div class="panel panel-default">
+  <div class="panel-heading"><h3 class="panel-title">Panel title</h3></div>
+  <div class="panel-body">Panel content</div>
+</div>
+```
+
+### Panels with context
+
+```html_example
+<div class="panel panel-success">
+  <div class="panel-heading"><h3 class="panel-title">Panel title</h3></div>
+  <div class="panel-body">Panel content</div>
+</div>
+<div class="panel panel-info">
+  <div class="panel-heading"><h3 class="panel-title">Panel title</h3></div>
+  <div class="panel-body">Panel content</div>
+</div>
+<div class="panel panel-warning">
+  <div class="panel-heading"><h3 class="panel-title">Panel title</h3></div>
+  <div class="panel-body">Panel content</div>
+</div>
+<div class="panel panel-danger">
+  <div class="panel-heading"><h3 class="panel-title">Panel title</h3></div>
+  <div class="panel-body">Panel content</div>
+</div>
+```
+
+### Panel with tables
+
+```html_example
+<div class="panel panel-default">
+  <div class="panel-heading">Panel heading</div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Username</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+```
+*/
+
+.panel {
+  .panel-body {
+    border-top: 1px solid $light-gray;
+  }
+  .panel-body:first-child {
+    border-top: none;
+  }
+}
+
+.panel-list {
+  padding-bottom: .75em;
+
+  .panel {
+    margin-bottom: .5em;
+  }
+}
+
+.panel-chart { height: 180px; padding: 10px; font-size: 21px; }
+.panel-version { height: 88px; padding: 10px; }
+
+.panel-default .table {
+  margin: 0;
+  th, td {
+    padding: 10px 15px;
+  }
+}
+
+.panel-heading {
+  small, .small { font-weight: normal; font-size: $font-size-small; line-height: $line-height-small; }
+}
+
+.panel-body {
+  h3, h4, h5 { margin-bottom: 10px; font-weight: bold; }
+  h3:first-child, h4:first-child, h5:first-child { margin-top: 0; }
+
+  .form-control {
+    background-color: $white-bg;
+  }
+}
+
+.panel-footer {
+  margin-top: 0;
+  line-height: 1.4em;
+  background-color: $white-color;
+  color: $darker-gray;
+
+  i {
+    padding-right: .2em;
+    font-size: $font-size-base;
+  }
+
+  img {
+    margin-top: -0.33em;
+  }
+  a {
+    color: $darker-gray;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  span a {
+    margin-right: .2em;
+  }
+ .btn-neutral {
+    padding: 0 3px;
+
+    i { font-size: $font-size-small; }
+  }
+  .btn-xs {
+    font-size: .75em;
+    border: 1px solid black;
+    background-color: $white-color;
+  }
+  .badge {
+    color: $darker-gray;
+    font-weight: normal;
+    background-color: $white-color;
+    border: 1px solid $darker-gray;
+    margin: -3px 0 0 5px;
+  }
+  .form-group {
+    margin-bottom: 0;
+  }
+  .form-group.submit {
+    padding: .5em;
+  }
+}
+
+.media-body .impactstory {
+  margin-top: .5em;
+}
+.btn-group.github {
+  margin-top: 1.5em;
+}
+.panel-register {
+  .btn-social {
+    width: 280px;
+    padding-left: 40px;
+    margin: 10px;
+    font-size: 16px;
+  }
+}
