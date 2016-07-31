@@ -43,3 +43,24 @@
     font-weight: bold;
   }
 }
+
+.info {
+  text-align: center;
+
+  h3 { margin-top: 0; }
+  .icon {
+    font-size: 2.5em;
+
+    [class^="fa-"], [class*=" fa-"] {
+      display: inline-block;
+      width: 100%;
+    }
+  }
+}
+
+.icon-primary { color: $primary-color; }
+.icon-success { color: $success-color; }
+.icon-info { color: $info-color; }
+.icon-warning { color: $warning-color; }
+.icon-danger { color: $danger-color; }
+.icon-orcid { color: #9dc33a; }

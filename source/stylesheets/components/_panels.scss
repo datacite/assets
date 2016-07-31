@@ -75,11 +75,8 @@ category: Styleguide
 */
 
 .panel {
-  .panel-body {
+  .panel-body + .panel-body {
     border-top: 1px solid $light-gray;
-  }
-  .panel-body:first-child {
-    border-top: none;
   }
 }
 
@@ -121,19 +118,19 @@ category: Styleguide
   color: $darker-gray;
 
   i {
-    padding-right: .2em;
     font-size: $font-size-base;
+    color: $darker-gray;
   }
 
   img {
     margin-top: -0.33em;
   }
-  a {
+  /*a {
     color: $darker-gray;
   }
   a:hover {
     text-decoration: underline;
-  }
+  }*/
   span a {
     margin-right: .2em;
   }
@@ -162,12 +159,6 @@ category: Styleguide
   }
 }
 
-.media-body .impactstory {
-  margin-top: .5em;
-}
-.btn-group.github {
-  margin-top: 1.5em;
-}
 .panel-register {
   .btn-social {
     width: 280px;

@@ -120,7 +120,7 @@ $lighter-gray:               #F4F5F5 !default;
 $light-gray:                 #E3E3E3 !default;
 $medium-gray:                #DDDDDD !default;
 $dark-gray:                  #9A9A9A !default;
-$darker-gray:                #273664!default;
+$darker-gray:                darken($medium-gray, 40%) !default;
 
 $gray-input-bg:              lighten($lighter-gray, 2%) !default;
 $danger-input-bg:            #FFC0A4 !default;
@@ -147,7 +147,6 @@ $info-states-color:          #3091B2 !default;
 $warning-color:              #F3BB45 !default;
 $warning-bg:                 #F3BB45 !default;
 $warning-states-color:       #BB992F !default;
-
 
 $danger-color:               #EB5E28 !default;
 $danger-bg:                  #EB5E28 !default;

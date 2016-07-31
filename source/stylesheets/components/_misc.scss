@@ -128,3 +128,7 @@ ul li {
 .dl-horizontal {
   margin-bottom: 0;
 }
+
+span.info { color: $info-color; }
+span.success { color: $success-color; }
+span.danger { color: $danger-color; }

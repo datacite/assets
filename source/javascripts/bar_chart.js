@@ -1,6 +1,6 @@
 /*global d3, startDate, endDate, startTime, endTime, formatWeek, formatHour, numberToHumanSize, formatFixed, formatDate, formatTime, numberWithDelimiter */
 
-var width = 250,
+var width = 240,
     height = 100,
     margin = { top: 7, right: 10, bottom: 5, left: 5 },
     colors = ["#1abc9c","#2ecc71","#3498db","#9b59b6","#34495e","#95a6a6"],
@@ -12,7 +12,17 @@ var width = 250,
 
 // bar chart
 function barViz(data, div, count, format) {
-  var domain = (format === "days") ? [startDate, endDate] : [startTime, endTime];
+  if (format === "days") {
+    var domain = [startDate, endDate];
+    var length = 30;
+  } else if (format === "months") {
+    var domain = [startDate, endDate];
+    var length = d3.time.months(startDate, endDate).length;
+    width = length * 13;
+  } else {
+    var domain = [startTime, endTime];
+    var length = 24;
+  }
 
   var x = d3.time.scale.utc()
     .domain(domain)
@@ -45,6 +55,10 @@ function barViz(data, div, count, format) {
         timeStamp = Date.parse(d.key + 'T12:00:00Z');
         var weekNumber = formatWeek(new Date(timeStamp));
         return (weekNumber % 2 === 0) ? "bar relations" : "bar relations-alt";
+      } else if (format === "months") {
+        timeStamp = Date.parse(d.key + '-01T12:00:00Z');
+        var year = formatYear(new Date(timeStamp));
+        return (year % 2 === 0) ? "bar relations" : "bar relations-alt";
       } else {
         timeStamp = Date.parse(d.key + ':00:01Z');
         var hour = formatHour(new Date(timeStamp));
@@ -53,10 +67,12 @@ function barViz(data, div, count, format) {
     .attr("x", function(d) {
       if (format === "days") {
         return x(new Date(Date.parse(d.key + 'T12:00:00Z')));
+      } else if (format === "months") {
+        return x(new Date(Date.parse(d.key + '-01T12:00:00Z')));
       } else {
         return x(new Date(Date.parse(d.key + ':00:00Z')));
       }})
-    .attr("width", width/30 - 1)
+    .attr("width", width/length - 1)
     .attr("y", function(d) { return y(d.values[count]); })
     .attr("height", function(d) { return height - y(d.values[count]); });
 
@@ -82,6 +98,9 @@ function barViz(data, div, count, format) {
       if (format === "days") {
         dateStamp = Date.parse(d.key + 'T12:00:00Z');
         dateString = " on " + formatDate(new Date(dateStamp));
+      } else if (format === "months") {
+        dateStamp = Date.parse(d.key + '-01T12:00:00Z');
+        dateString = " in " + formatMonthYear(new Date(dateStamp));
       } else {
         dateStamp = Date.parse(d.key + ':00:00Z');
         dateString = " at " + formatTime(new Date(dateStamp));

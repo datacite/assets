@@ -54,11 +54,11 @@ h2.graphs { margin-top: 2.5px; margin-bottom: 5px; }
 }
 
 .bar.relations {
-  fill: $success-color;
+  fill: $primary-color;
 }
 
 .bar.relations-alt {
-  fill: darken($success-color, 15%);
+  fill: darken($primary-color, 15%);
 }
 
 .bar.results {
