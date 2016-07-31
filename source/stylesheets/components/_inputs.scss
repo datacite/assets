@@ -154,3 +154,13 @@ textarea.form-control{
   input, select { border-color: $danger-color; }
   .help-block { color: $danger-color; }
 }
+.logo-placeholder {
+  width: 500px;
+  height: 200px;
+  border: 1px solid $light-gray;
+  color: $light-gray;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
