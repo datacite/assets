@@ -21,6 +21,13 @@
 //= require queue-async/queue.js
 //= require fitvids/jquery.fitvids.js
 //
+// Load theme-specific components
+//= require ct-paper
+//= require ct-paper-checkbox
+//= require ct-paper-radio
+//= require bootstrap-datepicker
+//= require bootstrap-select
+//
 // Load common d3 helper functions
 //= require bar_chart
 //= require donut_chart
