@@ -100,10 +100,14 @@ category: Styleguide
 
 .panel-heading {
   small, .small { font-weight: normal; font-size: $font-size-small; line-height: $line-height-small; }
+  .accordion-toggle {
+    color: $darker-gray;
+  }
 }
 
 .panel-body {
-  h3, h4, h5 { margin-bottom: 10px; font-weight: bold; }
+  h3, h4 { margin-bottom: 10px; font-weight: bold; }
+  h5 { margin-bottom: 0; font-weight: bold; }
   h3:first-child, h4:first-child, h5:first-child { margin-top: 0; }
 
   .form-control {
