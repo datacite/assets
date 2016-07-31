@@ -18,7 +18,7 @@
 .DS_Store
 
 # Ignore mamber images
-# /source/images/members/*
+/source/images/members/*
 !/source/images/members/.keep
 
 # ignore vendored assets and Ruby gems
