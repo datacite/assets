@@ -64,8 +64,10 @@ category: Styleguide
     background-color: $danger-color;
 }
 .label-allocating{
-    background-color: $primary-color;
+    color: $dark-gray;
+    background-color: $light-blue;
 }
 .label-non-allocating{
-    background-color: $info-color;
+    color: $dark-gray;
+    background-color: $light-azure;
 }
