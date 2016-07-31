@@ -17,9 +17,11 @@
 # Ignore .DS_store file
 .DS_Store
 
-# Ignore mamber images
+# Ignore member and service images
 /source/images/members/*
 !/source/images/members/.keep
+/source/images/services/*
+!/source/images/services/.keep
 
 # ignore vendored assets and Ruby gems
 /vendor/bower_components
