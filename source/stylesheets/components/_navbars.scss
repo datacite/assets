@@ -124,8 +124,9 @@ For navigation within a page we use pills.
     }
 
     .btn-default{
-        color: $white-color;
-        border-color: $white-color;
+        color: $white-color !important;
+        border-color: $white-color !important;
+        @include opacity(.9);
     }
     .btn-default.btn-fill{
         color: $dark-gray;
