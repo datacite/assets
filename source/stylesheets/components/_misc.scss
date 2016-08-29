@@ -1,4 +1,11 @@
 /*     General overwrite     */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 340px;
+}
 a{
   color: $info-color;
 
