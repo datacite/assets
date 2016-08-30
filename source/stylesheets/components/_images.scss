@@ -1,3 +1,15 @@
+/*doc
+---
+title: Images
+name: images
+category: Components
+---
+
+```html_example
+<img src="/images/kristian.png" class="img-details" />
+```
+*/
+
 .img-rounded{
     border-radius: $border-radius-extreme;
     box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);

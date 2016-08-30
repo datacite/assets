@@ -16,6 +16,7 @@ before_script:
   - cd ../
 
 script:
+  - bundle exec hologram -c hologram.yml
   - bundle exec middleman build -e production
 
 deploy:

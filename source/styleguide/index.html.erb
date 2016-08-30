@@ -1,0 +1,23 @@
+---
+title: Style guide
+description: A set of standards for the design of DataCite web pages.
+---
+
+<div class="wrapper">
+  <!-- https://www.pexels.com/photo/letters-metal-typography-31323/ -->
+  <div class="landing-header" style="background-image: url('/images/assets/type.jpg');">
+    <div class="container">
+      <div class="motto">
+        <h1><%= current_page.data.title %></h1>
+        <p><%= current_page.data.description %></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section-white">
+    <div class="container-fluid">
+      <%= partial "globals.html" %>
+      <%= partial "components.html" %>
+    </div>
+  </div>
+</div>

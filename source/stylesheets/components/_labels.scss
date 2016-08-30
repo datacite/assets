@@ -1,11 +1,9 @@
 /*doc
 ---
-title: Labels, badges and alerts
+title: Labels
 name: labels
-category: Styleguide
+category: Components
 ---
-
-### Labels
 
 ```html_example
 <span class="label label-default">Default</span>
@@ -14,27 +12,6 @@ category: Styleguide
 <span class="label label-info">Info</span>
 <span class="label label-warning">Warning</span>
 <span class="label label-danger">Danger</span>
-```
-
-### Badges
-
-```html_example
-<a href="#">Inbox <span class="badge">42</span></a>
-```
-
-```html_example
-<button class="btn btn-primary" type="button">
-  Messages <span class="badge">4</span>
-</button>
-```
-
-### Alerts
-
-```html_example
-<div class="alert alert-success" role="alert">You successfully read this important alert message.</div>
-<div class="alert alert-info" role="alert">This alert needs your attention, but it&#39;s not super important.</div>
-<div class="alert alert-warning" role="alert">Better check yourself, you&#39;re not looking too good.</div>
-<div class="alert alert-danger" role="alert">Change a few things up and try submitting again.</div>
 ```
 
 */

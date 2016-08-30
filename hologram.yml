@@ -24,18 +24,18 @@ code_example_templates: ./code_example_templates
 # If you want to create additional renderers that are not provided
 # by Hologram (i.e. coffeescript renderer, jade renderer, etc)
 # place them in this folder
-code_example_renderers: ./code_example_renderers
+# code_example_renderers: ./code_example_renderers
 
 # Any other asset folders that need to be copied to the destination
 # folder. Typically this will include the css that you are trying to
 # document. May also include additional folders as needed.
 dependencies:
-  - ./build
+#  - ./source/includes
 
 # Mark which category should be the index page
 # Alternatively, you may have an index.md in the source directory root
 # folder instead of specifying this config.
-index: basics
+# index: styleguide
 
 # To output navigation for top level sections, set the value to
 # 'section'. To output navigation for sub-sections, set the value to `all`
