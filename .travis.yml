@@ -3,6 +3,14 @@ rvm:
 - 2.3.1
 cache: bundler
 
+before_install:
+  - set -e
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+      AWS_BUCKET="assets.datacite.org";
+    else
+      AWS_BUCKET="assets.labs.datacite.org";
+    fi
+
 before_script:
   - cd vendor && npm install
   - cd ../
@@ -14,7 +22,7 @@ deploy:
   provider: s3
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
-  bucket: assets.datacite.org
+  bucket: $AWS_BUCKET
   region: eu-west-1
   skip_cleanup: true
   local_dir: build
