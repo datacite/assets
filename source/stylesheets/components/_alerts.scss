@@ -11,7 +11,7 @@ category: Components
     border-radius: 0;
     color: #FFFFFF;
     padding: 10px 15px;
-    font-size: 14px;
+    font-size: $font-size-base;
 
     .container &{
         border-radius: 4px;
