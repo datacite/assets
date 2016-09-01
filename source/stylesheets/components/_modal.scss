@@ -1,7 +1,17 @@
 .modal-header {
-    border-bottom: 1px solid $medium-gray;
+    background-color: $lighter-gray;
+    border: 0;
+    border-radius: 10px 10px 0 0;
     padding: 20px;
     text-align: center;
+
+    h4 {
+      margin: 0;
+    }
+    .close {
+      padding-left: 10px;
+      font-size: 30px;
+    }
 }
 .modal-content {
     border: 0 none;
@@ -13,28 +23,43 @@
 }
 .modal-body{
     padding: 20px 50px;
+    min-height: 240px;
+
+    pre {
+        background-color: $white-color;
+        border: 0;
+    }
+    #citation-text {
+        font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+        font-size: 16px;
+    }
+    #spinner {
+        position: relative;
+        top: 20px;
+    }
 }
 .modal-footer {
-    border-top: 1px solid $medium-gray;     
-    padding: 0px;  
-}
-.modal-footer .left-side, .modal-footer .right-side{
-    display: inline-block;
-    text-align: center;
-    width: 49%;
-}
-.modal-footer .btn-simple{
-    padding: 20px;
-    width: 100%
-}
-.modal-footer .divider{
-    background-color: $medium-gray;
-    display: inline-block;
-    float: inherit;
-    height: 63px;
-    margin: 0px -3px;
-    position: absolute;
-    width: 1px;
+    border-top: 1px solid $medium-gray;
+    padding: 0px;
+
+   .left-side, .modal-footer .right-side {
+        display: inline-block;
+        text-align: center;
+        width: 49%;
+    }
+    .btn-simple {
+        padding: 20px;
+        width: 100%
+    }
+    .divider {
+        background-color: $medium-gray;
+        display: inline-block;
+        float: inherit;
+        height: 63px;
+        margin: 0px -3px;
+        position: absolute;
+        width: 1px;
+    }
 }
 .modal.fade .modal-dialog {
     transform: none;
