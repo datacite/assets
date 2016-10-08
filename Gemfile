@@ -9,9 +9,10 @@ gem 'wdm', '~> 0.1.0', platforms: [:mswin, :mingw]
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 
 # Middleman Gems
-gem 'middleman', '>= 4.1.0', git: "https://github.com/datacite/middleman.git", branch: "tilt-version"
+gem 'middleman', '>= 4.0.0', git: "https://github.com/middleman/middleman.git"
+gem 'tilt', '~> 2.0', git: "https://github.com/datacite/tilt.git", branch: "pandoc-options"
+gem 'pandoc-ruby', '~> 1.0'
 gem 'middleman-sprockets', '~> 4.0.0'
 gem 'middleman-dotenv', '~> 2.0'
 gem 'middleman-livereload'
-gem 'tilt', '~> 2.0', git: "https://github.com/datacite/tilt.git", branch: "pandoc-options"
 gem 'hologram', '~> 1.4'
