@@ -22,9 +22,7 @@ sprockets.append_path File.join(root, 'vendor', 'bower_components')
 
 # Set markdown template engine
 set :markdown_engine, :pandoc
-set :markdown, smartypants: true,
-               csl: "styles/apa.csl",
-               bibliography: "bibliography/references.bib"
+set :markdown, smartypants: true
 
 # put configuration variables into .env file
 activate :dotenv
