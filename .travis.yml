@@ -23,7 +23,7 @@ before_script:
 
 script:
   - bundle exec hologram -c hologram.yml
-  - RACK_ENV=$RACK_ENV bundle exec middleman build
+  - bundle exec middleman build -e $RACK_ENV
 
 deploy:
   provider: s3
