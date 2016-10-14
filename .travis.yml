@@ -7,10 +7,10 @@ before_install:
   - set -e
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
       AWS_BUCKET="assets.datacite.org";
-      MIDDLEMAN_ENV="production"
+      MIDDLEMAN_ENV="production";
     else
       AWS_BUCKET="assets.labs.datacite.org";
-      MIDDLEMAN_ENV="stage"
+      MIDDLEMAN_ENV="stage";
     fi
 
   - wget https://github.com/jgm/pandoc/releases/download/1.15.2/pandoc-1.15.2-1-amd64.deb
