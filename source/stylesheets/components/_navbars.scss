@@ -63,6 +63,9 @@ For navigation within a page we use pills.
     .btn-simple{
         font-size: $font-size-medium;
     }
+    .btn-sm{
+        font-size: $font-size-small;
+    }
     .caret{
        // @include center-item();
     }

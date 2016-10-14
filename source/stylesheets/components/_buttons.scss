@@ -208,3 +208,7 @@ $bs-height-xs:   (floor($font-size-small * 1.2) + $padding-small-vertical + 1) !
 .btn-github        { @include btn-social(#444444); }
 .btn-google        { @include btn-social(#dd4b39); }
 .btn-orcid         { @include btn-social(#9dc33a); }
+
+.claim-ok-btn {
+  i { color: $white-color !important; }
+}
