@@ -34,7 +34,7 @@ activate :dotenv
 # Methods defined in the helpers block are available in templates
 helpers do
   def stage?
-    ENV['MIDDLEMAN_ENV'] == "stage"
+    ENV['RACK_ENV'] == "stage"
   end
 end
 

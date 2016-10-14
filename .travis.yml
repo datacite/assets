@@ -7,10 +7,10 @@ before_install:
   - set -e
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
       AWS_BUCKET="assets.datacite.org";
-      MIDDLEMAN_ENV="production";
+      RACK_ENV="production";
     else
       AWS_BUCKET="assets.labs.datacite.org";
-      MIDDLEMAN_ENV="stage";
+      RACK_ENV="stage";
     fi
 
   - wget https://github.com/jgm/pandoc/releases/download/1.15.2/pandoc-1.15.2-1-amd64.deb
@@ -23,7 +23,7 @@ before_script:
 
 script:
   - bundle exec hologram -c hologram.yml
-  - bundle exec middleman build --verbose -e $MIDDLEMAN_ENV
+  - bundle exec middleman build -e $RACK_ENV
 
 deploy:
   provider: s3
