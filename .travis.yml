@@ -11,6 +11,7 @@ before_install:
     else
       AWS_BUCKET="assets.labs.datacite.org";
       RACK_ENV="stage";
+      cp .env.labs .env;
     fi
 
   - wget https://github.com/jgm/pandoc/releases/download/1.15.2/pandoc-1.15.2-1-amd64.deb
