@@ -14,9 +14,9 @@ before_script:
 
 script:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
-      bundle exec middleman build -e production
+      bundle exec middleman build -e production;
     elif [ "$TRAVIS_BRANCH" == "labs" ]; then
-      bundle exec middleman build -e stage
+      bundle exec middleman build -e stage;
     else
       exit 1;
     fi
