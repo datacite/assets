@@ -59,6 +59,9 @@
   }
 }
 
+.icon-primary, .icon-success, .icon-info, .icon-warning, .icon-danger {
+  font-family: Raleway, Helvetica, Arial, sans-serif;
+}
 .icon-primary { color: $primary-color; }
 .icon-success { color: $success-color; }
 .icon-info { color: $info-color; }
