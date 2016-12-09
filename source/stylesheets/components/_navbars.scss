@@ -160,7 +160,7 @@ For navigation within a page we use pills.
 .navbar-default {
     background-color: $lighter-gray;
 
-    .brand{
+    .navbar-brand{
         color: $font-color !important;
     }
     .navbar-nav{
@@ -212,8 +212,10 @@ For navigation within a page we use pills.
 
 .navbar-white {
     background-color: $white-color;
+    margin: 0;
+    border: $none;
 
-    .brand{
+    .navbar-brand{
         color: $font-color !important;
     }
     .navbar-nav{
@@ -259,8 +261,8 @@ For navigation within a page we use pills.
     &:not(.navbar-transparent) .btn-neutral,
     &:not(.navbar-transparent) .btn-neutral:hover,
     &:not(.navbar-transparent) .btn-neutral:active{
-            color: $dark-gray;
-        }
+        color: $dark-gray;
+    }
 }
 
 /*      Navbar with icons            */
