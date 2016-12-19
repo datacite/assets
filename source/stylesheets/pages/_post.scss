@@ -24,6 +24,9 @@
     margin: 0;
     padding: 0 0 30px;
   }
+  code {
+    font-size: $font-size-xs;
+  }
 }
 .panel-footer {
   span, span a, a {
