@@ -28,6 +28,7 @@
     font-size: $font-size-xs;
   }
 }
+
 .panel-footer {
   span, span a, a {
     color: $gray-darker;
@@ -35,7 +36,13 @@
   .tags .fa-tags {
     margin-right: 3px;
   }
+  .comment {
+    margin-left: 3px;
+  }
   span.meta {
     margin-right: 1.5em;
   }
+}
+.post-list {
+  margin-bottom: 10px !important;
 }
