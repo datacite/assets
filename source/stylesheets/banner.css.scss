@@ -1,4 +1,5 @@
 #banner {
+    position: fixed ;
     left: 0px;
     top: 0px;
     width: 100%;
@@ -12,12 +13,10 @@
     padding: 5pt;
 }
 
-#toolbar {
-    float: left;
-}
-
-#toolbar2 {
-    float: right;
+#banner:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 #testinfo {

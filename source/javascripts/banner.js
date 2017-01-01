@@ -10,7 +10,6 @@ var banner_jquery = $.noConflict(true);
 
   function createToolBar(id) {
     var div = $("<div>").attr("id", id);
-    div.append($("<br>"));
     $("#banner").append(div);
     return div;
   }
