@@ -10,7 +10,6 @@ var banner_jquery = $.noConflict(true);
 
   function createToolBar(id) {
     var div = $("<div>").attr("id", id);
-    div.append($("<br>"));
     $("#banner").append(div);
     return div;
   }
@@ -18,6 +17,7 @@ var banner_jquery = $.noConflict(true);
   function addTestinfo() {
     var toolbar = createToolBar("testinfo");
     toolbar.text("This service is for testing only.");
+    toolbar.append($("<br>"));
   }
 
   $(document).ready(init);
