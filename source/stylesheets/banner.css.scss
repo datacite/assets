@@ -1,10 +1,9 @@
 #banner {
-    position: fixed ;
     left: 0px;
     top: 0px;
     width: 100%;
-    margin-bottom: 1ex;
-    background-color: black;
+    margin-bottom: 0.5em;
+    background-color: red;
     color: white;
     z-index: 100;
 }
@@ -22,8 +21,6 @@
 }
 
 #testinfo {
-    background-color: red !important;
-    clear: both;
     font-weight: bold;
     text-align: center;
 }
