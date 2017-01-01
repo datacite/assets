@@ -2,18 +2,10 @@ var banner_jquery = $.noConflict(true);
 
 (function($) {
   function init() {
-    var banner = $("<div>").attr("id", "banner");
-    $("body").prepend(banner);
-
-    addTestinfo();
-  }
-
-  function addTestinfo() {
-    var toolbar = $("<div>")
-      .attr("id", "testinfo")
+    var banner = $("<div>")
+      .attr("id", "banner");
       .text("This service is for testing only.");
-    $("#banner").append(toolbar);
-    $("#banner").append($("<br>"));
+    $("body").prepend(banner);
   }
 
   $(document).ready(init);

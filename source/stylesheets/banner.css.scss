@@ -1,59 +1,20 @@
 #banner {
-    position: fixed ;
+    position: absolute;
     left: 0px;
     top: 0px;
     width: 100%;
+    font-weight: bold;
+    font-family: sans-serif;
     margin-bottom: 0.5em;
-    background-color: red;
+    padding: 5px;
     color: white;
+    text-align: center;
+    background-color: red;
     z-index: 100;
 }
 
-#banner > div {
-    padding: 5pt;
-}
-
-#testinfo {
-    font-weight: bold;
-    text-align: center;
-}
-
-#banner * {
-    font-family: sans-serif;
-    font-size: medium;
-    color: white;
-}
-
-#banner ul {
-    padding: 0pt;
-    margin: 0pt;
-    display: inline;
-}
-
-#banner li {
-    float: left;
-    list-style-type: none;
-    margin-right: 0.8em;
-}
-
-#banner a {
-    text-decoration: none;
-}
-
-#banner a:link,
-#banner a:active,
-#banner a:visited {
-  color: #0084B8;
-}
-
-#banner a:hover {
-  color: #77C9EA;
-}
-
-.highlight {
-  color: #77C9EA !important;
-}
-
-#banner br {
+#banner:after {
+    content: "";
+    display: table;
     clear: both;
 }
