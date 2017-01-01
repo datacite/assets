@@ -3,7 +3,7 @@ var banner_jquery = $.noConflict(true);
 (function($) {
   function init() {
     var banner = $("<div>")
-      .attr("id", "banner");
+      .attr("id", "banner")
       .text("This service is for testing only.");
     $("body").prepend(banner);
   }
