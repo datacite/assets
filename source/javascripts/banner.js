@@ -1,6 +1,4 @@
-var banner_jquery = $.noConflict(true);
-
-(function($) {
+function($) {
   function init() {
     var banner = $("<div>")
       .attr("id", "banner")
@@ -9,4 +7,4 @@ var banner_jquery = $.noConflict(true);
   }
 
   $(document).ready(init);
-})(banner_jquery);
+}
