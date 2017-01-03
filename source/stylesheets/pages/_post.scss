@@ -39,6 +39,9 @@
   code {
     font-size: $font-size-xs;
   }
+  .unpublished {
+    color: $warning-color;
+  }
 }
 
 .panel-footer {
