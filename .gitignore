@@ -17,9 +17,7 @@
 # Ignore .DS_store file
 .DS_Store
 
-# Ignore member and service images
-/source/images/members/*
-!/source/images/members/.keep
+# Ignore service images
 /source/images/services/*
 !/source/images/services/.keep
 
