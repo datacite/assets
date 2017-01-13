@@ -1,19 +1,12 @@
 #banner {
-    position: fixed;
-    left: 0px;
-    top: 0px;
     width: 100%;
     font-weight: bold;
-    font-family: sans-serif;
-    font-size: 16px;
-    margin-bottom: 1em;
-    padding: 5px;
+    font-family: 'Raleway', "Helvetica", Arial, sans-serif;
+    font-size: 18px;
+    margin-bottom: 0;
+    padding: 8px;
     color: white;
     text-align: center;
-    background-color: red;
-    z-index: 100;
-}
-
-#wrapper {
-    margin-top: 35px !important;
+    background-color: #EB5E28;
+    opacity: 0.5;
 }
