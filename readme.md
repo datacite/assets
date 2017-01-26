@@ -13,7 +13,7 @@ bundle exec middleman
 Or using Docker.
 
 ```
-docker run -p 8010:80 datacite1/segugio
+docker run -p 8010:80 datacite/segugio
 ```
 
 Follow along via [Github Issues](https://github.com/datacite/segugio/issues).
