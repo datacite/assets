@@ -13,6 +13,11 @@
     "bootstrap-social": "~5.0.0",
     "font-awesome": "~4.5.0",
     "fitvids": "~1.1.0",
+    "swagger-ui": "~2.1.0",
+    "swagger-ui-themes": "~ 2.0.0",
+    "highlightjs": "~9.4.0",
+    "js-yaml": "~3.6.1",
+    "object-assign": "~4.1.0",
     "algoliasearch": "~3.20.3"
   }
 }
