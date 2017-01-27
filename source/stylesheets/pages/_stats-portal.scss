@@ -54,6 +54,15 @@
       font-size: 105%;
   }
 
+  td.bold {
+      width: 9%;
+  }
+
+  td:not(.number .bold .date) {
+      width: 30%;
+  }
+
+
   thead {
       background-color: #CDCDCD;
   }
