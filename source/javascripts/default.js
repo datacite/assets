@@ -20,7 +20,6 @@
 //= require crossfilter/crossfilter.js
 //= require queue-async/queue.js
 //= require fitvids/jquery.fitvids.js
-//= require algoliasearch/dist/algoliasearch.min.js
 //
 // Load theme-specific components
 //= require ct-paper
