@@ -20,7 +20,9 @@ end
 activate :data_source do |c|
   c.root = 'source/data'
   c.files = [
-    "links.json"
+    "authors.json",
+    "links.json",
+    "schemas.json"
   ]
 end
 
