@@ -16,6 +16,14 @@ configure :development do
   activate :livereload
 end
 
+# Load data
+activate :data_source do |c|
+  c.root = 'source/data'
+  c.files = [
+    "links.json"
+  ]
+end
+
 # Use sprockets for asset compilation
 activate :sprockets
 sprockets.append_path File.join(root, 'vendor', 'bower_components')
