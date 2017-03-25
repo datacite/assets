@@ -32,3 +32,6 @@
 //= require bar_chart
 //= require donut_chart
 //= require d3_helpers
+//
+// Load other common functions
+//= require statuspage
