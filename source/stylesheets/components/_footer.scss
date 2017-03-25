@@ -35,4 +35,29 @@
   ul.share {
     margin-top: .5em;
   }
+
+  .color-dot {
+    border-radius: 5px;
+    display:inline-block;
+    width:10px;
+    height:10px;
+    margin-right:5px;
+    &.critical {
+      background-color:$danger-color;
+    }
+    &.major {
+      background-color:#e88832
+    }
+    &.minor {
+      background-color:$warning-color;
+    }
+    &.none {
+      background-color:$success-color;
+    }
+  }
+
+  .color-description {
+    font-size: 18px;
+    color: $dark-gray;
+  }
 }
