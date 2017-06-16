@@ -16,6 +16,7 @@
     "swagger-ui": "~2.1.0",
     "swagger-ui-themes": "~ 2.0.0",
     "highlightjs": "~9.4.0",
+    "remarkable": "~1.7.0",
     "js-yaml": "~3.6.1",
     "object-assign": "~4.1.0"
   }
