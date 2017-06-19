@@ -217,5 +217,14 @@ function isEmpty(obj) {
 
 // from https://stackoverflow.com/questions/1026069/how-do-i-make-the-first-letter-of-a-string-uppercase-in-javascript
 function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
+  return string.charAt(0).toUpperCase() + string.slice(1);
 }
+
+// from https://stackoverflow.com/questions/23774231/how-do-i-remove-all-null-and-empty-string-values-from-a-json-object
+function removeEmpty(obj) {
+  Object.keys(obj).forEach(function(key) {
+    (obj[key] && typeof obj[key] === 'object') && removeEmpty(obj[key]) ||
+    (obj[key] === '' || obj[key] === null) && delete obj[key]
+  });
+  return obj;
+};
