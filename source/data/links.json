@@ -254,10 +254,6 @@
     {
       "name": "Outreach material",
       "url": "https://www.datacite.org/outreach.html"
-    },
-    {
-      "name": "Events",
-      "url": "https://www.datacite.org/events.html"
     }
   ],
   "community_links": [
@@ -276,6 +272,14 @@
     {
       "name": "Events",
       "url": "https://www.datacite.org/events.html"
+    },
+    {
+      "name": "Roadmap",
+      "url": "https://www.datacite.org/roadmap.html"
+    },
+    {
+      "name": "User Stories",
+      "url": "https://www.datacite.org/user-stories.html"
     }
   ],
   "contact_links": [
