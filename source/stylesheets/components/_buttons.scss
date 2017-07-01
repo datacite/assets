@@ -56,7 +56,7 @@ category: Components
 .navbar .navbar-nav > li > a.btn-info, .btn-info    { @include btn-styles($info-color, $info-states-color); }
 .navbar .navbar-nav > li > a.btn-warning, .btn-warning { @include btn-styles($warning-color, $warning-states-color); }
 .navbar .navbar-nav > li > a.btn-danger, .btn-danger  { @include btn-styles($danger-color, $danger-states-color); }
-.navbar-transparent .navbar-nav > li > .btn-neutral, .btn-neutral {
+.navbar-transparent .navbar-nav > li > a.btn-neutral, .btn-neutral {
     @include btn-styles($white-color, $white-color);
 
     &:hover,
