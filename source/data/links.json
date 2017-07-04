@@ -248,12 +248,8 @@
       "url": "https://schema.datacite.org"
     },
     {
-      "name": "Technical documentation",
-      "url": "https://www.datacite.org/technical.html"
-    },
-    {
-      "name": "Outreach material",
-      "url": "https://www.datacite.org/outreach.html"
+      "name": "Support",
+      "url": "http://support.datacite.org"
     }
   ],
   "community_links": [
