@@ -16,12 +16,12 @@
   }
 }
 
-.register-card, .register-card-login {
+.register-card, .register-card-login, .register-card-email {
   background-color: $white-color;
   border-radius: 8px;
   max-width: 350px;
   margin: 20px 0 70px;
-  min-height: 290px;
+  min-height: 270px;
   padding: 10px 30px;
 
   .form-control {
@@ -84,7 +84,7 @@
     margin: 3px;
   }
 
-  button[type=submit] {
+  button[type=submit], .btn-cancel {
     padding-left: 12px;
   }
 
@@ -98,4 +98,8 @@
 .register-card-login {
   margin: 0 0 70px;
   min-height: 460px;
+}
+
+.register-card-email {
+  min-height: 310px
 }
