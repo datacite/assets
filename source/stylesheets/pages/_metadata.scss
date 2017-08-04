@@ -4,8 +4,13 @@ pre.metadata {
 textarea.metadata {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 12px;
+  border-left-width: 1px;
+  border-left-color: #E3E3E3;
 }
-
+select.metadata {
+  border-left-width: 1px;
+  border-left-color: #E3E3E3;
+}
 .help-block {
   margin-left: 5px;
   margin-top: 20px;
