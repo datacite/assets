@@ -41,6 +41,15 @@
     "email": "kgarza@datacite.org",
     "image_url": "/images/kristian.png"
   },
+  "jstarr": {
+    "name": "Joan Starr",
+    "given": "Joan",
+    "family": "Starr",
+    "bio": "EZID Service Manager",
+    "twitter": "joan_starr",
+    "orcid": "http://orcid.org/0000-0002-7285-027X",
+    "image_url": "/images/jstarr.png"
+  },
   "jlin": {
     "name": "Jennifer Lin",
     "given": "Jennifer",
