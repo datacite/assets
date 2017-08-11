@@ -148,7 +148,8 @@ For navigation within a page we use pills.
 }
 .navbar-transparent{
     .dropdown-menu .divider{
-        background-color: rgba($white-color,.2);
+        background-color: $light-gray;
+        margin: 0px;
     }
 }
 
