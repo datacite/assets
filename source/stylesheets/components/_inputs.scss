@@ -154,9 +154,10 @@ textarea.form-control{
   .input-group-btn {
     .close {
       position: relative;
+      color: $light-gray;
       float: right;
-      left: -60px;
-      top: -15px;
+      left: -80px;
+      top: 10px;
     }
   }
 }
