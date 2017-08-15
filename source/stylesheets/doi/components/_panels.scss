@@ -286,7 +286,7 @@ category: Components
     h4 {
       font-size: 18px;
       line-height: 1.1;
-      font-weight: 700;
+      font-weight: $font-weight-bold;
       padding: 0;
       margin: 0;
       padding-left: 100px;
@@ -328,7 +328,7 @@ category: Components
     padding-left: 0;
   }
   h4 {
-    font-weight: normal;
+    font-weight: $font-weight-normal;
     font-size: 1.25em;
     border-bottom: 1px solid $darker-gray;
     padding-bottom: .15em;

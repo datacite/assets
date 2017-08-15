@@ -102,7 +102,41 @@ category: Globals
 
 */
 
-/*      light colors - used for select dropdown         */
+$turquoise:     #1abc9c;
+$emerald:       #2ecc71;
+$peter-river:   #3498db;
+$amethyst:      #9b59b6;
+$wet-asphalt:   #34495e;
+$sun-flower:    #f1c40f;
+$carrot:        #e67e22;
+$alizarin:      #e74c3c;
+$clouds:        #f4f6f7;
+$silver:        #bfc5c9;
+$asbestos:      #6c797a;
+
+// $gray:          lighten($silver, 15%);
+// $gray-light:    lighten($silver, 20%);
+// $gray-lighter:  lighten($silver, 21%);
+// $gray-dark:     lighten($silver, 10%);
+// $gray-darker:   darken($silver, 20%);
+// $inverse:       white;
+//
+// $brand-primary:         $wet-asphalt;
+// $brand-secondary:       $peter-river;
+// $brand-success:         $emerald;
+// $brand-warning:         $sun-flower;
+// $brand-danger:          $carrot;
+// $brand-info:            $peter-river;
+//
+// $body-bg:               $gray-light;
+// $text-color:            $brand-primary;
+//
+// $link-color:            $peter-river;
+// $link-hover-color:      mix($peter-river, black, 85%);
+//
+// $hr-border:             $gray;
+// $brand-primary-light:   lighten($wet-asphalt, 20%);
+
 
 $white-color:                #FFFFFF !default;
 $white-bg:                   #FFFFFF !default;
@@ -132,24 +166,24 @@ $default-color:              #66615B !default;
 $default-bg:                 #66615B !default;
 $default-states-color:       #403D39 !default;
 
-$primary-color:              #7A9E9F !default;
-$primary-bg:                 #7A9E9F !default;
+$primary-color:              $wet-asphalt !default;
+$primary-bg:                 $wet-asphalt !default;
 $primary-states-color:       #427C89 !default;
 
-$success-color:              #7AC29A !default;
-$success-bg:                 #7AC29A !default;
+$success-color:              $emerald !default;
+$success-bg:                 $emerald !default;
 $success-states-color:       #42A084 !default;
 
-$info-color:                 #68B3C8 !default;
-$info-bg:                    #68B3C8 !default;
+$info-color:                 $peter-river !default;
+$info-bg:                    $peter-river !default;
 $info-states-color:          #3091B2 !default;
 
-$warning-color:              #F3BB45 !default;
-$warning-bg:                 #F3BB45 !default;
+$warning-color:              $sun-flower !default;
+$warning-bg:                 $sun-flower !default;
 $warning-states-color:       #BB992F !default;
 
-$danger-color:               #EB5E28 !default;
-$danger-bg:                  #EB5E28 !default;
+$danger-color:               $carrot !default;
+$danger-bg:                  $carrot !default;
 $danger-states-color:        #B33C12 !default;
 
 $link-disabled-color:        #666666 !default;

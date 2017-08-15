@@ -12,12 +12,12 @@ Using the [rogue](https://github.com/jneen/rouge) gem and Github style for synta
 .hll { background-color: #f7f7f7; padding: 6px 10px; border-radius: 3px; }
 .c { color: #999988; font-style: italic; }
 .err { color: #a61717; background-color: #e3d2d2; }
-.k { font-weight: bold; }
-.o { font-weight: bold; }
+.k { font-weight: 700; }
+.o { font-weight: 700; }
 .cm { color: #999988; font-style: italic; }
-.cp { color: #999999; font-weight: bold; }
+.cp { color: #999999; font-weight: 700; }
 .c1 { color: #999988; font-style: italic; }
-.cs { color: #999999; font-weight: bold; font-style: italic; }
+.cs { color: #999999; font-weight: 700; font-style: italic; }
 .gd { color: #000000; background-color: #ffdddd; }
 .gd .x { color: #000000; background-color: #ffaaaa; }
 .ge { font-style: italic; }
@@ -27,29 +27,29 @@ Using the [rogue](https://github.com/jneen/rouge) gem and Github style for synta
 .gi .x { color: #000000; background-color: #aaffaa; }
 .go { color: #888888; }
 .gp { color: #555555; }
-.gs { font-weight: bold; }
-.gu { color: #800080; font-weight: bold; }
+.gs { font-weight: 700; }
+.gu { color: #800080; font-weight: 700; }
 .gt { color: #aa0000; }
-.kc { font-weight: bold; }
-.kd { font-weight: bold; }
-.kn { font-weight: bold; }
-.kp { font-weight: bold; }
-.kr { font-weight: bold; }
-.kt { color: #445588; font-weight: bold; }
+.kc { font-weight: 700; }
+.kd { font-weight: 700; }
+.kn { font-weight: 700; }
+.kp { font-weight: 700; }
+.kr { font-weight: 700; }
+.kt { color: #445588; font-weight: 700; }
 .m { color: #009999; }
 .s { color: #dd1144; }
 .n { color: #333333; }
 .na { color: teal; }
 .nb { color: #0086b3; }
-.nc { color: #445588; font-weight: bold; }
+.nc { color: #445588; font-weight: 700; }
 .no { color: teal; }
 .ni { color: purple; }
-.ne { color: #990000; font-weight: bold; }
-.nf { color: #990000; font-weight: bold; }
+.ne { color: #990000; font-weight: 700; }
+.nf { color: #990000; font-weight: 700; }
 .nn { color: #555555; }
 .nt { color: navy; }
 .nv { color: teal; }
-.ow { font-weight: bold; }
+.ow { font-weight: 700; }
 .w { color: #bbbbbb; }
 .mf { color: #009999; }
 .mh { color: #009999; }

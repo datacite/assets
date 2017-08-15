@@ -1,4 +1,4 @@
-"doi/components/*
+/*
 Datacite - Bootstrap 3 theme
 ---------------------------------------------*/
 
@@ -7,10 +7,10 @@ Datacite - Bootstrap 3 theme
 
 // Globals
 @import "doi/globals/colors";
-@import "globals/variables";
-@import "globals/mixins";
-@import "globals/ember";
-@import "globals/typography";
+@import "doi/globals/variables";
+@import "doi/globals/mixins";
+@import "doi/globals/ember";
+@import "doi/globals/typography";
 
 // Components
 @import "doi/components/misc";
