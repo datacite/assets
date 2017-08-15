@@ -11,7 +11,7 @@
   box-shadow: none !important;
 
   .panel-body {
-    background-color: $lighter-gray;
+    background-color: $white-bg;
   }
 
   ul {
@@ -41,7 +41,7 @@
     float: left;
     display: inline;
     color: $darker-gray;
-    background-color: $lighter-gray;
+    background-color: $white-bg;
     padding: 0 .5em 0 0;
     margin-left: 0;
   }
@@ -56,4 +56,3 @@
     border-top: none;
   }
 }
-
