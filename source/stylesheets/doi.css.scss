@@ -1,0 +1,49 @@
+"doi/components/*
+Datacite - Bootstrap 3 theme
+---------------------------------------------*/
+
+@import "bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
+@import "bootstrap-sass/assets/stylesheets/bootstrap";
+
+// Globals
+@import "doi/globals/colors";
+@import "globals/variables";
+@import "globals/mixins";
+@import "globals/ember";
+@import "globals/typography";
+
+// Components
+@import "doi/components/misc";
+@import "doi/components/page";
+@import "doi/components/buttons";
+@import "doi/components/github";
+@import "doi/components/inputs";
+@import "doi/components/progress-bars";
+@import "doi/components/sliders";
+@import "doi/components/alerts";
+@import "doi/components/labels";
+@import "doi/components/tooltips-and-popovers";
+@import "doi/components/sections";
+@import "doi/components/checkbox-radio";
+@import "doi/components/navbars";
+@import "doi/components/images";
+@import "doi/components/panels";
+@import "doi/components/footer";
+@import "doi/components/dropdown";
+@import "doi/components/tabs-navs-pagination";
+@import "doi/components/collapse";
+@import "doi/components/carousel";
+@import "doi/components/modal";
+@import "doi/components/responsive";
+@import "doi/components/datepicker";
+@import "doi/components/facets";
+@import "doi/components/graphs";
+@import "doi/components/markdown";
+
+// Pages
+@import "doi/pages/register";
+@import "doi/pages/search";
+@import "doi/pages/post";
+@import "doi/pages/styleguide";
+@import "doi/pages/stats-portal";
+@import "doi/pages/metadata";
