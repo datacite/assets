@@ -2,7 +2,7 @@
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
 
-$font-color:                 #66615b !default;
+$font-color:                 $wet-asphalt !default;
 $fill-font-color:            rgba(255, 255, 255, 0.7);
 
 $none:                       0   !default;
@@ -33,7 +33,7 @@ $padding-label-vertical:        2px !default;
 $padding-label-horizontal:     12px !default;
 
 // padding for links inside dropdown menu
-$padding-dropdown-vertical:     5px !default;
+$padding-dropdown-vertical:     6px !default;
 $padding-dropdown-horizontal:   15px !default;
 
 $margin-large-vertical:        15px !default;
