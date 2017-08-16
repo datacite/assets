@@ -20,11 +20,12 @@ body{
 }
 .landing-header {
   background-size: cover;
-  min-height: 700px;
+  background-position: center center;
+  min-height: 500px;
   margin-top: -122px;
 
   .motto{
-    padding-top: 15%;
+    padding-top: 25%;
     text-align: center;
     color: white;
   }
