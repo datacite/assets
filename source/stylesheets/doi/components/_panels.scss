@@ -81,13 +81,20 @@ category: Components
 // }
 
 .panel {
-    border: 0;
     border: 1px solid $light-gray;
     border-radius: $border-radius-base;
     box-shadow: none;
+
+    h4.user {
+      color: $carrot;
+    }
 }
 .panel-default > .panel-heading {
     background-color: $lighter-gray;
+}
+
+.panel-footer {
+  border-top: 0;
 }
 
 .panel-list {
@@ -120,6 +127,14 @@ category: Components
   h5 { margin-bottom: 0; font-weight: bold; }
   h3:first-child, h4:first-child, h5:first-child { margin-top: 0; }
   h3.work { margin-bottom: 0; }
+  h3.member {
+    margin-bottom: 0;
+    color: $turquoise;
+  }
+  h3.client {
+    margin-bottom: 0;
+    color: $emerald;
+  }
 
   .form-control {
     background-color: $white-bg;
