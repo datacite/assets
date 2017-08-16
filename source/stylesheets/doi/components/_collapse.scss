@@ -17,6 +17,9 @@
 .panel-title a:hover, .panel-title a:focus{
     text-decoration: none;
 }
+.panel-title .small {
+  font-size: $font-size-base;
+}
 .gsdk-collapse{
     display: block;
     height: 0px;
