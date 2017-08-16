@@ -1,11 +1,11 @@
 .panel {
     border: 0;
-    border-bottom: 1px solid $medium-gray;
+    border: 1px solid $lighter-gray;;
     box-shadow: none;
 }
 .panel-default > .panel-heading {
-    background-color: $light-gray;
-    border-color: $light-gray;
+    background-color: $lighter-gray;
+    border-color: $lighter-gray;
 }
 .panel-group .panel{
     border-radius: 0;
