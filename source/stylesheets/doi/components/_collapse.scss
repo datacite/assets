@@ -1,12 +1,3 @@
-.panel {
-    border: 0;
-    border: 1px solid $lighter-gray;;
-    box-shadow: none;
-}
-.panel-default > .panel-heading {
-    background-color: $lighter-gray;
-    border-color: $lighter-gray;
-}
 .panel-group .panel{
     border-radius: 0;
 }
@@ -16,9 +7,6 @@
 }
 .panel-title a:hover, .panel-title a:focus{
     text-decoration: none;
-}
-.panel-title .small {
-  font-size: $font-size-base;
 }
 .gsdk-collapse{
     display: block;

@@ -74,10 +74,20 @@ category: Components
 ```
 */
 
+// .panel {
+//   .panel-body + .panel-body {
+//     border-top: 1px solid $light-gray;
+//   }
+// }
+
 .panel {
-  .panel-body + .panel-body {
-    border-top: 1px solid $light-gray;
-  }
+    border: 0;
+    border: 1px solid $light-gray;
+    border-radius: $border-radius-base;
+    box-shadow: none;
+}
+.panel-default > .panel-heading {
+    background-color: $lighter-gray;
 }
 
 .panel-list {
@@ -99,7 +109,7 @@ category: Components
 }
 
 .panel-heading {
-  small, .small { font-weight: normal; font-size: $font-size-small; line-height: $line-height-small; }
+  small, .small { font-weight: normal; font-size: $font-size-base; line-height: $line-height-base; }
   .accordion-toggle {
     color: $darker-gray;
   }
