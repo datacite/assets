@@ -7,10 +7,10 @@ body {
   margin-bottom: 340px;
 }
 a{
-  color: $info-color;
+  color: $link-color;
 
   &:hover, &:focus{
-     color: $info-states-color;
+     color: $link-hover-color;
      text-decoration: none;
   }
 

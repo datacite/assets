@@ -131,8 +131,8 @@ $asbestos:      #6c797a;
 // $body-bg:               $gray-light;
 // $text-color:            $brand-primary;
 //
-// $link-color:            $peter-river;
-// $link-hover-color:      mix($peter-river, black, 85%);
+$link-color:            $peter-river;
+$link-hover-color:      mix($peter-river, black, 85%);
 //
 // $hr-border:             $gray;
 // $brand-primary-light:   lighten($wet-asphalt, 20%);
@@ -162,8 +162,8 @@ $success-input-bg:           #ABF3CB !default;
 $other-medium-gray:          #A49E93 !default;
 $transparent-bg:             transparent !default;
 
-$default-color:              #66615B !default;
-$default-bg:                 #66615B !default;
+$default-color:              $black-color;
+$default-bg:                 $black-color;
 $default-states-color:       #403D39 !default;
 
 $primary-color:              $wet-asphalt !default;
@@ -182,8 +182,8 @@ $warning-color:              $sun-flower !default;
 $warning-bg:                 $sun-flower !default;
 $warning-states-color:       #BB992F !default;
 
-$danger-color:               $carrot !default;
-$danger-bg:                  $carrot !default;
+$danger-color:               $alizarin !default;
+$danger-bg:                  $alizarin !default;
 $danger-states-color:        #B33C12 !default;
 
 $link-disabled-color:        #666666 !default;

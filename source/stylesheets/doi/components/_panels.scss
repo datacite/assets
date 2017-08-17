@@ -131,10 +131,6 @@ category: Components
     margin-bottom: 0;
     color: $turquoise;
   }
-  h3.client {
-    margin-bottom: 0;
-    color: $emerald;
-  }
 
   .form-control {
     background-color: $white-bg;
@@ -178,7 +174,7 @@ category: Components
     color: $darker-gray;
     font-weight: normal;
     font-size: 14px;
-    background-color: $white-color;
+    background-color: $white-bg;
     border: 1px solid $darker-gray;
     margin: -3px 0 0 5px;
   }
