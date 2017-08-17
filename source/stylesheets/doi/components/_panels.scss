@@ -141,10 +141,8 @@ category: Components
     background-color: $white-bg;
   }
 
-  .description img {
-    width: 250px;
-    float: left;
-    margin: 0px 15px 15px 0px;
+  .description
+    margin-bottom: .75em;
   }
 }
 
