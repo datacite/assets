@@ -119,9 +119,9 @@
 .pagination > li:last-child > a,
 .pagination > li:last-child > span{
     background-color: transparent;
-    border: 2px solid $default-color;
+    border: 2px solid $light-gray;
     border-radius: 20px;
-    color: $default-color;
+    color: $light-gray;
     height: $line-height;
     margin: 0 2px;
     min-width: 36px;
@@ -136,8 +136,8 @@
 .pagination > li.active > span:hover,
 .pagination > li.active > a:focus,
 .pagination > li.active > span:focus {
-    background-color: $default-color;
-    border-color: $default-color;
+    background-color: $carrot;
+    border-color: $carrot;
     color: $white-color;
 }
 
@@ -148,8 +148,8 @@
 .pagination-primary > li:first-child > span,
 .pagination-primary > li:last-child > a,
 .pagination-primary > li:last-child > span{
-    border: 2px solid $primary-color;
-    color: $primary-color;
+    border: 2px solid $light-gray;
+    color: $light-gray;
 }
 
 .nav-pills-primary > li.active > a,
@@ -164,8 +164,8 @@
 .pagination-primary > li.active > span:hover,
 .pagination-primary > li.active > a:focus,
 .pagination-primary > li.active > span:focus{
-   background-color: $primary-color;
-   border-color: $primary-color;
+   background-color: $carrot;
+   border-color: $carrot;
    color: $white-color;
 }
 
@@ -192,8 +192,8 @@
 .pagination-info > li.active > span:hover,
 .pagination-info > li.active > a:focus,
 .pagination-info > li.active > span:focus{
-   background-color: $info-color;
-   border-color: $info-color;
+   background-color: $carrot;
+   border-color: $carrot;
    color: $white-color;
 }
 
@@ -220,8 +220,8 @@
 .pagination-success > li.active > span:hover,
 .pagination-success > li.active > a:focus,
 .pagination-success > li.active > span:focus{
-   background-color: $success-color;
-   border-color: $success-color;
+   background-color: $carrot;
+   border-color: $carrot;
    color: $white-color;
 }
 
