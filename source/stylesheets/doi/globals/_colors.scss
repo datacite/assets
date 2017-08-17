@@ -152,40 +152,45 @@ $black-hr:                   #444444 !default;
 
 $gray:                       lighten($silver, 15%);
 $lighter-gray:               lighten($silver, 21%);
-$light-gray:                 lighten($silver, 20%);
+$light-gray:                 lighten($silver, 18%);
 $medium-gray:                $gray;
-$dark-gray:                  lighten($silver, 10%);
+$dark-gray:                  darken($silver, 10%);
 $darker-gray:                darken($silver, 20%);
 
 $gray-input-bg:              $white-bg !default;
-$danger-input-bg:            #FFC0A4 !default;
+$danger-input-bg:            $alizarin !default;
 $success-input-bg:           #ABF3CB !default;
 $other-medium-gray:          #A49E93 !default;
 $transparent-bg:             transparent !default;
 
 $default-color:              $black-color;
 $default-bg:                 $black-color;
-$default-states-color:       #403D39 !default;
+$default-states-color:       $white-color !default;
 
 $primary-color:              $wet-asphalt !default;
 $primary-bg:                 $wet-asphalt !default;
-$primary-states-color:       #427C89 !default;
+$bg-primary:                 $wet-asphalt !default;
+$primary-states-color:       $white-color !default;
 
 $success-color:              $emerald !default;
 $success-bg:                 $emerald !default;
-$success-states-color:       #42A084 !default;
+$bg-success:                 $emerald !default;
+$success-states-color:       $white-color !default;
 
 $info-color:                 $peter-river !default;
 $info-bg:                    $peter-river !default;
-$info-states-color:          #3091B2 !default;
+$bg-info:                    $peter-river !default;
+$info-states-color:          $white-color !default;
 
 $warning-color:              $sun-flower !default;
 $warning-bg:                 $sun-flower !default;
-$warning-states-color:       #BB992F !default;
+$bg-warning:                 $sun-flower !default;
+$warning-states-color:       $white-color !default;
 
 $danger-color:               $alizarin !default;
 $danger-bg:                  $alizarin !default;
-$danger-states-color:        #B33C12 !default;
+$bg-danger:                  $alizarin !default;
+$danger-states-color:        $white-color !default;
 
 $link-disabled-color:        #666666 !default;
 
@@ -203,11 +208,6 @@ $orange-navbar:             rgba(#FF9500, .98);
 $red-navbar:                rgba(#FF4C40, .98);
 
 $bg-nude:               #FFFCF5 !default;
-$bg-primary:            #8ECFD5 !default;
-$bg-info:               #7CE4FE !default;
-$bg-success:            #8EF3C5 !default;
-$bg-warning:            #FFE28C !default;
-$bg-danger:             #FF8F5E !default;
 
 $filter-blue:         darken($primary-color, 10%);
 $filter-azure:        darken($info-color, 10%);
