@@ -119,9 +119,9 @@
 .pagination > li:last-child > a,
 .pagination > li:last-child > span{
     background-color: transparent;
-    border: 2px solid $light-gray;
+    border: 2px solid $gray;
     border-radius: 20px;
-    color: $light-gray;
+    color: $gray;
     height: $line-height;
     margin: 0 2px;
     min-width: 36px;
@@ -148,8 +148,8 @@
 .pagination-primary > li:first-child > span,
 .pagination-primary > li:last-child > a,
 .pagination-primary > li:last-child > span{
-    border: 2px solid $light-gray;
-    color: $light-gray;
+    border: 2px solid $gray;
+    color: $gray;
 }
 
 .nav-pills-primary > li.active > a,
