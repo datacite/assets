@@ -18,7 +18,7 @@ category: Components
 
     padding: $padding-base-vertical $padding-base-horizontal;
 
-    @include btn-styles($default-color, $default-states-color);
+    @include btn-styles($turquoise, $default-turqouise-color);
     @include transition($fast-transition-time, linear);
 
     &:hover,
@@ -212,7 +212,3 @@ $bs-height-xs:   (floor($font-size-small * 1.2) + $padding-small-vertical + 1) !
 .claim-ok-btn {
   i { color: $white-color !important; }
 }
-
-.btn-member        { color: $turquoise; }
-.btn-client        { color: $emerald; }
-.btn-user          { color: $carrot; }
