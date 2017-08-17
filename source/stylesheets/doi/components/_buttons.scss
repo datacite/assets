@@ -212,3 +212,7 @@ $bs-height-xs:   (floor($font-size-small * 1.2) + $padding-small-vertical + 1) !
 .claim-ok-btn {
   i { color: $white-color !important; }
 }
+
+.btn-member        { color: $turquoise; }
+.btn-client        { color: $emerald; }
+.btn-user          { color: $carrot; }
