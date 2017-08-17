@@ -140,6 +140,11 @@ category: Components
   .form-control {
     background-color: $white-bg;
   }
+
+  .description img {
+    width: 250px;
+    height: 100px;
+  }
 }
 
 .panel-footer {
