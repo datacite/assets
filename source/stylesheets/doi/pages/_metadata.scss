@@ -1,5 +1,6 @@
 pre.metadata {
   font-size: 12px;
+  padding: 0;
 }
 textarea.metadata {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -14,4 +15,8 @@ select.metadata {
 .help-block {
   margin-left: 5px;
   margin-top: 20px;
+}
+
+code#output {
+  background-color: $white;
 }
