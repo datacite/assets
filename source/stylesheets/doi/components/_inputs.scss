@@ -11,7 +11,7 @@
    @include placeholder($medium-gray,1);
 }
 
-.form-control {
+.form-control, .es-control {
     background-color: $gray-input-bg;
     border: 1px solid $light-gray;
     border-radius: $border-radius-base;
@@ -152,7 +152,7 @@ textarea.form-control{
     }
   }
 
-  .es-input {
+  .es-control {
     input[type="text"] {
       height: 45px;
       border-right: none;
@@ -160,6 +160,9 @@ textarea.form-control{
       &:focus {
         border-color: $turquoise;
       }
+    }
+    .es-clear-zone {
+
     }
   }
   .input-group-btn {
