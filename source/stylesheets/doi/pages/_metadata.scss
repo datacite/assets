@@ -1,12 +1,9 @@
 pre.metadata {
-  font-size: 12px;
-  padding: 0;
-}
-textarea.metadata {
+  background-color: $white-bg;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 12px;
-  border-left-width: 1px;
-  border-left-color: #E3E3E3;
+  padding: 0;
+  border: 0;
 }
 select.metadata {
   border-left-width: 1px;
