@@ -144,6 +144,7 @@ textarea.form-control{
   margin-right: auto;
 
   #search-clear {
+    z-index: 3;
     color: $medium-gray;
     position: absolute;
     right: 75px;
@@ -152,6 +153,7 @@ textarea.form-control{
   }
 
   input[name="query"] {
+    z-index: 1;
     height: 45px;
     border-right: none;
 
@@ -161,6 +163,7 @@ textarea.form-control{
   }
   .input-group-btn {
     .close {
+      z-index: 2;
       position: relative;
       color: $turquoise;
       float: right;
