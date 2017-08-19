@@ -144,9 +144,10 @@ textarea.form-control{
   margin-right: auto;
 
   #search-clear {
+    color: $medium-gray;
     position: absolute;
-    right: 18px;
-    top: 18px;
+    right: 60px;
+    top: 10px;
     text-decoration: none;
   }
 
