@@ -151,6 +151,17 @@ textarea.form-control{
       border-color: $turquoise;
     }
   }
+
+  .es-input {
+    input[type="text"] {
+      height: 45px;
+      border-right: none;
+
+      &:focus {
+        border-color: $turquoise;
+      }
+    }
+  }
   .input-group-btn {
     .close {
       position: relative;
