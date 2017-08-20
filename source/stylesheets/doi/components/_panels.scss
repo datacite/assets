@@ -102,6 +102,15 @@ category: Components
 .panel-transparent {
   border: 0;
 
+  .panel-title {
+    font-weight: bold;
+    color: $turquoise;
+    border-bottom: 1px solid $medium-gray;
+    padding-bottom: .15em;
+    padding-left: 10px;
+    margin: 0 0 .35em 0;
+  }
+
   .panel-body {
     border: 0;
     padding-left: 10px;
