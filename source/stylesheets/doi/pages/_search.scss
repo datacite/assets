@@ -3,10 +3,11 @@ h3.results {
   font-weight: bold;
 }
 h3.member-results {
-  margin: 0 0 .35em .75em;
   font-weight: bold;
   color: $turquoise;
   border-bottom: 1px solid $medium-gray;
+  padding-bottom: .15em;
+  margin: 0 0 .5em 0;
 }
 .col-md-9#content-work, .col-md-9#content-contributor, .col-md-9#content-data-center {
   padding-bottom: 2em;
