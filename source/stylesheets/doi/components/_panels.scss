@@ -103,6 +103,7 @@ category: Components
   border: 0;
 
   .panel-title {
+    font-size: 25px;
     font-weight: bold;
     color: $turquoise;
     border-bottom: 1px solid $medium-gray;
@@ -110,6 +111,13 @@ category: Components
     padding-left: 10px;
     border-left-width: 10px;
     margin: 0 0 .35em 0;
+
+    .small {
+      font-weight: normal;
+      font-size: $font-size-base;
+      color: $darker-gray;
+      line-height: $line-height-base;
+    }
   }
 
   .panel-body {
