@@ -93,6 +93,11 @@ category: Components
       margin-top: .75em;
     }
 }
+
+.panel.transparent {
+  border: 0;
+}
+
 .panel-default > .panel-heading {
     background-color: $lighter-gray;
 }
