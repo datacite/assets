@@ -91,13 +91,16 @@ category: Components
 
     .pseudo-footer {
       margin-top: .75em;
+      color: $darker-gray;
     }
 }
 
 .panel-transparent {
-  border: 0;
-  padding-bottom: 0;
-  margin-bottom: 0;
+  .panel-body {
+    border: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
 }
 
 .panel-default > .panel-heading {
