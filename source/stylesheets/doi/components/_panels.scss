@@ -90,15 +90,17 @@ category: Components
     }
 
     .pseudo-footer {
-      margin-top: .75em;
+      margin-top: .5em;
       color: $darker-gray;
     }
 }
 
 .panel-transparent {
+  border: 0;
+
   .panel-body {
     border: 0;
-    padding-bottom: 0;
+    padding-top: 0;
     margin-bottom: 0;
   }
 }
@@ -161,7 +163,7 @@ category: Components
   }
 
   .country {
-    margin-top: .75em;
+    margin-top: .5em;
   }
 }
 
