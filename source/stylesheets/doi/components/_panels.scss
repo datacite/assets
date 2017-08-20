@@ -107,10 +107,8 @@ category: Components
     font-weight: bold;
     color: $turquoise;
     border-bottom: 1px solid $medium-gray;
-    padding-bottom: .15em;
-    padding-left: 10px;
-    border-left-width: 10px;
-    margin: 0 0 .35em 0;
+    padding-bottom: 0;
+    margin: 0 0 .35em 10px;
 
     .small {
       font-weight: normal;
