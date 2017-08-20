@@ -124,6 +124,11 @@ category: Components
     padding-top: 0;
     margin-bottom: 0;
   }
+
+  .panel-footer {
+    padding-top: 0;
+    padding-left: 10px;
+  }
 }
 
 .panel-default > .panel-heading {
@@ -178,8 +183,11 @@ category: Components
   }
 
   .description, .metadata {
-    margin-bottom: .5em;
+    margin-bottom: 6px;
     img {
+      width: 500px;
+    }
+    img-small {
       width: 250px;
     }
   }
