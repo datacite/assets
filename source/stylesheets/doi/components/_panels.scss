@@ -90,8 +90,12 @@ category: Components
     }
 
     .pseudo-footer {
-      margin-top: .5em;
       color: $darker-gray;
+
+      a, i {
+        font-size: $font-size-base;
+        color: $darker-gray;
+      }
     }
 }
 
@@ -157,13 +161,10 @@ category: Components
   }
 
   .description {
+    margin-bottom: .5em;
     img {
       width: 250px;
     }
-  }
-
-  .country {
-    margin-top: .5em;
   }
 }
 
