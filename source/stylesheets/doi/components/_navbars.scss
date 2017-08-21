@@ -91,7 +91,7 @@ For navigation within a page we use pills.
     }
 
     .navbar-nav{
-        > li > a:not(.btn){
+        li a:not(.btn){
             color: $white-color;
             border-color: $white-color;
             @include opacity(0.8);
