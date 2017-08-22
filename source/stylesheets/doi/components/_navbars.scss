@@ -78,7 +78,7 @@ For navigation within a page we use pills.
     margin-top: -5px;
 }
 
-.navbar-transparent, [class*="navbar-ct"]{
+.navbar-transparent {
     .navbar-brand{
         color: $white-color;
         @include opacity(.9);
