@@ -50,6 +50,14 @@
     "orcid": "http://orcid.org/0000-0002-7285-027X",
     "image_url": "/images/jstarr.png"
   },
+  "dlowenberg": {
+    "name": "Daniella Lowenberg",
+    "given": "Daniella",
+    "family": "Lowenberg",
+    "bio": "Research Data Specialist and Product Manager California Digital Library",
+    "orcid": "http://orcid.org/0000-0003-2255-1869",
+    "image_url": "/images/dl.jpg"
+  },
   "jlin": {
     "name": "Jennifer Lin",
     "given": "Jennifer",
