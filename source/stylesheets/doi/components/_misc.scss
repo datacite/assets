@@ -140,12 +140,12 @@ span.info { color: $info-color; }
 span.success { color: $success-color; }
 span.danger { color: $danger-color; }
 
-p.landing-page {
+p.landing-page, p.landing-page-centered {
   font-size: 21px;
   margin-top: -2em;
   margin-bottom: 1em;
 }
 
-p.landing-page.centered {
+p.landing-page-centered {
   text-align: center;
 }
