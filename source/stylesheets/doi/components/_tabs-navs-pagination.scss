@@ -1,6 +1,12 @@
 /*             Navigation menu                */
 
 /*             Navigation Tabs                 */
+.nav-tabs-member {
+  padding-bottom: 10px
+  border-bottom: 1px solid $light-gray;
+  margin-bottom: 20px;
+}
+
 .nav-tabs-navigation{
     text-align: center;
     border-bottom: 1px solid $light-gray;
