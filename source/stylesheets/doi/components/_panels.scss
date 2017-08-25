@@ -122,7 +122,8 @@ category: Components
     h2 {
       color: $wet-asphalt;
       font-weight: bold;
-      border-bottom: 0;
+      border-bottom: 0 !important;
+      padding: 5px 0;
     }
   }
 
