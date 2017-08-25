@@ -3,14 +3,16 @@
 /*             Navigation Tabs                 */
 .nav-tabs-member {
   .nav-tabs {
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     border-bottom: 1px solid $light-gray;
-    margin-bottom: 20px;
-  }
+    margin-bottom: 30px;
 
-  .nav-link {
-    font-size: $font-size-h3;
-    color: $turquoise;
+    a, a:focus, a:hover  {
+      font-size: $font-size-h3;
+    }
+    a:focus, a:hover {
+      color: $turquoise;
+    }
   }
 }
 
