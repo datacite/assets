@@ -2,9 +2,11 @@
 
 /*             Navigation Tabs                 */
 .nav-tabs-member {
-  padding-bottom: 10px;
-  border-bottom: 1px solid $light-gray;
-  margin-bottom: 20px;
+  .nav-tabs {
+    padding-bottom: 10px;
+    border-bottom: 1px solid $light-gray;
+    margin-bottom: 20px;
+  }
 
   .nav-link {
     font-size: $font-size-h3;
