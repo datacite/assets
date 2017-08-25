@@ -3,9 +3,14 @@
 /*             Navigation Tabs                 */
 .nav-tabs-member {
   .nav-tabs {
-    padding-bottom: 2px;
+    padding-bottom: 3px;
     border-bottom: 1px solid $light-gray;
     margin-bottom: 0;
+
+    .nav-link {
+      padding-left: 0;
+      margin-left: 10px;
+    }
 
     a, a:focus, a:hover, .active {
       font-size: $font-size-h3;
