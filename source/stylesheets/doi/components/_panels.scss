@@ -118,6 +118,12 @@ category: Components
       color: $darker-gray;
       line-height: $line-height-base;
     }
+
+    h2 {
+      color: $wet-asphalt;
+      font-weight: bold;
+      border-bottom: 0;
+    }
   }
 
   .panel-body {
