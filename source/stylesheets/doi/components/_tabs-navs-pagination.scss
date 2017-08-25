@@ -3,9 +3,9 @@
 /*             Navigation Tabs                 */
 .nav-tabs-member {
   .nav-tabs {
-    padding-bottom: 3px;
+    padding-bottom: 0;
     border-bottom: 1px solid $light-gray;
-    margin-bottom: 0;
+    margin-bottom: 3em;
 
     .nav-link {
       padding-left: 0;
@@ -20,6 +20,7 @@
     }
     a:focus, a:hover, > li > a:focus, .active > a, .active > a:hover, .active > a:focus {
       color: $turquoise;
+      font-weight: bold;
     }
   }
 }
