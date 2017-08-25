@@ -118,13 +118,14 @@ category: Components
       color: $darker-gray;
       line-height: $line-height-base;
     }
-
+  }
+  .panel-title.work {
     h2 {
       color: $wet-asphalt;
       font-weight: bold;
-      border-bottom: 0 !important;
-      padding: 5px 0;
     }
+    border-bottom: 0;
+    padding: 5px 0;
   }
 
   .panel-body {
