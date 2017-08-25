@@ -3,14 +3,17 @@
 /*             Navigation Tabs                 */
 .nav-tabs-member {
   .nav-tabs {
-    padding-bottom: 5px;
+    padding-bottom: 2px;
     border-bottom: 1px solid $light-gray;
-    margin-bottom: 30px;
+    margin-bottom: 2em;
 
     a, a:focus, a:hover, .active {
       font-size: $font-size-h3;
     }
-    a:focus, a:hover {
+    a {
+      color: $medium-gray;
+    }
+    a:focus, a:hover, .active {
       color: $turquoise;
     }
   }
