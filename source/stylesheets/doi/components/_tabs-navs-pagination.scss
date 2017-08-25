@@ -5,15 +5,15 @@
   .nav-tabs {
     padding-bottom: 2px;
     border-bottom: 1px solid $light-gray;
-    margin-bottom: 2em;
+    margin-bottom: 0;
 
     a, a:focus, a:hover, .active {
       font-size: $font-size-h3;
     }
     a {
-      color: $medium-gray;
+      color: $darker-gray;
     }
-    a:focus, a:hover, .active {
+    a:focus, a:hover, > li > a:focus, .active > a, .active > a:hover, .active > a:focus {
       color: $turquoise;
     }
   }
