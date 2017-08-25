@@ -38,20 +38,20 @@ category: Components
     }
 }
 .alert-info{
-    background-color: $bg-info;
-    color: $info-states-color;
+    background-color: $white_bg;
+    color: $info-color;
 }
 .alert-success {
-    background-color: $bg-success;
-    color: $success-states-color;
+    background-color: $white_bg;
+    color: $success-color;
 }
 .alert-warning {
-    background-color: $bg-warning;
-    color: $warning-states-color;
+    background-color: $white_bg;
+    color: $warning-color;
 }
 .alert-danger {
-    background-color: $bg-danger;
-    color: $danger-states-color;
+    background-color: $white_bg;
+    color: $danger-color;
 }
 
 .alert-simple-info {
