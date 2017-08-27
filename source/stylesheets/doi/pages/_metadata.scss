@@ -19,6 +19,9 @@ select.metadata {
 }
 
 .license {
-  font-size: $font-size-large;
-  color: $wet-asphalt;
+  font-size: 25px;
+
+  a {
+    color: $wet-asphalt;
+  }
 }
