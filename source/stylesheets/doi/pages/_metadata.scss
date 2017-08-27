@@ -1,12 +1,11 @@
 pre.metadata {
-  background-color: $white-bg;
+  font-size: 16px;
+}
+textarea.metadata {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 12px;
-  padding: 0;
-  border: 0;
-  margin: 0;
-  white-space: pre;
-  display: block;
+  border-left-width: 1px;
+  border-left-color: #E3E3E3;
 }
 select.metadata {
   border-left-width: 1px;
@@ -15,8 +14,4 @@ select.metadata {
 .help-block {
   margin-left: 5px;
   margin-top: 20px;
-}
-
-code#output {
-  background-color: white;
 }
