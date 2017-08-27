@@ -28,9 +28,9 @@ select.metadata {
     }
   }
   span {
-    margin-bottom: 3px;
 
     i {
+      vertical-align: text-bottom;
       color: $darker-gray;
       font-size: $font-size-base;
     }
