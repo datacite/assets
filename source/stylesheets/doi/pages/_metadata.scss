@@ -20,11 +20,15 @@ select.metadata {
 
 .license {
   font-size: 25px;
-  
+
   i {
     padding-top: 3px;
   }
   a {
     color: $wet-asphalt;
+  }
+  span {
+    color: $darker-gray;
+    font-size: $font-size-base;
   }
 }
