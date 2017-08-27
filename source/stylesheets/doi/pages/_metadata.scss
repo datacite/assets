@@ -1,5 +1,4 @@
 pre.metadata {
-  font-size: 14px;
   background-color: $white-bg;
   border: 0;
   padding: 0;
@@ -17,4 +16,8 @@ select.metadata {
 .help-block {
   margin-left: 5px;
   margin-top: 20px;
+}
+
+.license {
+  font-size: $font-size-large;
 }
