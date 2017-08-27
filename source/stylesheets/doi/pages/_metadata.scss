@@ -27,9 +27,12 @@ select.metadata {
       padding-top: 3px;
     }
   }
-  span i {
-    color: $darker-gray;
-    font-size: $font-size-base;
-    padding-bottom: 2px;
+  span {
+    padding-bottom: 3px;
+
+    i {
+      color: $darker-gray;
+      font-size: $font-size-base;
+    }
   }
 }
