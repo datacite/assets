@@ -19,15 +19,15 @@ select.metadata {
 }
 
 .license {
-  font-size: 25px;
-
-  i {
-    padding-top: 3px;
-  }
   a {
     color: $wet-asphalt;
+
+    i {
+      font-size: 25px;
+      padding-top: 3px;
+    }
   }
-  span {
+  span i {
     color: $darker-gray;
     font-size: $font-size-base;
   }
