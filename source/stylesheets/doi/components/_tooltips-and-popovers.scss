@@ -107,21 +107,21 @@
 
 
 .popover{
-    border: 1px solid $medium-gray;
+    border: 1px solid $lighter-gray;
     border-radius: $border-radius-base;
     font-weight: $font-weight-normal;
     padding: 0;
     z-index: 1031;
 }
 .popover-title{
-    background-color: $medium-gray;
+    background-color: $lighter-gray;
     border-bottom: 0 none;
-    font-size: $font-size-large;
+    font-size: $font-size-larger;
     font-weight: bold;
     line-height: 22px;
     padding: 15px 15px 8px 15px;
     margin: 0;
-    text-align: center;
+    text-align: left;
     border-radius: $border-radius-base $border-radius-base 0 0;
 }
 .popover-content{
