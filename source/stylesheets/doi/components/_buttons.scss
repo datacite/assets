@@ -18,7 +18,7 @@ category: Components
 
     padding: $padding-base-vertical $padding-base-horizontal;
 
-    @include btn-styles($turquoise, $default-turqouise-color);
+    @include btn-styles($default-color, $default-states-color);
     @include transition($fast-transition-time, linear);
 
     &:hover,
