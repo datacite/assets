@@ -165,13 +165,14 @@ $success-input-bg:           #ABF3CB !default;
 $other-medium-gray:          #A49E93 !default;
 $transparent-bg:             transparent !default;
 
-$default-color:              #66615B !default;
-$default-bg:                 #66615B !default;
-$default-states-color:       #403D39 !default;
+$default-color:              $wet-asphalt !default;
+$default-bg:                 $wet-asphalt !default;
+$bg-default:                 $wet-asphalt !default;
+$default-states-color:       $white-color !default;
 
-$primary-color:              $wet-asphalt !default;
-$primary-bg:                 $wet-asphalt !default;
-$bg-primary:                 $wet-asphalt !default;
+$primary-color:              $turquoise !default;
+$primary-bg:                 $turquoise !default;
+$bg-primary:                 $turquoise !default;
 $primary-states-color:       $white-color !default;
 
 $success-color:              $emerald !default;
