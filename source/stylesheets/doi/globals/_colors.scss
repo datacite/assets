@@ -168,12 +168,12 @@ $transparent-bg:             transparent !default;
 $default-color:              $wet-asphalt !default;
 $default-bg:                 $wet-asphalt !default;
 $bg-default:                 $wet-asphalt !default;
-$default-states-color:       $white-color !default;
+$default-states-color:       darken($wet-asphalt, 10%) !default;
 
 $primary-color:              $turquoise !default;
 $primary-bg:                 $turquoise !default;
 $bg-primary:                 $turquoise !default;
-$primary-states-color:       $white-color !default;
+$primary-states-color:       darken($turquoise, 10%) !default;
 
 $success-color:              $emerald !default;
 $success-bg:                 $emerald !default;
