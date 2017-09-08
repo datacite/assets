@@ -209,6 +209,8 @@ $bs-height-xs:   (floor($font-size-small * 1.2) + $padding-small-vertical + 1) !
 .btn-google        { @include btn-social(#dd4b39); }
 .btn-orcid         { @include btn-social(#9dc33a); }
 
+.btn-icon { padding-right: 0; }
+
 .claim-ok-btn {
   i { color: $white-color !important; }
 }
