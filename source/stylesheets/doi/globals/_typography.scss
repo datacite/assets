@@ -110,15 +110,15 @@ span.form-control-feedback.glyphicon {
     font-family: 'FontAwesome';
     font-style: normal;
     font-weight: normal;
-    line-height: 1;
+    line-height: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 span.form-control-feedback.glyphicon.glyphicon-ok {
-  content: "\f00c";
+  content: "";
 }
 span.form-control-feedback.glyphicon.glyphicon-remove {
-  content: "\f00d";
+  content: "";
 }
 pre {
   font-size: $font-size-small;
