@@ -103,7 +103,7 @@ blockquote small{
 .text-danger, .text-danger:hover{
     color: $danger-states-color !important;
 }
-.glyphicon {
+span.form-control-feedback.glyphicon {
     position: relative;
     top: 1px;
     display: inline-block;
@@ -114,10 +114,10 @@ blockquote small{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-.glyphicon-ok {
+span.form-control-feedback.glyphicon.glyphicon-ok {
   content: "\f00c";
 }
-.glyphicon-remove {
+span.form-control-feedback.glyphicon.glyphicon-remove {
   content: "\f00d";
 }
 pre {
