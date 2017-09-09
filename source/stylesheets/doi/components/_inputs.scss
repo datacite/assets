@@ -122,7 +122,7 @@
 }
 .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
     background-color: $light-gray;
-    color: $default-color;
+    color: $medium-gray;
     cursor: not-allowed;
 }
 
