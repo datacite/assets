@@ -103,22 +103,8 @@ blockquote small{
 .text-danger, .text-danger:hover{
     color: $danger-states-color !important;
 }
-span.form-control-feedback.glyphicon {
-    position: relative;
-    top: 1px;
-    display: inline-block;
-    font-family: 'FontAwesome';
-    font-style: normal;
-    font-weight: normal;
-    line-height: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-span.form-control-feedback.glyphicon.glyphicon-ok {
-  content: "";
-}
-span.form-control-feedback.glyphicon.glyphicon-remove {
-  content: "";
+span.form-control-feedback {
+  visibility: hidden;
 }
 pre {
   font-size: $font-size-small;
