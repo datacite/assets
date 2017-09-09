@@ -35,18 +35,22 @@
     }
 
     .has-success &{
-        background-color: $success-input-bg;
+        background-color: $white-bg;;
         color: $success-color;
+        border-color: $success-color;
     }
     .has-success &:focus{
         background-color: $white-bg;
+        border-color: $success-color;
     }
     .has-error &{
-        background-color: $danger-input-bg;
+        background-color: $white-bg;;
         color: $danger-color;
+        border-color: $danger-color;
     }
     .has-error &:focus{
         background-color: $white-bg;
+        border-color: $danger-color;
     }
 
     & + .form-control-feedback{
