@@ -93,7 +93,7 @@ category: Components
       padding-top: 5px;
       color: $darker-gray;
 
-      a, i {
+      > a, > i {
         font-size: $font-size-base;
         color: $darker-gray;
       }
