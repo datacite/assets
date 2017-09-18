@@ -11,9 +11,6 @@ h3.member-results, h3.provider-results, h3.user-results, h3.doi-results, h3.work
 
   .small { font-size: $font-size-base; }
 }
-h3.user-results {
-  border-bottom: 0;
-}
 .col-md-9#content-work, .col-md-9#content-contributor, .col-md-9#content-data-center, #content-data-center, #content-member, #content-user {
   padding-bottom: 1em;
 }
