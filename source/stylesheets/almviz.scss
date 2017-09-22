@@ -60,6 +60,26 @@
   border: 2px solid $wet-asphalt;
 }
 
+.bar.tiny {
+  fill: $peter-river;
+}
+
+.bar.small {
+  fill: darken($peter-river, 10%);
+}
+
+.bar.medium {
+  fill: darken($peter-river, 15%);
+}
+
+.bar.large {
+  fill: darken($peter-river, 20%);
+}
+
+.bar.extra-large {
+  fill: darken($peter-river, 25%);
+}
+
 .relations {
   border: 2px solid $peter-river;
 }
