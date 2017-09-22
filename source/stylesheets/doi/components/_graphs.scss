@@ -54,23 +54,23 @@ h2.graphs { margin-top: 2.5px; margin-bottom: 5px; }
 }
 
 .bar.tiny {
-  fill: $peter-river;
+  fill: $turquoise;
 }
 
 .bar.small {
-  fill: darken($peter-river, 10%);
+  fill: darken($turquoise, 10%);
 }
 
 .bar.medium {
-  fill: darken($peter-river, 15%);
+  fill: darken($turquoise, 20%);
 }
 
 .bar.large {
-  fill: darken($peter-river, 20%);
+  fill: darken($turquoise, 30%);
 }
 
 .bar.extra-large {
-  fill: darken($peter-river, 25%);
+  fill: darken($turquoise, 40%);
 }
 
 .bar.relations {
