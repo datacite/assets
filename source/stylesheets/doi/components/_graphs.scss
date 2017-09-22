@@ -58,19 +58,19 @@ h2.graphs { margin-top: 2.5px; margin-bottom: 5px; }
 }
 
 .bar.small {
-  fill: darken($turquoise, 10%);
+  fill: darken($turquoise, 5%);
 }
 
 .bar.medium {
-  fill: darken($turquoise, 20%);
+  fill: darken($turquoise, 10%);
 }
 
 .bar.large {
-  fill: darken($turquoise, 30%);
+  fill: darken($turquoise, 15%);
 }
 
 .bar.extra-large {
-  fill: darken($turquoise, 40%);
+  fill: darken($turquoise, 20%);
 }
 
 .bar.relations {
