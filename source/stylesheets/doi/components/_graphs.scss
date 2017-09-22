@@ -53,6 +53,26 @@ h2.graphs { margin-top: 2.5px; margin-bottom: 5px; }
   margin: auto;
 }
 
+.bar.tiny {
+  fill: $peter-river;
+}
+
+.bar.small {
+  fill: darken($peter-river, 10%);
+}
+
+.bar.medium {
+  fill: darken($peter-river, 15%);
+}
+
+.bar.large {
+  fill: darken($peter-river, 20%);
+}
+
+.bar.extra-large {
+  fill: darken($peter-river, 25%);
+}
+
 .bar.relations {
   fill: $primary-color;
 }
