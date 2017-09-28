@@ -7,6 +7,10 @@
     border-bottom: 1px solid $light-gray;
     margin-bottom: 3em;
 
+    li {
+      width: 100px;
+    }
+
     .nav-link {
       padding-left: 0;
       margin-left: 10px;
@@ -23,7 +27,6 @@
     }
     a:focus, > li > a:focus, .active > a, .active > a:focus {
       color: $turquoise;
-      font-weight: normal;
     }
   }
 }
