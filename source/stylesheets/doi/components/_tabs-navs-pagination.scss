@@ -17,11 +17,9 @@
     }
     a {
       color: $darker-gray;
-      font-weight: bold;
     }
     a:focus, a:hover, > li > a:focus, .active > a, .active > a:hover, .active > a:focus {
       color: $turquoise;
-      font-weight: bold;
     }
   }
 }
