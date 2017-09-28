@@ -16,16 +16,19 @@
       font-size: $font-size-h3;
     }
     a {
-      color: $link-color;
+      color: $darker-gray;
     }
     a:hover, .active > a:hover {
-      color: $link-hover-color;
+      color: $dark-gray;
     }
     a:focus, > li > a:focus, .active > a, .active > a:focus {
       color: $turquoise;
+      font-weight: normal;
     }
   }
 }
+
+
 
 .nav-tabs-navigation{
     text-align: center;
