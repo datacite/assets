@@ -16,9 +16,12 @@
       font-size: $font-size-h3;
     }
     a {
-      color: $darker-gray;
+      color: $link-color;
     }
-    a:focus, a:hover, > li > a:focus, .active > a, .active > a:hover, .active > a:focus {
+    a:hover, .active > a:hover {
+      color: $link-hover-color;
+    },
+    a:focus, > li > a:focus, .active > a, .active > a:focus {
       color: $turquoise;
     }
   }
