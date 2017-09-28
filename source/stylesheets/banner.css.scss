@@ -9,6 +9,8 @@
     text-align: center;
     background-color: #EB5E28;
     opacity: 0.5;
-    position: relative;
-    z-index: 100;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1000;
 }
