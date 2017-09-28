@@ -17,11 +17,11 @@
     }
     a {
       color: $darker-gray;
-      font-family: bold;
+      font-weight: bold;
     }
     a:hover, .active > a:hover {
       color: $dark-gray;
-      font-family: bold;
+      font-weight: bold;
     }
     a:focus, > li > a:focus, .active > a, .active > a:focus {
       color: $turquoise;
