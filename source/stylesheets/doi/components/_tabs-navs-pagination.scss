@@ -7,10 +7,6 @@
     border-bottom: 1px solid $light-gray;
     margin-bottom: 3em;
 
-    li {
-      width: 100px;
-    }
-
     .nav-link {
       padding-left: 0;
       margin-left: 10px;
@@ -21,9 +17,11 @@
     }
     a {
       color: $darker-gray;
+      font-family: bold;
     }
     a:hover, .active > a:hover {
       color: $dark-gray;
+      font-family: bold;
     }
     a:focus, > li > a:focus, .active > a, .active > a:focus {
       color: $turquoise;
