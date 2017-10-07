@@ -50,3 +50,12 @@ category: Components
     background-color: $light-red;
     margin-left: 10px;
 }
+.subject {
+  margin-top: 6px;
+
+  .label-primary{
+    color: $primary-color;
+    background-color: #FFFFFF;
+    border: 2px solid $primary-color;
+  }
+}
