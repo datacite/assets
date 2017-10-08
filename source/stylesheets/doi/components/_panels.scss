@@ -199,6 +199,11 @@ category: Components
   h3.member {
     margin-bottom: 0;
     color: $turquoise;
+
+    > a, > i {
+      color: $darker-gray;
+      font-size: 60%;
+    }
   }
   h3.edit {
     margin: 5px 10px 10px 0;
