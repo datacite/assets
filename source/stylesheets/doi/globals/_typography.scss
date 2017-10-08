@@ -68,13 +68,21 @@ p{
 }
 
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small, h1 .small, h2 .small, h3 .small, h4 .small, h5 .small, h6 .small, .h1 .small, .h2 .small, .h3 .small, .h4 .small, .h5 .small, .h6 .small {
-    color: $dark-gray;
-    font-weight: $font-weight-light;
-    line-height: $line-height-general;
+  color: $dark-gray;
+  font-weight: $font-weight-light;
+  line-height: $line-height-general;
+
+  > a, > i {
+    color: $darker-gray;
+  }
 }
 
 h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
+  font-size: 60%;
+
+  > a, > i {
     font-size: 60%;
+  }
 }
 .title-uppercase{
     text-transform: uppercase;
