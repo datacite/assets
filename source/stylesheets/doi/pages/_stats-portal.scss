@@ -41,11 +41,11 @@
       font-size: 10pt;
       padding: 4px;
       text-align: center;
-      font-weight: bold;
+      font-weight: $font-weight-bold;
   }
 
   tr.totals td {
-      font-weight: bold;
+      font-weight: $font-weight-bold;
       font-size: 105%;
   }
 
@@ -111,7 +111,7 @@
   }
 
   .bold {
-      font-weight: bold;
+      font-weight: $font-weight-bold;
   }
 
   #ui-state-default ui-corner-top ul{

@@ -1,15 +1,15 @@
 h2.work {
-  font-weight: bold;
+  font-weight: $font-weight-bold;
   margin: 5px 10px 30px 9px;
 }
 
 h2.member {
-  font-weight: bold;
+  font-weight: $font-weight-bold;
   margin: 5px 10px 10px 10px;
 }
 
 h3.edit {
-  font-weight: bold;
+  font-weight: $font-weight-bold;
   margin: 5px 10px 10px 10px;
   color: $turquoise;
 }

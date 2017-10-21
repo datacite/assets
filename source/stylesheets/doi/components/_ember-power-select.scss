@@ -220,7 +220,7 @@ $ember-basic-dropdown-content-background-color: $ember-power-select-background-c
 // Groups
 .ember-power-select-group-name {
   cursor: default;
-  font-weight: bold;
+  font-weight: $font-weight-bold;
 }
 
 // Disabled styles
