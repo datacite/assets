@@ -9,7 +9,7 @@ before_install:
       AWS_BUCKET="assets.datacite.org";
       RACK_ENV="production";
       cp .env.master .env;
-  - elif [ "$TRAVIS_BRANCH" != "master" ]; then
+    elif [ "$TRAVIS_BRANCH" != "master" ]; then
       AWS_BUCKET="assets.test.datacite.org";
       RACK_ENV="stage";
       cp .env.stage .env;
