@@ -5,7 +5,7 @@ cache: bundler
 
 before_install:
   - set -e
-  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+  - if [ "${TRAVIS_TAG?}" ]; then
       AWS_BUCKET="assets.datacite.org";
       RACK_ENV="production";
       cp .env.master .env;
