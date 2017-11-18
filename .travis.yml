@@ -9,13 +9,14 @@ before_install:
       AWS_BUCKET="assets.datacite.org";
       RACK_ENV="production";
       cp .env.master .env;
-    elif [ "$TRAVIS_BRANCH" != "master" ]; then
+    elif [ "$TRAVIS_BRANCH" == "master" ]; then
       AWS_BUCKET="assets.test.datacite.org";
       RACK_ENV="stage";
       cp .env.stage .env;
     else
       exit 1;
     fi
+
   - wget https://github.com/jgm/pandoc/releases/download/1.15.2/pandoc-1.15.2-1-amd64.deb
   - sudo dpkg -i pandoc-1.15.2-1-amd64.deb
   - rm pandoc-1.15.2-1-amd64.deb
