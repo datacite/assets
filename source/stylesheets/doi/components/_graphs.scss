@@ -21,9 +21,8 @@ h2.graphs { margin-top: 2.5px; margin-bottom: 5px; }
 .chart .subtitle { fill: grey; }
 .chart .label {
   color: $dark-gray;
-  font-weight: $font-weight-light;
   font-size: $font-size-small;
-  font-family: $font-family-base;
+  font-family: $font-family-sans-serif;
 }
 
 .chart .line {
