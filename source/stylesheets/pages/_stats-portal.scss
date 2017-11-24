@@ -29,7 +29,8 @@
       text-align: right;
 
       span {
-        font-variant-numeric: lining-nums tabular-nums;
+        font-variant-numeric: lining-nums;
+        font-feature-settings: "lnum";
       }
   }
 
