@@ -49,6 +49,9 @@ category: Components
     margin-left: -2px;
 }
 
+.btn-group-vertical > .btn {
+  text-align: left;
+}
 .btn-group-vertical > .btn:first-child:not(:last-child) {
   border-top-left-radius: 13px;
   border-top-right-radius: 13px;
