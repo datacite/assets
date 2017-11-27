@@ -193,8 +193,6 @@ textarea.form-control{
 .form-group {
   abbr { border: none; }
   .help-block { font-size: $font-size-small; }
-
-  .input-group .input-group-btn { height: 40px; }
 }
 .form-group.has-error {
   input, select { border-color: $danger-color; }
@@ -203,3 +201,4 @@ textarea.form-control{
 form .logo img {
   padding: 20px;
 }
+#password .input-group-btn { height: 40px; }
