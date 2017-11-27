@@ -41,16 +41,28 @@ category: Components
     background-color: $white_bg;
     color: $info-color;
     border: 2px solid $info-color;
+
+    i {
+      color: $info-color;
+    }
 }
 .alert-success {
     background-color: $white_bg;
     color: $success-color;
     border: 2px solid $success-color;
+
+    i {
+      color: $success-color;
+    }
 }
 .alert-warning {
     background-color: $white_bg;
     color: $warning-color;
     border: 2px solid $warning-color;
+
+    i {
+      color: $warning-color;
+    }
 }
 .alert-danger {
     background-color: $white_bg;
