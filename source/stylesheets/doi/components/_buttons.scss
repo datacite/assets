@@ -49,6 +49,18 @@ category: Components
     margin-left: -2px;
 }
 
+.btn-group-vertical > .btn:first-child {
+  border-top-left-radius: 26px;
+  border-top-right-radius: 26px;
+}
+.btn-group-vertical > .btn:not(:last-child) {
+  border-bottom-width: 0;
+}
+.btn-group-vertical > .btn:last-child {
+  border-bottom-left-radius: 26px;
+  border-bottom-right-radius: 26px;
+}
+
 // Apply the mixin to the buttons
 //.btn-default { @include btn-styles($default-color, $default-states-color); }
 .navbar .navbar-nav > li > a.btn-primary, .btn-primary { @include btn-styles($primary-color, $primary-states-color); }
