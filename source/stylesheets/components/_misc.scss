@@ -139,3 +139,22 @@ ul li {
 span.info { color: $info-color; }
 span.success { color: $success-color; }
 span.danger { color: $danger-color; }
+
+.license {
+  a {
+    color: $wet-asphalt;
+
+    i {
+      font-size: 25px;
+      padding-top: 3px;
+    }
+  }
+  span {
+
+    i {
+      margin-bottom: 10px;
+      color: $darker-gray;
+      font-size: $font-size-base;
+    }
+  }
+}
