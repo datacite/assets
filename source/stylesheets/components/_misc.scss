@@ -142,7 +142,7 @@ span.danger { color: $danger-color; }
 
 .license {
   a {
-    color: black;
+    color: $default-color;
 
     i {
       font-size: 25px;
