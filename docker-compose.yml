@@ -1,12 +1,7 @@
 version: '2'
 
-# when sharing the host folder, you need to reinstall Ruby gems
-# and npm modules into the vendor folder
-
 services:
   assets:
-    env_file:
-      - .env
     image: datacite/segugio
     ports:
       - "8010:4567"
