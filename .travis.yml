@@ -13,7 +13,7 @@ before_install:
       cp .env.master .env;
       AUTO_DEPLOY=true;
     elif [ "$TRAVIS_BRANCH" == "master" ]; then
-      AWS_BUCKET="assets.stage.datacite.org";
+      AWS_BUCKET="assets.test.datacite.org";
       RACK_ENV="stage";
       cp .env.stage .env;
       CLOUDFRONT_DISTRIBUTION_ID=$CLOUDFRONT_DISTRIBUTION_ID_STAGE;
