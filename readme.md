@@ -5,7 +5,6 @@
 The DataCite assets server. Uses the [middleman](https://middlemanapp.com/) static site generator.
 
 ## Development
-
 ```
 bundle exec middleman
 ```
