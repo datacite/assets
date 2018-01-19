@@ -4,7 +4,7 @@ $(document).ready(function() {
     return;
   }
   var doi = new URL(identifier);
-  url = 'https://data.datacite.org/application/vnd.schemaorg.ld+json/' + doi.pathname;
+  var url = 'https://data.datacite.org/application/vnd.schemaorg.ld+json/' + doi.pathname;
 
   $.ajax({
     url: url,
