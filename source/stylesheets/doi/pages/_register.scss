@@ -16,6 +16,20 @@
   }
 }
 
+.sign-in-background {
+  background-size: cover;
+  min-height: 1000px;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 20px;
+
+  .container{
+    margin-top: 10%;
+    position: relative;
+    z-index: 3;
+  }
+}
+
 .register-card, .register-card-login, .register-card-email {
   background-color: $white-color;
   border-radius: 8px;
