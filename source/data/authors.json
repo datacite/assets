@@ -137,9 +137,17 @@
     "name": "Laure Haak",
     "given": "Laure",
     "family": "Haak",
-    "bio": "Executive Director of ORCID, an international and interdisciplinary non-profit organization dedicated to providing the technical infrastructure to generate and maintain unique and persistent identifiers for researchers and scholars.",
+    "bio": "ORCID Executive Director.",
     "orcid": "https://orcid.org/0000-0001-5109-3700",
     "image_url": "/images/lhaak.png"
+  },
+  "epentz": {
+    "name": "Ed Pentz",
+    "given": "Ed",
+    "family": "Pentz",
+    "bio": "Crossref Executive Director.",
+    "orcid": "https://orcid.org/0000-0002-5993-8592",
+    "image_url": "/images/epentz.png"
   },
   "lnielsen": {
     "name": "Lars Holm Nielsen",
