@@ -133,6 +133,14 @@
     "twitter": "larsjuhljensen",
     "image_url": "/images/larsjuhljensen.jpg"
   },
+  "lhaak": {
+    "name": "Laure Haak",
+    "given": "Laure",
+    "family": "Haak",
+    "bio": "Executive Director of ORCID, an international and interdisciplinary non-profit organization dedicated to providing the technical infrastructure to generate and maintain unique and persistent identifiers for researchers and scholars.",
+    "orcid": "https://orcid.org/0000-0001-5109-3700",
+    "image_url": "/images/lhaak.png"
+  },
   "lnielsen": {
     "name": "Lars Holm Nielsen",
     "bio": "CERN (departing)"
