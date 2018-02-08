@@ -29,6 +29,10 @@
     margin-bottom: 8px;
   }
 
+  .form-control[disabled] {
+    background-color: $white-color;
+  }
+
   .form-group {
     margin: 0;
   }
