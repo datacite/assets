@@ -41,7 +41,7 @@ category: Components
 .text-primary, .text-findable, .panel-footer .text-findable {
     color: $primary-color;
 }
-.text-default, .text-draft, .panel-footer .text-draft {
+.text-default, .text-inactive, .panel-footer .text-inactive {
     color: $default-color;
 }
 .text-info, .text-registered, .panel-footer .text-registered {
@@ -50,7 +50,7 @@ category: Components
 .text-success {
     color: $success-color;
 }
-.text-warning, .text-inactive, .panel-footer .text-inactive {
+.text-warning, .text-draft, .panel-footer .text-draft {
     color: $warning-color;
 }
 .text-danger {
