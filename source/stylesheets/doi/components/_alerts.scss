@@ -37,6 +37,26 @@ category: Components
         top: 70px;
     }
 }
+
+.text-primary, .text-findable {
+    color: $primary-color;
+}
+.text-default, .text-draft {
+    color: $default-color;
+}
+.text-info, .text-registered {
+    color: $info-color;
+}
+.text-success {
+    color: $success-color;
+}
+.text-warning, .text-inactive {
+    color: $warning-color;
+}
+.text-danger {
+    color: $danger-color;
+}
+
 .alert-info{
     background-color: $white_bg;
     color: $info-color;
