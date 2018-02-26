@@ -157,12 +157,13 @@ textarea.form-control{
 }
 
 .compound-form {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
 
   input {
     z-index: 1;
+    border: 1px solid $light-gray;
     height: 45px;
   }
 }
