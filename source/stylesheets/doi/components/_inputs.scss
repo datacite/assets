@@ -177,7 +177,9 @@ textarea.form-control{
 
   input.form-control {
     z-index: 1;
-    border: 1px solid $light-gray !important;
+    border-right: 1px solid !important:
+
+    border: 1px solid $light-gray;
     height: 45px;
   }
 }
