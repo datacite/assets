@@ -149,6 +149,14 @@
     "orcid": "https://orcid.org/0000-0002-5993-8592",
     "image_url": "/images/epentz.png"
   },
+  "ghendricks": {
+    "name": "Ginny Hendricks",
+    "given": "Ginny",
+    "family": "Hendricks",
+    "bio": "Crossref Director of Member & Community Outreach.",
+    "orcid": "https://orcid.org/0000-0002-0353-2702",
+    "image_url": "/images/ghendricks.png"
+  },
   "lnielsen": {
     "name": "Lars Holm Nielsen",
     "bio": "CERN (departing)"
