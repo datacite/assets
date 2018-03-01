@@ -153,3 +153,12 @@ p.landing-page-centered {
 [hidden] {
   display: none !important;
 }
+
+.x-file--input {
+  height: 0;
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  width: 1px;
+  z-index: -1;
+}
