@@ -178,22 +178,22 @@ $primary-states-color:       darken($turquoise, 10%) !default;
 $success-color:              $emerald !default;
 $success-bg:                 $emerald !default;
 $bg-success:                 $emerald !default;
-$success-states-color:       $white-color !default;
+$info-states-color:          darken($emerald, 10%) !default;
 
 $info-color:                 $peter-river !default;
 $info-bg:                    $peter-river !default;
 $bg-info:                    $peter-river !default;
-$info-states-color:          $white-color !default;
+$info-states-color:          darken($peter-river, 10%) !default;
 
 $warning-color:              $carrot !default;
 $warning-bg:                 $carrot !default;
 $bg-warning:                 $carrot !default;
-$warning-states-color:       $white-color !default;
+$warning-states-color:       darken($carrot, 10%) !default;
 
 $danger-color:               $alizarin !default;
 $danger-bg:                  $alizarin !default;
 $bg-danger:                  $alizarin !default;
-$danger-states-color:        $white-color !default;
+$danger-states-color:        darken($alizarin, 10%) !default;
 
 $link-disabled-color:        #666666 !default;
 
