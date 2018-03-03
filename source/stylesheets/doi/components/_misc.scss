@@ -162,3 +162,7 @@ p.landing-page-centered {
   width: 1px;
   z-index: -1;
 }
+
+.help-block { font-size: $font-size-small; }
+.help-block.has-error { color: $danger-color; }
+.help-block.has-success { color: $success-color; }
