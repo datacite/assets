@@ -22,7 +22,6 @@
 //= require fitvids/jquery.fitvids.js
 //
 // Load theme-specific components
-//= require bootstrap-datepicker
 //= require bootstrap-select
 //
 // Load common d3 helper functions
