@@ -134,11 +134,16 @@
     border-color: $medium-gray;
 }
 
-.input-group-btn:last-child > .btn{
+.input-group-btn:last-child > .btn {
     margin-left: 0;
 }
-textarea.form-control{
-    padding: 10px;
+textarea.form-control {
+  padding: 10px;
+
+  &:metadata {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-size: 12px;
+  }
 }
 
 #metadata {
