@@ -29,8 +29,10 @@
 
     .has-success &,
     .has-error &,
+    .has-warning &,
     .has-success &:focus,
-    .has-error &:focus{
+    .has-error &:focus,
+    .has-warning &:focus {
         @include box-shadow(none);
     }
 
@@ -51,6 +53,15 @@
     .has-error &:focus{
         background-color: $white-bg;
         border-color: $danger-color;
+    }
+    .has-warning &{
+        background-color: $white-bg;;
+        color: $warning-color;
+        border-color: $warning-color;
+    }
+    .has-warning &:focus{
+        background-color: $white-bg;
+        border-color: $warning-color;
     }
 
     & + .form-control-feedback{
@@ -82,6 +93,11 @@
 .has-success{
     .form-control-feedback, .control-label{
         color: $success-color;
+    }
+}
+.has-warning{
+    .form-control-feedback, .control-label{
+        color: $warning-color;
     }
 }
 
@@ -241,6 +257,15 @@ textarea.form-control {
       background-color: $white-bg;
       border-color: $danger-color;
     }
+    &.has-warning {
+      background-color: $white-bg;;
+      color: $warning-color;
+      border-color: $warning-color;
+    }
+    &.has-warning &:focus{
+      background-color: $white-bg;
+      border-color: $warning-color;
+    }
   }
 
   .help-block {
@@ -287,7 +312,7 @@ textarea.form-control {
   abbr { border: none; }
   .help-block { font-size: $font-size-small; }
 
-  &.has-error {
+  &.has-error, &.has-warning {
     :last-child.help-block {
       display: none;
     }
@@ -296,6 +321,10 @@ textarea.form-control {
 .form-group.has-error {
   input, select { border-color: $danger-color; }
   .help-block { color: $danger-color; }
+}
+.form-group.has-warning {
+  input, select { border-color: $warning-color; }
+  .help-block { color: $warning-color; }
 }
 
 form .logo img {
