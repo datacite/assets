@@ -170,6 +170,14 @@ textarea.form-control {
 
   .input-group-btn {
     vertical-align: top;
+    
+    .btn {
+      height: 40px;
+
+      i {
+        padding-top: 3px;
+      }
+    }
   }
 
   .input-group-addon {
@@ -334,4 +342,8 @@ form .logo img {
 
 .multi-part-form, .form-group {
   margin-bottom: 1.5em;
+
+  .form-control {
+    margin-bottom: 0.5em;
+  }
 }
