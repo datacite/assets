@@ -157,6 +157,14 @@
     "orcid": "https://orcid.org/0000-0002-0353-2702",
     "image_url": "/images/ghendricks.png"
   },
+  "abirukuo": {
+    "name": "Aliaksandr Birukou",
+    "given": "Aliaksandr",
+    "family": "Birukou",
+    "bio": "Executive Editor for Computer Science at SpringerNature.",
+    "orcid": "https://orcid.org/0000-0002-4925-9131",
+    "image_url": "/images/abirukou.png"
+  },
   "lnielsen": {
     "name": "Lars Holm Nielsen",
     "bio": "CERN (departing)"
