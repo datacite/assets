@@ -296,6 +296,10 @@ textarea.form-control {
     text-decoration: none;
   }
 
+  input[name="query"]::-ms-clear {
+    display: none;
+  }
+
   input[name="query"] {
     z-index: 1;
     height: 45px;
