@@ -167,4 +167,8 @@ p.landing-page-centered {
 .help-block.has-error { color: $danger-color; }
 .help-block.has-success { color: $success-color; }
 .help-block.has-warning { color: $warning-color; }
-.help-header { margin-bottom: 0 }
+
+h3.help-header {
+  margin: 5px 10px 0 0;
+  color: $turquoise;
+}
