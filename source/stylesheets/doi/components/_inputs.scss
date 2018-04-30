@@ -87,7 +87,7 @@
 
 .has-error{
     .form-control-feedback, .control-label{
-        color: $danger-color;
+        color: $danger-heor;
     }
 }
 .has-success{
@@ -360,4 +360,8 @@ h3.metadata-form {
   margin: 0 0 .35em 0;
 
   .small { font-size: $font-size-base; }
+}
+
+.control-label &:col-md-2 {
+  font-weight: $font-weight-normal;
 }
