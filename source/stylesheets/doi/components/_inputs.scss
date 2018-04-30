@@ -165,9 +165,6 @@ textarea.form-control {
 }
 
 .compound-form {
-  margin-left: auto;
-  margin-right: auto;
-
   .input-group-btn {
     vertical-align: top;
 
@@ -180,10 +177,17 @@ textarea.form-control {
     }
   }
 
+  .input-group {
+    position: relative;
+    float: left;
+    min-height: 1px;
+    padding-left: 30px;
+    padding-right: 15px;
+  }
+
   .input-group-addon {
     vertical-align: top;
     text-align: left;
-    height: 40px;
     margin: 0;
     padding: 0;
 
@@ -210,7 +214,7 @@ textarea.form-control {
       font-size: 18px;
       position: absolute;
       right: 45px;
-      top: 42px;
+      top: 11px;
       height: 12px;
       text-decoration: none;
     }
@@ -221,20 +225,12 @@ textarea.form-control {
       font-size: 18px;
       position: absolute;
       right: 18px;
-      top: 42px;
+      top: 11px;
       height: 12px;
       text-decoration: none;
     }
   }
   .form-group {
-    padding-top: 30px;
-
-    .control-label {
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
     &.has-feedback .control-label {
       left: -120px;
     }
@@ -277,7 +273,7 @@ textarea.form-control {
   }
 
   .help-block {
-    margin-left: -118px;
+    margin-left: -88px;
     margin-top: 44px;
   }
 }
