@@ -50,6 +50,15 @@
     "email": "rhallett@datacite.org",
     "image_url": "/images/rhallett.png"
   },
+    "rdasler": {
+    "name": "Robin Dasler",
+    "given": "Robin",
+    "family": "Dasler",
+    "bio": "DataCite Product Manager",
+    "orcid": "https://orcid.org/0000-0002-4695-7874",
+    "email": "robin.dasler@datacite.org",
+    "image_url": "/images/robin.png"
+  },
   "jstarr": {
     "name": "Joan Starr",
     "given": "Joan",
