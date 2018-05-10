@@ -8,14 +8,14 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (5.0.6)
+    activesupport (5.0.7)
       concurrent-ruby (~> 1.0, >= 1.0.2)
-      i18n (~> 0.7)
+      i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
-    backports (3.10.3)
+    backports (3.11.3)
     borrower (0.10.0)
     coffee-script (2.4.1)
       coffee-script-source
@@ -25,16 +25,16 @@ GEM
       sass (>= 3.2, < 3.5)
     concurrent-ruby (1.0.5)
     contracts (0.13.0)
-    dotenv (2.2.1)
+    dotenv (2.4.0)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
     erubis (2.7.0)
-    eventmachine (1.2.5)
+    eventmachine (1.2.6)
     execjs (2.7.0)
     fast_blank (1.0.0)
-    fastimage (2.1.0)
-    ffi (1.9.18)
+    fastimage (2.1.3)
+    ffi (1.9.23)
     haml (5.0.4)
       temple (>= 0.8.0)
       tilt
@@ -44,7 +44,7 @@ GEM
       handlebars-source (~> 4.0.5)
       therubyracer (~> 0.12.1)
     handlebars-source (4.0.11)
-    hashie (3.5.6)
+    hashie (3.5.7)
     hologram (1.4.0)
       redcarpet (>= 2.2, < 4.0)
       rouge (>= 1.5)
@@ -103,7 +103,7 @@ GEM
     middleman-sprockets (4.1.1)
       middleman-core (~> 4.0)
       sprockets (>= 3.0)
-    minitest (5.10.3)
+    minitest (5.11.3)
     padrino-helpers (0.13.3.4)
       i18n (~> 0.6, >= 0.6.7)
       padrino-support (= 0.13.3.4)
@@ -112,18 +112,19 @@ GEM
       activesupport (>= 3.1)
     pandoc-ruby (1.0.0)
     parallel (1.12.1)
-    public_suffix (3.0.1)
-    rack (2.0.3)
-    rack-livereload (0.3.16)
+    public_suffix (3.0.2)
+    rack (2.0.5)
+    rack-cors (1.0.2)
+    rack-livereload (0.3.17)
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
-    rb-fsevent (0.10.2)
+    rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
     redcarpet (3.4.0)
     ref (2.0.0)
-    rouge (3.0.0)
+    rouge (3.1.1)
     sass (3.4.25)
     servolux (0.13.0)
     sprockets (3.7.1)
@@ -138,7 +139,7 @@ GEM
     tilt-handlebars (1.4.0)
       handlebars (~> 0.7)
       tilt (>= 1.3, < 3)
-    tzinfo (1.2.4)
+    tzinfo (1.2.5)
       thread_safe (~> 0.1)
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
@@ -154,10 +155,9 @@ DEPENDENCIES
   middleman-livereload
   middleman-sprockets (~> 4.1.0)
   pandoc-ruby (~> 1.0)
+  rack-cors (~> 1.0, >= 1.0.2)
   tilt (~> 2.0)!
   tilt-handlebars (~> 1.4)
-  tzinfo-data
-  wdm (~> 0.1.0)
 
 BUNDLED WITH
-   1.16.0
+   1.16.1

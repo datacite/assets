@@ -221,6 +221,8 @@ category: Components
   }
   small, .small { font-weight: normal; font-size: $font-size-base; line-height: $line-height-base; }
 
+  .subtitle { font-weight: normal; font-size: $font-size-base; line-height: 1.1; margin-bottom: 10px; }
+  
   span { 
     font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
     font-size: $font-size-base;

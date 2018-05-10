@@ -53,9 +53,17 @@ category: Components
 .subject {
   margin-top: 6px;
 
-  .label-primary{
+  .label-primary {
     color: $primary-color;
     background-color: #FFFFFF;
     border: 2px solid $primary-color;
   }
+  .label-info {
+    color: $info-color;
+    background-color: #FFFFFF;
+    border: 2px solid $info-color;
+  }
+  .label-sm {
+    font-size: $font-size-xs;  
+}
 }
