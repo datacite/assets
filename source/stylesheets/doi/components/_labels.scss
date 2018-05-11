@@ -63,6 +63,11 @@ category: Components
     background-color: #FFFFFF;
     border: 2px solid $info-color;
   }
+  .label-default {
+    color: $dark-gray;
+    background-color: #FFFFFF;
+    border: 2px solid $dark-gray;
+  }
   .label-sm {
     font-size: $font-size-xs;  
 }
