@@ -176,7 +176,19 @@
   },
   "lnielsen": {
     "name": "Lars Holm Nielsen",
-    "bio": "CERN (departing)"
+    "given": "Lars Holm",
+    "family": "Nielsen",
+    "bio": "Zenodo Project Leader at CERN.",
+    "orcid": "https://orcid.org/0000-0001-8135-3489",
+    "image_url": "/images/larsholmnielsen.jpeg"
+  },
+  "arfon": {
+    "name": "Arfon Smith",
+    "given": "Arfon",
+    "family": "Smith",
+    "bio": "Head of the Data Science Mission Office at Space Telescope Science Institute.",
+    "orcid": "https://orcid.org/0000-0002-3957-2474",
+    "image_url": "/images/arfon.png"
   },
   "jashton": {
     "name": "Jan Ashton",
