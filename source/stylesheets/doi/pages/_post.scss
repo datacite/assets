@@ -29,7 +29,7 @@
     font-family: 'Source Sans Pro', "Helvetica", Arial, sans-serif;
   }*/
   img, table {
-    max-width: 100%;
+    max-width: 100% !important;
     margin: 0 auto .5em auto;
     display: block;
   }
