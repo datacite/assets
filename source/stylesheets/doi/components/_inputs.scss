@@ -165,6 +165,8 @@ textarea.form-control {
 }
 
 .compound-form {
+  margin-bottom: 0 !important;
+
   .input-group-btn {
     vertical-align: top;
 
@@ -181,7 +183,7 @@ textarea.form-control {
     position: relative;
     float: left;
     min-height: 1px;
-    padding-left: 30px;
+    padding-left: 15px;
     padding-right: 15px;
   }
 
