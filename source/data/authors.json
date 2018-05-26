@@ -29,6 +29,7 @@
     "family": "Cruse",
     "bio": "DataCite Executive Director",
     "orcid": "https://orcid.org/0000-0002-9300-5278",
+    "github": "pcruse",
     "email": "patricia.cruse@datacite.org",
     "image_url": "/images/cruse.jpg"
   },
@@ -38,6 +39,7 @@
     "family": "Garza",
     "bio": "DataCite Application Developer",
     "orcid": "https://orcid.org/0000-0003-3484-6875",
+    "github": "kjgarza",
     "email": "kgarza@datacite.org",
     "image_url": "/images/kristian.png"
   },
@@ -47,6 +49,7 @@
     "family": "Hallett",
     "bio": "DataCite Application Developer",
     "orcid": "https://orcid.org/0000-0002-8599-0773",
+    "github": "richardhallett",
     "email": "rhallett@datacite.org",
     "image_url": "/images/rhallett.png"
   },
@@ -56,8 +59,18 @@
     "family": "Dasler",
     "bio": "DataCite Product Manager",
     "orcid": "https://orcid.org/0000-0002-4695-7874",
+    "github": "daslerr",
     "email": "robin.dasler@datacite.org",
     "image_url": "/images/robin.png"
+  },
+  "bdreyer": {
+    "name": "Britta Dreyer",
+    "given": "Britta",
+    "family": "Dreyer",
+    "bio": "DataCite Business Manager",
+    "orcid": "https://orcid.org/0000-0002-0687-5460",
+    "github": "brittadreyer",
+    "image_url": "/images/bdreyer.png"
   },
   "jstarr": {
     "name": "Joan Starr",
