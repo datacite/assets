@@ -33,9 +33,13 @@
     margin: 0 auto .5em auto;
     display: block;
   }
-  figure {
+  figure, .figure {
     margin: 0;
     padding: 0 0 30px;
+
+    .caption {
+      font-size: $font-size-small;
+    }
   }
   code {
     font-size: $font-size-xs;
