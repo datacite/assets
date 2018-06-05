@@ -89,6 +89,14 @@
     "orcid": "https://orcid.org/0000-0003-2255-1869",
     "image_url": "/images/dl.jpg"
   },
+  "abudden": {
+    "name": "Amber Budden",
+    "given": "Amber",
+    "family": "Budden",
+    "bio": "Director for Community Engagement and Outreach at DataONE",
+    "orcid": "https://orcid.org/0000-0003-2885-3980",
+    "image_url": "/images/abudden.jpg"
+  },
   "jlin": {
     "name": "Jennifer Lin",
     "given": "Jennifer",
