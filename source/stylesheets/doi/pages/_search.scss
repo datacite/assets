@@ -2,7 +2,7 @@ h3.results {
   margin: 0 0 .35em .75em;
   font-weight: $font-weight-bold;
 }
-h3.member-results, h3.provider-results, h3.user-results, h3.doi-results, h3.work-results, h3.client-results, h3.client-prefix-results, h3.prefix-results, , h3.provider-prefix-results {
+h3.member-results, h3.provider-results, h3.user-results, h3.doi-results, h3.work-results, h3.client-results, h3.client-prefix-results, h3.prefix-results, , h3.provider-prefix-results, h3.repository-results {
   font-weight: $font-weight-bold;
   color: $turquoise;
   border-bottom: 1px solid $medium-gray;
@@ -11,6 +11,7 @@ h3.member-results, h3.provider-results, h3.user-results, h3.doi-results, h3.work
 
   .small { font-size: $font-size-base; }
 }
+h3.repository-results { margin: 0 0 .35em 0; }
 .col-md-9#content-work, .col-md-9#content-contributor, .col-md-9#content-data-center, #content-data-center, #content-member, #content-user {
   padding-bottom: 1em;
 }
@@ -27,5 +28,10 @@ h3.member-results, h3.provider-results, h3.user-results, h3.doi-results, h3.work
 
   .help-block {
     margin-left: 12px;
+  }
+
+  .help-block.search-form {
+    margin-left: 0;
+    font-size: $font-size-small;
   }
 }
