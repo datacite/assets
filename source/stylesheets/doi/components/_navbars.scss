@@ -30,7 +30,7 @@ For navigation within a page we use pills.
 .navbar{
     border: $none;
     font-size: $font-size-navbar;
-    padding: 10px;
+    padding: 0;
     margin-bottom: 0;
     z-index: 3;
 
@@ -39,6 +39,10 @@ For navigation within a page we use pills.
         margin: $navbar-margin-brand;
         padding: $navbar-padding-brand;
         font-size: $font-size-large-navbar;
+
+        span.repository-finder {
+            color: $turquoise;
+        }
     }
     .navbar-nav{
          > li > a {
