@@ -211,6 +211,14 @@
     "orcid": "https://orcid.org/0000-0002-3957-2474",
     "image_url": "/images/arfon.png"
   },
+  "jchodacki": {
+    "name": "John Chodacki",
+    "given": "John",
+    "family": "Chodacki",
+    "bio": "Director of the University of California Curation Center (UC3) at California Digital Library (CDL).",
+    "orcid": "https://orcid.org/0000-0002-7378-2408",
+    "image_url": "/images/jchodacki.jpg"
+  },
   "jashton": {
     "name": "Jan Ashton",
     "bio": "British Library"
