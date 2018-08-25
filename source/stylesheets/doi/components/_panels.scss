@@ -219,6 +219,10 @@ category: Components
   h3.metadata {
     margin: 0 0 .35em 1em;
   }
+
+  div.form-help-header {
+    h3, div { margin-left: -5px; }
+  }
   small, .small { font-weight: normal; font-size: $font-size-base; line-height: $line-height-base; }
 
   .subtitle { font-weight: normal; font-size: $font-size-base; line-height: 1.1; margin-bottom: 10px; }
