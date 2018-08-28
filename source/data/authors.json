@@ -72,6 +72,15 @@
     "github": "brittadreyer",
     "image_url": "/images/bdreyer.png"
   },
+  "hcousijn": {
+    "name": "Helena Cousijn",
+    "given": "Helena",
+    "family": "Cousijn",
+    "bio": "DataCite Director of Community Engagement and Communications",
+    "orcid": "https://orcid.org/0000-0001-6660-6214",
+    "github": "hcousijn",
+    "image_url": "/images/hcousijn.png"
+  },
   "jstarr": {
     "name": "Joan Starr",
     "given": "Joan",
