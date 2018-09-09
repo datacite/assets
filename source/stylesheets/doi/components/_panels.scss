@@ -191,6 +191,17 @@ category: Components
   }
 }
 
+h3.member {
+  margin-bottom: 0;
+  font-weight: bold;
+  color: $turquoise;
+
+  > a, > i, > .btn-icon {
+    color: $darker-gray;
+    font-size: 60%;
+  }
+}
+
 .panel-body {
   h3, h4 { margin-bottom: 10px; font-weight: bold; }
   h5 { margin-bottom: 0; font-weight: bold; }
