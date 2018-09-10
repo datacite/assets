@@ -294,6 +294,15 @@ textarea.form-control {
     text-decoration: none;
   }
 
+  #search-clear-repo {
+    z-index: 3;
+    color: $medium-gray;
+    position: absolute;
+    right: 90px;
+    top: 16px;
+    text-decoration: none;
+  }
+
   input[name="query"]::-ms-clear {
     display: none;
   }
@@ -362,4 +371,30 @@ h3.metadata-form {
 
 label.control-label.col-md-2 {
   font-weight: $font-weight-normal;
+}
+
+span.twitter-typeahead {
+  // height: 53px;
+  width: 100%;
+  margin-top: 6px;
+  // padding-bottom: 3px;
+}
+
+.tt-hint {
+  height: 45px;
+}
+
+.tt-input {
+  height: 45px;
+  border-right: none;
+}
+
+.tt-menu {
+  padding: 5px 10px 5px 10px;
+  border-left: 1px solid $dark-gray;
+  border-right: 1px solid $dark-gray;
+  border-bottom: 1px solid $dark-gray;
+  width: 100%;
+  background: white;
+  cursor: pointer;
 }
