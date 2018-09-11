@@ -10,8 +10,9 @@
   h3.work { margin-bottom: 0; font-weight: bold; }
   h5 { margin-bottom: 0; font-weight: bold; }
   .subtitle { font-weight: normal; font-size: $font-size-base; line-height: 1.1; margin-bottom: 10px; }
-  .alert-success { 
+  .alert-repository { 
     p,li,h5 { color: $font-color; }
+    margin-top: 1.5em;
   }
 }
 .icons-sprite, .icons-access_inactive, .icons-access_inactive_32, .icons-api_active, .icons-api_active_32, .icons-api_inactive, .icons-api_inactive_32, .icons-ark_active, .icons-ark_active_32, .icons-certificate_active, .icons-certificate_active_32, .icons-certificate_inactive, .icons-certificate_inactive_32, .icons-closed_access_active, .icons-closed_access_active_32, .icons-doi_active, .icons-doi_active_32, .icons-hdl_active, .icons-hdl_active_32, .icons-info_active, .icons-info_active_32, .icons-info_inactive, .icons-info_inactive_32, .icons-licenses_active, .icons-licenses_active_32, .icons-licenses_inactive, .icons-licenses_inactive_32, .icons-open_access_active, .icons-open_access_active_32, .icons-other_active, .icons-other_active_32, .icons-persistent_identifier_active, .icons-persistent_identifier_active_32, .icons-persistent_identifier_inactive, .icons-persistent_identifier_inactive_32, .icons-policy_active, .icons-policy_active_32, .icons-policy_inactive, .icons-policy_inactive_32, .icons-purl_active, .icons-purl_active_32, .icons-restricted_access_active, .icons-restricted_access_active_32, .icons-urn_active, .icons-urn_active_32 {
