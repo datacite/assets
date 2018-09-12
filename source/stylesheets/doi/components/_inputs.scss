@@ -280,7 +280,7 @@ textarea.form-control {
   }
 }
 
-#search {
+#search, #search-repository {
   margin-bottom: 3px;
   margin-left: auto;
   margin-right: auto;
@@ -346,6 +346,10 @@ textarea.form-control {
   .help-block { color: $warning-color; }
 }
 
+#search-repository {
+  margin-bottom: 1.5em;
+}
+
 form .logo img {
   padding: 20px;
 }
@@ -374,10 +378,8 @@ label.control-label.col-md-2 {
 }
 
 span.twitter-typeahead {
-  // height: 53px;
   width: 100%;
   margin-top: 6px;
-  // padding-bottom: 3px;
 }
 
 .tt-hint {
@@ -397,4 +399,14 @@ span.twitter-typeahead {
   width: 100%;
   background: white;
   cursor: pointer;
+}
+
+.loading-slider {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  z-index: 999;
 }
