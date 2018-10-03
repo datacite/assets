@@ -81,6 +81,15 @@
     "github": "hcousijn",
     "image_url": "/images/hcousijn.png"
   },
+  "rlammey": {
+    "name": "Rachael Lammey",
+    "given": "Rachael",
+    "family": "Lammey",
+    "bio": "Crossref Head of Community Outreach",
+    "orcid": "https://orcid.org/0000-0001-5800-1434",
+    "github": "rlammey",
+    "image_url": "/images/rlammey.jpg"
+  },
   "jstarr": {
     "name": "Joan Starr",
     "given": "Joan",
