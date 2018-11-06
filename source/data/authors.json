@@ -80,6 +80,15 @@
     "orcid": "https://orcid.org/0000-0001-6660-6214",
     "github": "hcousijn",
     "image_url": "/images/hcousijn.png"
+   },
+  "mhirsch": {
+    "name": "Mary Hirsch",
+    "given": "Mary",
+    "family": "Hirsch",
+    "bio": "DataCite Member Support Manager",
+    "orcid": "https://orcid.org/0000-0002-6628-8225",
+    "github": "maryhirsch",
+    "image_url": "/images/mhirsch.png" 
   },
   "rlammey": {
     "name": "Rachael Lammey",
