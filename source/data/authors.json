@@ -254,6 +254,13 @@
     "orcid": "https://orcid.org/0000-0003-3585-6733",
     "image_url": "/images/thabermann.jpg"
   },
+  "nnoy": {
+    "name": "Nathasha Noy",
+    "given": "Nathasha",
+    "family": "Noy",
+    "bio": "Research Scientist at Google AI.",
+    "image_url": "/images/nnoy.jpg"
+  },
   "jashton": {
     "name": "Jan Ashton",
     "bio": "British Library"
