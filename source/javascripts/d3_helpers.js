@@ -187,6 +187,31 @@ function formattedAuthor(author) {
   return name;
 }
 
+// construct author list from author object
+function formattedCreatorList(creatorList) {
+  creatorList = creatorList.map(function(d) { return formattedCreator(d); });
+  switch (creatorList.length) {
+    case 0:
+    case 1:
+    case 2:
+      return creatorList.join(" & ");
+    case 3:
+    case 4:
+      return creatorList.slice(0,-1).join(", ") + " & " + creatorList[creatorList.length - 1];
+    default:
+      return creatorList.slice(0,3).join(", ") + ", <em>et al</em>";
+  }
+}
+
+// construct author object from author parts
+function formattedCreator(creator) {
+  var givenName = (typeof creator.givenName !== "undefined") ? creator.givenName : "";
+  var familyName = (typeof creator.familyName !== "undefined") ? creator.familyName : "";
+  var name = [givenName, familyName].join(" ");
+  // var name = (typeof creator.nameIdentifiers !== "undefined") ? '<a href="/contributors/' + creator["ORCID"].substring(7) + '">' + name + '</a>' : name;
+  return name;
+}
+
 function formattedState(state) {
   if (state === "failed") {
     return '<span class="label label-fatal">failed</span>';
