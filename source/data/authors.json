@@ -80,6 +80,14 @@
     "orcid": "https://orcid.org/0000-0001-6660-6214",
     "github": "hcousijn",
     "image_url": "/images/hcousijn.png"
+  },
+  "jbrase": {
+    "name": "Jan Brase",
+    "given": "Jan",
+    "family": "Brase",
+    "bio": "Head of Research and Development, SUB Goettingen",
+    "orcid": "https://orcid.org/0000-0002-8250-6253",
+    "image_url": "/images/jbrase.jpg"
    },
   "mhirsch": {
     "name": "Mary Hirsch",
