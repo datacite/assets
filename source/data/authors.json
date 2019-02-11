@@ -107,6 +107,14 @@
     "github": "rlammey",
     "image_url": "/images/rlammey.jpg"
   },
+  "mgould": {
+    "name": "Maria Gould",
+    "given": "Maria",
+    "family": "Gould",
+    "bio": "Research Data Specialist & Product Manager",
+    "orcid": "http://orcid.org/0000-0002-2916-3423",
+    "image_url": "/images/mariagould.png"
+   }, 
   "jstarr": {
     "name": "Joan Starr",
     "given": "Joan",
