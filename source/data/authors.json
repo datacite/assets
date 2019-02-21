@@ -107,6 +107,14 @@
     "github": "rlammey",
     "image_url": "/images/rlammey.jpg"
   },
+  "ameadows": {
+    "name": "Alice Meadows",
+    "given": "Alice",
+    "family": "Meadows",
+    "bio": "ORCID Director of Communications",
+    "orcid": "https://orcid.org/0000-0003-2161-3781",
+    "image_url": "/images/ameadows.jpg"
+  },
   "mgould": {
     "name": "Maria Gould",
     "given": "Maria",
