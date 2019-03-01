@@ -164,6 +164,19 @@ textarea.form-control {
   }
 }
 
+.input-group-btn {
+  vertical-align: top;
+
+  .btn {
+    height: 40px;
+    padding-top: 6px;
+
+    i {
+      padding-top: 3px;
+    }
+  }
+}
+
 .compound-form {
   margin-bottom: 0 !important;
 
