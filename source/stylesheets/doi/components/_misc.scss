@@ -164,9 +164,13 @@ p.landing-page-centered {
 }
 
 .help-block { font-size: $font-size-small; margin-bottom: 20px; }
-.help-block.has-error { color: $danger-color; }
-.help-block.has-success { color: $success-color; }
-.help-block.has-warning { color: $warning-color; }
+.help-block.has-error { color: $danger-color !important; }
+.help-block.has-success { color: $success-color !important; }
+.help-block.has-warning { color: $warning-color !important; }
+
+.input.has-error { color: $danger-color !important; }
+.input.has-success { color: $success-color !important; }
+.input.has-warning { color: $warning-color !important; }
 
 .table-condensed > thead > tr > th, .table-condensed > thead > tr > td,
 .table-condensed > tbody > tr > th, .table-condensed > tbody > tr > td,

@@ -358,6 +358,7 @@ textarea.form-control {
 .form-group {
   abbr { border: none; }
   .help-block { font-size: $font-size-small; }
+  .help-block-fragment { display: block !important; }
 
   &.has-error, &.has-warning {
     :last-child.help-block {
