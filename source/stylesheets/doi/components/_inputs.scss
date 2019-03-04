@@ -178,14 +178,14 @@ textarea.form-control {
 }
 
 .power-select-label {
-  margin: 0 80px;
+  margin: 0 80px !important;
 }
 
 .power-select-fragment {
-  margin: 0 95px;
+  margin: 0 95px ;
 }
 
-.col-md-offset-3 {
+.col-md-9 {
   label.subtitle {
     font-size: $font-size-small;
     margin-bottom: 5px;
