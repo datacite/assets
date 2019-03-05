@@ -177,6 +177,17 @@ textarea.form-control {
   }
 }
 
+.radio-fragment {
+  padding-left: 80px;
+  margin-top: -6px;
+  padding-bottom: 10px;
+
+  .subtitle {
+    font-size: $font-size-small !important;
+    margin-right: 10px;
+  }
+}
+
 .power-select-label {
   margin: 0 80px !important;
 }
