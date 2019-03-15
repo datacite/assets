@@ -323,7 +323,11 @@
   },
   "msmaele": {
     "name": "Madeleine de Smaele",
-    "bio": "TU Delft"
+    "given": "Madeleine",
+    "family": "de Smaele",
+    "bio": "TU Delft",
+    "orcid": "https://orcid.org/0000-0002-8963-3415",
+    "image_url": "/images/msmaele.jpg"
   },
   "myahia": {
     "name": "Mohamed Yahia",
