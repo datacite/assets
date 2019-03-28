@@ -278,6 +278,14 @@
     "orcid": "https://orcid.org/0000-0003-3585-6733",
     "image_url": "/images/thabermann.jpg"
   },
+  "aaryani": {
+    "name": "Amir Aryani",
+    "given": "Amir",
+    "family": "Aryani",
+    "bio": "Head, Social Data Analytics Lab, Swinburne University",
+    "orcid": "https://orcid.org/0000-0002-4259-9774",
+    "image_url": "/images/aaryani.png"
+  },
   "nnoy": {
     "name": "Natasha Noy",
     "given": "Natasha",
