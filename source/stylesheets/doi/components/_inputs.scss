@@ -178,9 +178,7 @@ textarea.form-control {
 }
 
 .radio-fragment {
-  padding-left: 80px;
-  margin-top: -6px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 
   .subtitle {
     font-size: $font-size-small !important;
@@ -194,11 +192,11 @@ textarea.form-control {
 }
 
 .power-select-label {
-  margin: 0 80px !important;
+  margin: 0 !important;
 }
 
 .power-select-fragment {
-  margin: 0 95px !important;
+  margin: 0 15px !important;
 
   .col-md-9.col-md-offset-3 {
     margin-left: 0 !important;
