@@ -89,6 +89,14 @@
     "orcid": "https://orcid.org/0000-0002-8250-6253",
     "image_url": "/images/jbrase.jpg"
    },
+  "fziedorn": {
+    "name": "Frauke Ziedorn",
+    "given": "Frauke",
+    "family": "Ziedorn",
+    "bio": "Research Data Management Consultant, TIB Hannover",
+    "orcid": "https://orcid.org/0000-0002-1143-781X",
+    "image_url": "/images/fziedorn.jpg"
+   },
   "mhirsch": {
     "name": "Mary Hirsch",
     "given": "Mary",
@@ -340,10 +348,6 @@
   "myahia": {
     "name": "Mohamed Yahia",
     "bio": "Inist-CNRS"
-  },
-  "fziedorn": {
-    "name": "Frauke Ziedorn",
-    "bio": "TIB (On leave, Metadata Supervisor)"
   },
   "tbradford": {
     "name": "Tina Bradford",
