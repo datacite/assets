@@ -388,12 +388,25 @@ textarea.form-control {
   }
 }
 .form-group.has-error {
-  input, select { border-color: $danger-color; }
+  input, select { color: $danger-color; border-color: $danger-color; }
   .help-block { color: $danger-color; }
+
+  input.no-error, select.no-error { color: $wet-asphalt; border-color: $medium-gray; }
+  .help-block.no-error { color: $darker-gray; }
 }
 .form-group.has-warning {
-  input, select { border-color: $warning-color; }
+  input, select { color: $warning-color; border-color: $warning-color; }
   .help-block { color: $warning-color; }
+
+  input.no-error, select.no-error { color: $wet-asphalt; border-color: $medium-gray; }
+  .help-block.no-error { color: $darker-gray; }
+}
+.form-group.has-success {
+  input, select { color: $success-color; border-color: $success-color; }
+  .help-block { color: $success-color; }
+
+  input.no-error, select.no-error { color: $wet-asphalt; border-color: $medium-gray; }
+  .help-block.no-error { color: $darker-gray; }
 }
 
 #search-repository {
