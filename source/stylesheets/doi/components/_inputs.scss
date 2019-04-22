@@ -405,8 +405,8 @@ textarea.form-control {
   input, select { color: $success-color; border-color: $success-color; }
   .help-block { color: $success-color; }
 
-  input.no-error, select.no-error { color: $wet-asphalt; border-color: $medium-gray; }
-  .help-block.no-error { color: $darker-gray; }
+  input.no-success, select.no-success { color: $wet-asphalt; border-color: $medium-gray; }
+  .help-block.no-success { color: $darker-gray; }
 }
 
 #search-repository {
