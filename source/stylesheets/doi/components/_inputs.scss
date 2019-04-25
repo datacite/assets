@@ -178,9 +178,7 @@ textarea.form-control {
 }
 
 .radio-fragment {
-  padding-left: 80px;
-  margin-top: -6px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 
   .subtitle {
     font-size: $font-size-small !important;
@@ -194,11 +192,11 @@ textarea.form-control {
 }
 
 .power-select-label {
-  margin: 0 80px !important;
+  margin: 0 !important;
 }
 
 .power-select-fragment {
-  margin: 0 95px !important;
+  margin: 0 15px !important;
 
   .col-md-9.col-md-offset-3 {
     margin-left: 0 !important;
@@ -390,12 +388,25 @@ textarea.form-control {
   }
 }
 .form-group.has-error {
-  input, select { border-color: $danger-color; }
+  input, select { color: $danger-color; border-color: $danger-color; }
   .help-block { color: $danger-color; }
+
+  input.no-error, textarea.no-error, select.no-error { color: $wet-asphalt; border-color: $medium-gray; }
+  .help-block.no-error { color: $darker-gray; }
 }
 .form-group.has-warning {
-  input, select { border-color: $warning-color; }
+  input, select { color: $warning-color; border-color: $warning-color; }
   .help-block { color: $warning-color; }
+
+  input.no-error, textarea.no-error, select.no-error { color: $wet-asphalt; border-color: $medium-gray; }
+  .help-block.no-error { color: $darker-gray; }
+}
+.form-group.has-success {
+  input, select { color: $success-color; border-color: $success-color; }
+  .help-block { color: $success-color; }
+
+  input.no-success, textarea.no-success, select.no-success { color: $wet-asphalt; border-color: $medium-gray; }
+  .help-block.no-success { color: $darker-gray; }
 }
 
 #search-repository {
