@@ -53,6 +53,24 @@ category: Components
 label.search-form {
   display: block;
 }
+.label-primary-inv {
+  color: $primary-color;
+  background-color: #FFFFFF;
+  border: 2px solid $primary-color;
+}
+.label-info-inv {
+  color: $info-color;
+  background-color: #FFFFFF;
+  border: 2px solid $info-color;
+}
+.label-default-inv {
+  color: $dark-gray;
+  background-color: #FFFFFF;
+  border: 2px solid $dark-gray;
+}
+.label-sm {
+  font-size: $font-size-xs; 
+} 
 .subject {
   margin-top: 6px;
 
