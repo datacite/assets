@@ -177,3 +177,35 @@ p.landing-page-centered {
 .table-condensed > tfoot > tr > th, .table-condensed > tfoot > tr > td {
     padding-left: 0;
 }
+
+#or {
+    position: relative;
+    width: 290px;
+    height: 50px;
+    
+    line-height: 50px;
+    text-align: center;
+
+    color: $dark-gray;
+  }
+  
+  #or::before,
+  #or::after {
+    position: absolute;
+    width: 130px;
+    height: 1px;
+    
+    top: 24px;
+    
+    background-color: $medium-gray;
+    
+    content: '';
+  }
+  
+  #or::before {
+    left: 0;
+  }
+  
+  #or::after {
+    right: 0;
+  }
