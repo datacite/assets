@@ -224,6 +224,7 @@ $bs-height-xs:   (floor($font-size-small * 1.2) + $padding-small-vertical + 1) !
 .btn-github        { @include btn-social(#444444); }
 .btn-google        { @include btn-social(#dd4b39); }
 .btn-orcid         { @include btn-social(#9dc33a); }
+.btn-globus        { @include btn-social(#294b8e); }
 
 .btn-orcid > :first-child {
   left: 5px;
@@ -232,6 +233,16 @@ $bs-height-xs:   (floor($font-size-small * 1.2) + $padding-small-vertical + 1) !
   width: 29px;
   height: 24px;
   padding-right: 5px;
+}
+
+.btn-globus > :first-child {
+  left: 5px;
+  top: 5px;
+  bottom: 3px;
+  width: 38px;
+  height: 24px;
+  padding-right: 5px;
+  border-right: 1px solid #fff;
 }
 
 .btn-icon { padding-right: 0; }
