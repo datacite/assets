@@ -366,6 +366,10 @@ textarea.form-control {
     }
   }
   .input-group-btn {
+    .btn {
+      height: 45px;
+    }
+
     .close {
       z-index: 2;
       position: relative;
