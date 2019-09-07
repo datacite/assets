@@ -209,3 +209,14 @@ p.landing-page-centered {
   #or::after {
     right: 0;
   }
+
+  .uid { 
+    font-weight: normal; 
+    font-size: $font-size-base; 
+    line-height: $line-height-small;
+    margin-top: -6px;
+  }
+
+  .spin-authorize {
+    margin-top: 5em;
+  }

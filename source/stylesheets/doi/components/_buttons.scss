@@ -233,6 +233,7 @@ $bs-height-xs:   (floor($font-size-small * 1.2) + $padding-small-vertical + 1) !
   width: 29px;
   height: 24px;
   padding-right: 5px;
+  border-right: 1px solid #fff;
 }
 
 .btn-globus > :first-child {
