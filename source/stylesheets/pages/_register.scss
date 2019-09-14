@@ -4,13 +4,11 @@
 
 .register-background {
   background-size: cover;
-  min-height: 1000px;
-  overflow: hidden;
-  width: 100%;
+  min-height: 900px;
   margin-top: -122px;
 
   .container{
-    margin-top: 10%;
+    padding-top: 15%;
     position: relative;
     z-index: 3;
   }
