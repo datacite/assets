@@ -416,6 +416,22 @@ textarea.form-control {
 #search-repository {
   margin-bottom: 1.5em;
 }
+.search-wide {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .input-group-btn {
+    .close {
+      position: relative;
+      color: $light-gray;
+      float: right;
+      left: -90px;
+      top: 12px;
+    }
+  }
+}
 
 form .logo img {
   padding: 20px;

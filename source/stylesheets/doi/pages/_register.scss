@@ -4,19 +4,17 @@
 
 .register-background {
   background-size: cover;
-  min-height: 800px;
-  overflow: hidden;
-  width: 100%;
+  min-height: 900px;
   margin-top: -122px;
 
   .container{
-    margin-top: 10%;
+    padding-top: 15%;
     position: relative;
     z-index: 3;
   }
 }
 
-.register-card, .register-card-login, .register-card-email {
+.register-card, .register-card-login, .register-card-email, .register-card-globus {
   background-color: $white-color;
   border-radius: 8px;
   max-width: 350px;
@@ -116,4 +114,9 @@
 
 .register-card-email {
   min-height: 310px
+}
+
+.register-card-globus {
+  margin: 0 0 70px;
+  min-height: 160px;
 }

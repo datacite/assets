@@ -50,6 +50,8 @@
 }
 
 .panel-footer {
+  border-top: 1px solid #ddd;
+
   span, span a, a {
     color: $gray-darker;
   }

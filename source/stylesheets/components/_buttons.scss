@@ -211,12 +211,12 @@ $bs-height-xs:   (floor($font-size-small * 1.2) + $padding-small-vertical + 1) !
 .btn-globus        { @include btn-social(#294b8e); }
 
 .btn-orcid > :first-child {
-  left: 5px;
-  top: 5px;
+  left: 6px;
+  top: 6px;
   bottom: 3px;
-  width: 38px;
+  width: 32px;
   height: 24px;
-  padding-right: 14px;
+  padding-right: 6px;
   border-right: 1px solid #fff;
 }
 
