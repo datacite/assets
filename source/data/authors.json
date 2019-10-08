@@ -156,6 +156,20 @@
     "orcid": "https://orcid.org/0000-0003-2885-3980",
     "image_url": "/images/abudden.jpg"
   },
+  "ssanone": {
+    "name": "Susanna Sansone",
+    "given": "Susanna",
+    "family": "Sansone",
+    "bio": "Associate Director, Oxford e-Research Centre",
+    "orcid": "https://orcid.org/0000-0001-5306-5690",
+ },
+  "pmcquilton": {
+    "name": "Peter McQuilton",
+    "given": "Peter",
+    "family": "McQuilton",
+    "bio": "FAIRsharing Coordinator, Oxford e-Research Centre",
+    "orcid": "https://orcid.org/0000-0003-2687-1982",
+  },
   "jlin": {
     "name": "Jennifer Lin",
     "given": "Jennifer",
@@ -348,6 +362,10 @@
   "myahia": {
     "name": "Mohamed Yahia",
     "bio": "Inist-CNRS"
+  },
+  "afarquhar": {
+    "name": "Adam Farquhar",
+    "bio": "British Library"
   },
   "tbradford": {
     "name": "Tina Bradford",
