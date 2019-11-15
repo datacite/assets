@@ -49,9 +49,11 @@
   }
 }
 
-.panel-footer {
+.panel-default .panel-footer {
   border-top: 1px solid #ddd;
+}
 
+.panel-footer {
   span, span a, a {
     color: $gray-darker;
   }
