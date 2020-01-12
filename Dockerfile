@@ -23,7 +23,7 @@ RUN apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold" &&
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Install bundler
-RUN gem install bundler
+RUN gem install bundler -v 1.7.3
 
 # Prepare app folder
 RUN mkdir /home/app/webapp
