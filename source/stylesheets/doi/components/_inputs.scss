@@ -47,12 +47,12 @@
     }
     .has-error &{
         background-color: $white-bg;;
-        color: $danger-color;
+        color: #e74c3c;
         border-color: $danger-color;
     }
     .has-error &:focus{
         background-color: $white-bg;
-        border-color: $danger-color;
+        border-color: #e74c3c;;
     }
     .has-warning &{
         background-color: $white-bg;;
@@ -277,6 +277,28 @@ textarea.form-control {
       position: absolute;
       right: 18px;
       top: 11px;
+      height: 12px;
+      text-decoration: none;
+    }
+
+    &.refresh-input {
+      z-index: 3;
+      color: $medium-gray;
+      font-size: 18px;
+      position: absolute;
+      right: 45px;
+      top: -20px;
+      height: 12px;
+      text-decoration: none;
+    }
+
+    &.clear-input {
+      z-index: 3;
+      color: $medium-gray;
+      font-size: 18px;
+      position: absolute;
+      right: 18px;
+      top: -20px;
       height: 12px;
       text-decoration: none;
     }
