@@ -42,29 +42,22 @@
 
     <%= stylesheet_link_tag 'doi' %>
     <%= favicon_tag 'favicon.ico' %>
-
-    <% if ENV['BUGSNAG_JS_KEY'] %>
-      <script
-        src="//d2wy8f7a9ursnm.cloudfront.net/bugsnag-2.min.js"
-        data-apikey="<%= ENV['BUGSNAG_JS_KEY'] %>">
-      </script>
-    <% end %>
   </head>
   <body>
     <% header_links = development? ? data.links.development_links : (stage? ? data.links.stage_links : data.links.production_links) %>
-    <%= partial "includes/header.html.hbs", locals:
+    <%= partial "includes/header.html.erb", locals:
       { site_title: ENV['SITE_TITLE'],
         stage: stage?,
         development: development?,
         header_links: header_links } -%>
     <%= yield -%>
-    <%= partial "includes/footer.html.hbs", locals:
+    <%= partial "includes/footer.html.erb", locals:
       { about_links: data.links.about_links,
         services_links: data.links.services_links,
         resources_links: data.links.resources_links,
         community_links: data.links.community_links,
         contact_links: data.links.contact_links } -%>
-    <%= partial "includes/javascripts.html.hbs" -%>
-    <%= partial "includes/google_analytics.html.hbs", locals: { site_ga: ENV['SITE_GA'] } -%>
+    <%= partial "includes/javascripts.html.erb" -%>
+    <%= partial "includes/google_analytics.html.erb", locals: { site_ga: ENV['SITE_GA'] } -%>
   </body>
 </html>
