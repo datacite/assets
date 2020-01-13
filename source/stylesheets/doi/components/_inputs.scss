@@ -213,6 +213,30 @@ textarea.form-control {
   }
 }
 
+.input-group-addon {
+  &.refresh-input {
+    z-index: 3;
+    color: $medium-gray;
+    font-size: 18px;
+    position: absolute;
+    right: 45px;
+    top: 5px;
+    height: 12px;
+    text-decoration: none;
+  }
+
+  &.clear-input {
+    z-index: 3;
+    color: $medium-gray;
+    font-size: 18px;
+    position: absolute;
+    right: 18px;
+    top: 5px;
+    height: 12px;
+    text-decoration: none;
+  }
+}
+
 .compound-form {
   margin-bottom: 0 !important;
 
@@ -277,28 +301,6 @@ textarea.form-control {
       position: absolute;
       right: 18px;
       top: 11px;
-      height: 12px;
-      text-decoration: none;
-    }
-
-    &.refresh-input {
-      z-index: 3;
-      color: $medium-gray;
-      font-size: 18px;
-      position: absolute;
-      right: 45px;
-      top: -20px;
-      height: 12px;
-      text-decoration: none;
-    }
-
-    &.clear-input {
-      z-index: 3;
-      color: $medium-gray;
-      font-size: 18px;
-      position: absolute;
-      right: 18px;
-      top: -20px;
       height: 12px;
       text-decoration: none;
     }
