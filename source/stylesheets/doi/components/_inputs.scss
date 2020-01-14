@@ -219,7 +219,7 @@ textarea.form-control {
     color: $medium-gray;
     font-size: 18px;
     position: absolute;
-    right: 45px;
+    right: 57px;
     top: 5px;
     height: 12px;
     text-decoration: none;
@@ -230,7 +230,7 @@ textarea.form-control {
     color: $medium-gray;
     font-size: 18px;
     position: absolute;
-    right: 18px;
+    right: 32px;
     top: 5px;
     height: 12px;
     text-decoration: none;
@@ -255,6 +255,12 @@ textarea.form-control {
   .input-group {
     position: relative;
     float: left;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .input-group-no-float {
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
