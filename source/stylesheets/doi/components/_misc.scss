@@ -220,3 +220,37 @@ p.landing-page-centered {
   .spin-authorize {
     margin-top: 5em;
   }
+
+  .metrics-icons {
+    i {
+      margin-right: 1.5em; margin-bottom: 4px; margin-top: 4px;
+    }
+  }
+  
+  .metrics-counter {
+    display:flex;
+  }
+  
+  .user-metrics-counter-box { 
+    text-align:center; 
+  }
+  
+  .user-metrics-counter { 
+    display: block;
+    height: 160px;
+    width: 160px;
+    line-height: 140px;
+    
+    -moz-border-radius: 80px;
+    border-radius: 80px;
+  
+    background: #fff;
+    border: 8px solid #4DB6AC;
+    color: #4DB6AC;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+    margin: auto;
+  }
+  
