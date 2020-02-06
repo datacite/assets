@@ -415,6 +415,22 @@ textarea.form-control {
     }
   }
 }
+
+#search-repository {
+  .input-group-btn {
+    vertical-align: middle;
+  
+    .btn {
+      height: 45px;
+      padding-top: 6px;
+  
+      i {
+        padding-top: 3px;
+      }
+    }
+  }
+}
+
 .form-group {
   abbr { border: none; }
   .help-block { font-size: $font-size-small; }
@@ -451,6 +467,7 @@ textarea.form-control {
 #search-repository {
   margin-bottom: 1.5em;
 }
+
 .search-wide {
   padding-bottom: 20px;
   margin-bottom: 20px;
