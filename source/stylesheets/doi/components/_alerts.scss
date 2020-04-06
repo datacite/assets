@@ -96,3 +96,13 @@ category: Components
   color: $default-color;
   padding: 0 0 0 10px;
 }
+
+.required-nested-label label.control-label.col-md-3:before {
+    color: red;
+    content: "*";
+}
+
+.required-label:before {
+    color: red;
+    content: "*";
+}
