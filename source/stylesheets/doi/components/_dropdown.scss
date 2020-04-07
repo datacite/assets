@@ -119,3 +119,8 @@
 .navbar-menu {
  margin-top: -12px;
 }
+
+// more compact selects
+.compact-select .power-select-fragment div.form-group.ember-view {
+    margin-bottom: 1px;
+}
