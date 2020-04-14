@@ -101,20 +101,6 @@
     }
 }
 
-.required-nested-label label:after, .form-group .required-label:after {
-  content: " *";
-  color: #e74c3c;
-}
-
-.required-nested-label .form-group.has-success label:after, .required-nested-label.form-group.has-success label:after {
-  content: " *";
-  color: $success-color;
-}
-
-label.subtitle:after {
-  content: "";
-}
-
 .input-group-addon {
     background-color: $gray-input-bg;
     border: medium none;

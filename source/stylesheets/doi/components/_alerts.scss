@@ -98,11 +98,20 @@ category: Components
 }
 
 .required-nested-label label.control-label.col-md-3:before {
-    color: red;
-    content: "*";
+    color: #e74c3c;
+    content: "* ";
 }
 
 .required-label:before {
-    color: red;
-    content: "*";
+    color: #e74c3c;
+    content: "* ";
 }
+
+.required-nested-label .form-group.has-success label:before, .required-nested-label.form-group.has-success label:before {
+    content: "* ";
+    color: $success-color;
+  }
+  
+  label.subtitle:after {
+    content: "";
+  }
