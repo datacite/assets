@@ -153,6 +153,12 @@ textarea.form-control {
   margin-bottom: 5px;
 }
 
+.label-vertical {
+  color: $darker-gray;
+  padding-top: 7px;
+  margin-bottom: 7px;
+}
+
 #metadata {
   select {
     font-family: $font-family-base;
@@ -197,6 +203,20 @@ textarea.form-control {
 
 .power-select-label {
   margin: 0 !important;
+}
+
+.input-fragment {
+  .col-md-9.col-md-offset-3 {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    width: 100%;
+  }
+  .form-group {
+    margin-bottom: -8px;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
 }
 
 .power-select-fragment {
