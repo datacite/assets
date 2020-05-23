@@ -9,7 +9,6 @@ The DataCite assets server. Uses the [middleman](https://middlemanapp.com/) stat
 bundle exec middleman
 ```
 
-
 Or using Docker.
 
 ```
