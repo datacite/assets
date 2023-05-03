@@ -1,7 +1,4 @@
-# Segugio
-
-[![Build Status](https://travis-ci.org/datacite/segugio.svg?branch=master)](https://travis-ci.org/datacite/segugio)
-
+# Assets
 The DataCite assets server. Uses the [middleman](https://middlemanapp.com/) static site generator.
 
 ## Development
@@ -12,10 +9,10 @@ bundle exec middleman
 Or using Docker.
 
 ```
-docker run -p 8010:80 datacite/segugio
+docker run -p 8010:80 datacite/assets
 ```
 
-Follow along via [Github Issues](https://github.com/datacite/segugio/issues).
+Follow along via [Github Issues](https://github.com/datacite/assets/issues).
 
 ### Note on Patches/Pull Requests
 
@@ -26,4 +23,4 @@ Follow along via [Github Issues](https://github.com/datacite/segugio/issues).
 * Commit, push and make a pull request. Bonus points for topical branches.
 
 ## License
-**segugio** is released under the [MIT License](https://github.com/datacite/segugio/blob/master/LICENSE.md).
+**assets** is released under the [MIT License](https://github.com/datacite/assets/blob/master/LICENSE.md).

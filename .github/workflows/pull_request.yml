@@ -1,0 +1,14 @@
+name: Test Pull Request
+on:
+  pull_request:
+    branches:
+      - master
+  workflow_dispatch:
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print basic info
+        run: |
+          echo "REPOSITORY: ${{ github.repository }}"
+          echo "BRANCH: ${{ github.ref_name }}"
