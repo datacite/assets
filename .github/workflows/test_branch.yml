@@ -10,6 +10,7 @@ jobs:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       S3_BUCKET: ${{ secrets.STAGE_S3_BUCKET }}
+      S3_REGION: ${{ secrets.S3_REGION }}
       CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.STAGE_CLOUDFRONT_DISTRIBUTION_ID }}
       SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
     steps:
@@ -33,7 +34,10 @@ jobs:
           echo "BRANCH: ${{ github.ref_name }}"
           echo "BRANCH-DEP: ${{ steps.extract_variables.outputs.BRANCH }}"
           echo "GIT_SHA_DEP: ${{ steps.extract_variables.outputs.GIT_SHA }}"
-          echo "GIT_SHA_SHORT_DEP: ${{ steps.extract_variables.outputs.BRANCH }}"
+          echo "GIT_SHA_SHORT_DEP: ${{ steps.extract_variables.outputs.GIT_SHA_SHORT }}"
+          echo "S3_REGION: $S3_REGION"
+          echo "S3_BUCKET: $S3_BUCKET"
+          echo "CLOUDFRONT_DISTRIBUTION_ID: $CLOUDFRONT_DISTRIBUTION_ID"
 
       - name: Build
         run: |
