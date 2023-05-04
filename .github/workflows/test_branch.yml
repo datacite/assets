@@ -2,10 +2,89 @@ name: Test Branch
 on:
   workflow_dispatch:
 jobs:
-  my-job:
+  run:
     runs-on: ubuntu-latest
+    env:
+      RACK_ENV: stage
+      ENV_FILE: .env.stage
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      S3_BUCKET: ${{ secrets.STAGE_S3_BUCKET }}
+      CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.STAGE_CLOUDFRONT_DISTRIBUTION_ID }}
+      SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
     steps:
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.6'
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Extract variables
+        shell: bash
+        run: |
+          echo "::set-output name=BRANCH::$(echo ${GITHUB_REF#refs/heads/} | sed 's/\//_/g')"
+          echo "::set-output name=GIT_SHA::$(git rev-parse HEAD)"
+          echo "::set-output name=GIT_SHA_SHORT::$(git rev-parse --short HEAD)"
+        id: extract_variables
       - name: print basic info
         run: |
           echo "REPOSITORY: ${{ github.repository }}"
           echo "BRANCH: ${{ github.ref_name }}"
+          echo "BRANCH-DEP: ${{ steps.extract_variables.outputs.BRANCH }}"
+          echo "GIT_SHA_DEP: ${{ steps.extract_variables.outputs.GIT_SHA }}"
+          echo "GIT_SHA_SHORT_DEP: ${{ steps.extract_variables.outputs.BRANCH }}"
+
+      - name: Build
+        run: |
+          cp $ENV_FILE .env
+          gem install bundler -v 1.17.3
+          bundle install --jobs 4 --retry 3
+          cd vendor && npm install
+          cd ../
+          wget https://github.com/jgm/pandoc/releases/download/1.19.2.1/pandoc-1.19.2.1-1-amd64.deb
+          sudo dpkg -i pandoc-1.19.2.1-1-amd64.deb
+          rm pandoc-1.19.2.1-1-amd64.deb
+          bundle exec hologram -c hologram.yml
+          bundle exec middleman build -e $RACK_ENV
+
+      # - name: Check links
+      #   run: |
+      #     bundle exec htmlproofer --http-status-ignore "999,403" --allow-hash-href --empty_alt_ignore --only-4xx ./build
+
+      #- name: Cypress run
+      #  uses: cypress-io/github-action@v2
+      #  with:
+      #    start: bundle exec middleman
+      #    wait-on: 'http://localhost:4567'
+      #    quiet: true
+      #    record: true
+      #    parallel: true
+      #    group: 'Tests'
+      #  env:
+      #    CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+      #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #
+      #- name: Deploy
+      #  uses: reggionick/s3-deploy@v3
+      #  with:
+      #    folder: build
+      #    bucket: ${{ secrets.STAGE_S3_BUCKET }}
+      #    bucket-region: ${{ secrets.S3_BUCKET_REGION }}
+      #    dist-id: ${{ secrets.STAGE_CLOUDFRONT_DISTRIBUTION_ID }}
+      #    invalidation: /
+      #    delete-removed: false
+      #
+      #- name: Notify Slack
+      #  uses: edge/simple-slack-notify@master
+      #  with:
+      #    channel: '#ops'
+      #    color: 'good'
+      #    text: 'A new version of the <https://www.stage.datacite.org|homepage> has been deployed to stage.'
+      #    failure_text: '${env.GITHUB_WORKFLOW} (${env.GITHUB_RUN_NUMBER}) build failed'
+      #    fields: |
+      #      [{ "title": "Commit message", "value": "${{ steps.extract_variables.outputs.MESSAGE }}" },
+      #       { "title": "Committed by", "value": "<https://github.com/${{ github.repository }}/commits?author=${{ github.actor }}|${{ github.actor }}>", "short": true },
+      #       { "title": "Commit SHA", "value": "<https://github.com/${{ github.repository }}/commit/${{ steps.extract_variables.outputs.GIT_SHA }}|${{ steps.extract_variables.outputs.GIT_SHA_SHORT }}>", "short": true },
+      #       { "title": "Repository", "value": "<https://github.com/${{ github.repository }}|${{ github.repository }}>", "short": true },
+      #       { "title": "Branch", "value": "<https://github.com/${{ github.repository }}/tree/${{ steps.extract_variables.outputs.BRANCH }}|${{ steps.extract_variables.outputs.BRANCH }}>", "short": true }]
