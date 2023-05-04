@@ -43,8 +43,8 @@ jobs:
           echo "============================"
           echo "REPOSITORY: ${{ github.repository }}"
           echo "BRANCH: ${{ github.ref_name }}"
-          echo "S3_REGION: $S3_REGION or ${{ env.$S3_REGION }} or ${{ secrets.STAGE_S3_BUCKET_REGION }}"
-          echo "S3_BUCKET: $S3_BUCKET or ${{ env.$S3_BUCKET }} or ${{ secrets.STAGE_S3_BUCKET }}"
+          echo "S3_REGION: $S3_REGION or ${{ env.S3_REGION }} or ${{ secrets.STAGE_S3_BUCKET_REGION }}"
+          echo "S3_BUCKET: $S3_BUCKET or ${{ env.S3_BUCKET }} or ${{ secrets.STAGE_S3_BUCKET }}"
           echo "CLOUDFRONT_DISTRIBUTION_ID: $CLOUDFRONT_DISTRIBUTION_ID or ${{ env.CLOUDFRONT_DISTRIBUTION_ID }} or ${{ secrets.STAGE_CLOUDFRONT_DISTRIBUTION_ID }}"
 
       - name: Build
