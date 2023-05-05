@@ -3,9 +3,9 @@
 
 # The directory containing the source files to parse recursively
 source:
-  - ./source/stylesheets/components
-  - ./source/stylesheets/globals
-  - ./source/stylesheets/pages
+  - ./source/stylesheets/datacite/components
+  - ./source/stylesheets/datacite/globals
+  - ./source/stylesheets/datacite/pages
 
 # The directory that hologram will build to
 destination: ./source/styleguide

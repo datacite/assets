@@ -1,101 +1,11 @@
-name: Test Branch
+name: Build/Deploy Branch to Staging
 on:
   workflow_dispatch:
 jobs:
-  run:
+  my-job:
     runs-on: ubuntu-latest
-    env:
-      RACK_ENV: stage
-      ENV_FILE: .env.stage
-      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      S3_BUCKET: ${{ secrets.STAGE_S3_BUCKET }}
-      S3_REGION: ${{ secrets.STAGE_S3_BUCKET_REGION }}
-      CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.STAGE_CLOUDFRONT_DISTRIBUTION_ID }}
-      SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
     steps:
-      - uses: actions/checkout@v3
-      - uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '2.7'
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '14'
-      - name: Extract variables
-        shell: bash
-        run: |
-          echo "BRANCH=$(echo ${GITHUB_REF#refs/heads/} | sed 's/\//_/g')" >> $GITHUB_ENV
-          echo "GIT_SHA=$(git rev-parse HEAD)" >> $GITHUB_ENV
-          echo "GIT_SHA_SHORT=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
-        id: extract_variables
       - name: print basic info
         run: |
-          echo "ENV_FILE_1: $ENV_FILE"
-          echo "ENV_FILE_2: ${{ env.ENV_FILE }}"
-          echo "RACK_ENV_1: $RACK_ENV"
-          echo "RACK_ENV_2: ${{ env.RACK_ENV }}"
-          echo "BRANCH_1: $BRANCH"
-          echo "BRANCH_2: ${{ env.BRANCH }}"
-          echo "GIT_SHA_1: $GIT_SHA"
-          echo "GIT_SHA_2: ${{ env.GIT_SHA }}"
-          echo "GIT_SHA_SHORT_1: $GIT_SHA_SHORT"
-          echo "GIT_SHA_SHORT_2: ${{ env.GIT_SHA_SHORT }}"
-          echo "============================"
           echo "REPOSITORY: ${{ github.repository }}"
           echo "BRANCH: ${{ github.ref_name }}"
-          echo "S3_REGION: $S3_REGION or ${{ env.S3_REGION }} or ${{ secrets.STAGE_S3_BUCKET_REGION }}"
-          echo "S3_BUCKET: $S3_BUCKET or ${{ env.S3_BUCKET }} or ${{ secrets.STAGE_S3_BUCKET }}"
-          echo "CLOUDFRONT_DISTRIBUTION_ID: $CLOUDFRONT_DISTRIBUTION_ID or ${{ env.CLOUDFRONT_DISTRIBUTION_ID }} or ${{ secrets.STAGE_CLOUDFRONT_DISTRIBUTION_ID }}"
-
-      - name: Build
-        run: |
-          cp $ENV_FILE .env
-          bundle _1.17.3_ install --jobs 4 --retry 3
-          yarn install
-          wget https://github.com/jgm/pandoc/releases/download/1.19.2.1/pandoc-1.19.2.1-1-amd64.deb
-          sudo dpkg -i pandoc-1.19.2.1-1-amd64.deb
-          rm pandoc-1.19.2.1-1-amd64.deb
-          bundle exec hologram -c hologram.yml
-          bundle exec middleman build -e $RACK_ENV
-          rm *.png *.gif
-
-      # - name: Check links
-      #   run: |
-      #     bundle exec htmlproofer --http-status-ignore "999,403" --allow-hash-href --empty_alt_ignore --only-4xx ./build
-
-      #- name: Cypress run
-      #  uses: cypress-io/github-action@v2
-      #  with:
-      #    start: bundle exec middleman
-      #    wait-on: 'http://localhost:4567'
-      #    quiet: true
-      #    record: true
-      #    parallel: true
-      #    group: 'Tests'
-      #  env:
-      #    CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-      #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #
-      #- name: Deploy
-      #  uses: reggionick/s3-deploy@v3
-      #  with:
-      #    folder: build
-      #    bucket: ${{ secrets.STAGE_S3_BUCKET }}
-      #    bucket-region: ${{ secrets.S3_BUCKET_REGION }}
-      #    dist-id: ${{ secrets.STAGE_CLOUDFRONT_DISTRIBUTION_ID }}
-      #    invalidation: /
-      #    delete-removed: false
-      #
-      #- name: Notify Slack
-      #  uses: edge/simple-slack-notify@master
-      #  with:
-      #    channel: '#ops'
-      #    color: 'good'
-      #    text: 'A new version of the <https://www.stage.datacite.org|homepage> has been deployed to stage.'
-      #    failure_text: '${env.GITHUB_WORKFLOW} (${env.GITHUB_RUN_NUMBER}) build failed'
-      #    fields: |
-      #      [{ "title": "Commit message", "value": "${{ steps.extract_variables.outputs.MESSAGE }}" },
-      #       { "title": "Committed by", "value": "<https://github.com/${{ github.repository }}/commits?author=${{ github.actor }}|${{ github.actor }}>", "short": true },
-      #       { "title": "Commit SHA", "value": "<https://github.com/${{ github.repository }}/commit/${{ steps.extract_variables.outputs.GIT_SHA }}|${{ steps.extract_variables.outputs.GIT_SHA_SHORT }}>", "short": true },
-      #       { "title": "Repository", "value": "<https://github.com/${{ github.repository }}|${{ github.repository }}>", "short": true },
-      #       { "title": "Branch", "value": "<https://github.com/${{ github.repository }}/tree/${{ steps.extract_variables.outputs.BRANCH }}|${{ steps.extract_variables.outputs.BRANCH }}>", "short": true }]

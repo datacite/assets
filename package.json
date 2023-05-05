@@ -34,6 +34,7 @@
     "@babel/preset-env": "^7.10.2",
     "@babel/preset-typescript": "^7.10.1",
     "babel-loader": "^8.1.0",
+    "babel-runtime": "^6.23.0",
     "css-loader": "^3.6.0",
     "cssnano": "^4.1.10",
     "cypress": "^6.4.0",

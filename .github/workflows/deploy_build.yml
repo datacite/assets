@@ -23,11 +23,6 @@ jobs:
   deploy_build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '16'
-      - name: Checkout
-        uses: actions/checkout@v3
       - name: print basic info in cached.yml
         run: |
           echo "ENV_FILE: ${{ inputs.env_file }}"
@@ -40,6 +35,8 @@ jobs:
           echo "Deploying from sha: $(git rev-parse --short ${{ github.sha }})"
           echo "Deploying to environment: ${{ inputs.rack_env }}"
 
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: Get cached build
         uses: actions/cache@v3
         with:
@@ -61,6 +58,11 @@ jobs:
       #    CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
       #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       #
+
+      #- name: Check deployment bucket - stage.
+      #  if: secrets.s3_bucket == 'assets.stage.datacite.org'
+      #  run: |
+      #    echo "DEPLOYING TO STAGING"
 
       - name: Deploy Cached Build
         uses: reggionick/s3-deploy@v3
