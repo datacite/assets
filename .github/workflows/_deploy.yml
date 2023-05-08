@@ -1,0 +1,65 @@
+name: Deploy
+on:
+  workflow_call:
+    inputs:
+      RACK_ENV:
+        required: true
+        type: string
+      ENV_FILE:
+        required: true
+        type: string
+      REPOSITORY:
+        required: true
+        type: string
+      BRANCH:
+        required: true
+        type: string
+      GIT_SHA:
+        required: true
+        type: string
+    secrets:
+      S3_BUCKET:
+        required: true
+      S3_REGION:
+        required: true
+      CLOUDFRONT_DISTRIBUTION_ID:
+        required: true  
+      AWS_ACCESS_KEY_ID:
+        required: true
+      AWS_SECRET_ACCESS_KEY:
+        required: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Install Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: '14'
+
+    - name: Get cached build
+      uses: actions/cache@v3
+      with:
+        path: build
+        key: assets-build-${{ inputs.GIT_SHA }}
+        restore-keys: |
+          assets-build-${{ inputs.GIT_SHA }}
+
+    # It is important that delete-removed = false for now.
+    - name: Deploy Build
+      uses: reggionick/s3-deploy@master
+      with:
+        folder: build
+        bucket: ${{ secrets.S3_BUCKET }}
+        bucket-region: ${{ secrets.S3_REGION }}
+        dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+        invalidation: /
+        delete-removed: false

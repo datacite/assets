@@ -1,106 +1,100 @@
 name: Build/Deploy Branch to Staging
 on:
   workflow_dispatch:
-
+  
 env:
   RACK_ENV: stage
   ENV_FILE: .env.stage
-  s3_bucket: ${{ secrets.STAGE_S3_BUCKET }}
-  s3_region: ${{ secrets.STAGE_S3_BUCKET_REGION }}
-  cloudfront_distribution_id: ${{ secrets.STAGE_CLOUDFRONT_DISTRIBUTION_ID }}
-  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-  SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
 
 jobs:
   vars:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest 
     outputs:
-      rack_env: ${{ env.RACK_ENV }}
-      env_file: ${{ env.ENV_FILE }}
+      RACK_ENV: ${{ steps.extract_variables.outputs.RACK_ENV }}
+      ENV_FILE: ${{ steps.extract_variables.outputs.ENV_FILE }}
+      REPOSITORY: ${{ steps.extract_variables.outputs.REPOSITORY }}
+      BRANCH: ${{ steps.extract_variables.outputs.BRANCH }}
+      TAG: ${{ steps.extract_variables.outputs.TAG }}
+      GIT_SHA: ${{ steps.extract_variables.outputs.GIT_SHA }}
+      GIT_SHA_SHORT: ${{ steps.extract_variables.outputs.GIT_SHA_SHORT }}
+      MESSAGE: ${{ steps.extract_variables.outputs.MESSAGE }}
+      LATEST_RELEASE: ${{ steps.extract_variables.outputs.outputs.tag }}
+      SITE_URL: ${{ steps.extract_variables.outputs.SITE_URL }}
+      SITE_NAME: ${{ steps.extract_variables.outputs.SITE_NAME }}
     steps:
-      - name: Prints Vars
-        run: | 
-          echo "Exposing env vars"
+    - name: Git checkout
+      uses: actions/checkout@v3
+    - name: Get latest release tag
+      uses: oprypin/find-latest-tag@v1
+      with:
+        repository: ${{ github.repository }}
+        releases-only: true 
+      id: octokit      
+    - name: GET .env
+      run: |
+        cp ${{ env.ENV_FILE }} .env
+    - name: Dotenv action
+      uses: falti/dotenv-action@v1.0.4
+      id: dotenv   
+    - name: Extract variables
+      shell: bash
+      run: |
+        echo "RACK_ENV=${{ env.RACK_ENV }}" >> $GITHUB_OUTPUT
+        echo "ENV_FILE=${{ env.ENV_FILE }}" >> $GITHUB_OUTPUT
+        echo "REPOSITORY=${{ github.repository }}" >> $GITHUB_OUTPUT
+        echo "BRANCH=${{ github.ref_name }}" >> $GITHUB_OUTPUT
+        echo "TAG=${{ github.ref_name }}" >> $GITHUB_OUTPUT
+        echo "GIT_SHA=${{ github.sha }}" >> $GITHUB_OUTPUT
+        echo "GIT_SHA_SHORT=$( git rev-parse --short ${{ github.sha }} )" >> $GITHUB_OUTPUT
+        echo "MESSAGE=$(git log --format=%B -n 1 ${{ github.event.after }})" >> $GITHUB_OUTPUT
+        echo "LATEST_RELEASE=${{ steps.octokit.outputs.tag }}" >> $GITHUB_OUTPUT
+        echo "SITE_NAME=${{ steps.dotenv.outputs.SITE_NAME }}" >> $GITHUB_OUTPUT
+        echo "SITE_URL=${{ steps.dotenv.outputs.SITE_URL }}" >> $GITHUB_OUTPUT
+      id: extract_variables  
+    - name: Print state
+      run: |
+        echo "RACK_ENV = ${{ steps.extract_variables.outputs.RACK_ENV }}"
+        echo "ENV_FILE = ${{ steps.extract_variables.outputs.ENV_FILE }}"
+        echo "REPOSITORY = ${{ steps.extract_variables.outputs.REPOSITORY }}"
+        echo "BRANCH = ${{ steps.extract_variables.outputs.BRANCH }}"
+        echo "GIT_SHA = ${{ steps.extract_variables.outputs.GIT_SHA }}"
 
   build:
-    needs: vars
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+    needs: [vars]
+    uses: ./.github/workflows/_build.yml
+    with:
+      RACK_ENV: ${{ needs.vars.outputs.RACK_ENV }}
+      ENV_FILE: ${{ needs.vars.outputs.ENV_FILE }}
+      REPOSITORY: ${{ needs.vars.outputs.REPOSITORY }}
+      BRANCH: ${{ needs.vars.outputs.BRANCH }}
+      GIT_SHA: ${{ needs.vars.outputs.GIT_SHA }}
+      
+  deploy:
+    needs: [vars, build]
+    uses: ./.github/workflows/_deploy.yml
+    with:
+      RACK_ENV: ${{ needs.vars.outputs.RACK_ENV }}
+      ENV_FILE: ${{ needs.vars.outputs.ENV_FILE }}
+      REPOSITORY: ${{ needs.vars.outputs.REPOSITORY }}
+      BRANCH: ${{ needs.vars.outputs.BRANCH }}
+      GIT_SHA: ${{ needs.vars.outputs.GIT_SHA }}
+    secrets:
+      S3_BUCKET: ${{ secrets.STAGE_S3_BUCKET }}
+      S3_REGION: ${{ secrets.STAGE_S3_BUCKET_REGION }}
+      CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.STAGE_CLOUDFRONT_DISTRIBUTION_ID }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
-      - name: print basic info
-        run: |
-          echo "ENV_FILE: ${{ needs.vars.outputs.env_file }}"
-          echo "RACK_ENV: ${{ needs.vars.outputs.rack_env }}"
-          echo "s3_bucket: ${{ env.s3_bucket }}"
-          echo "s3_region: ${{ env.s3_region }}"
-          echo "cloudfront_distribution_id: ${{ env.cloudfront_distribution_id }}"
-          echo "Deploying from repository: ${{ github.repository }}"
-          echo "Deployng from branch: ${{ github.ref_name }}"
-          echo "Deploying from short sha: $( git rev-parse --short ${{ github.sha }} )"
-          echo "Deploying to environment: ${{ needs.vars.outputs.rack_env }}"
-
-      - name: Set Up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '2.7'
-      - name: Install Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: '14'
-
-      - name: Build
-        run: |
-          cp ${{ needs.vars.outputs.env_file }} .env
-          bundle _1.17.3_ install --jobs 4 --retry 3
-          yarn install
-          wget https://github.com/jgm/pandoc/releases/download/1.19.2.1/pandoc-1.19.2.1-1-amd64.deb
-          sudo dpkg -i pandoc-1.19.2.1-1-amd64.deb
-          rm pandoc-1.19.2.1-1-amd64.deb
-          bundle exec hologram -c hologram.yml
-          bundle exec middleman build -e ${{ needs.vars.outputs.rack_env }}
-          rm build/*.png build/*.gif
-
-      - name: Deploy Build
-        uses: reggionick/s3-deploy@v3
-        with:
-          folder: build
-          bucket: ${{ env.s3_bucket }}
-          bucket-region: ${{ env.s3_region }}
-          dist-id: ${{ env.cloudfront_distribution_id }}
-          invalidation: /
-          delete-removed: false
-
-      #- name: Cache
-      #  uses: actions/cache@v3
-      #  with:
-      #    path: build
-      #    key: assets-build-${{ github.sha }}
-      #    restore-keys: |
-      #      assets-build-${{ github.sha }}
-
-  #call_build_and_cache:
-  #  needs: vars
-  #  name: Call build
-  #  uses: ./.github/workflows/build.yml
-  #  with:
-  #    rack_env: ${{ needs.vars.outputs.rack_env }}
-  #    env_file: ${{ needs.vars.outputs.env_file }}
-  #  secrets: inherit
-
-  #call_deploy_cached_build:
-  # needs: [vars, call_build_and_cache]
-  #  name: Call deploy_build.
-  #  uses: ./.github/workflows/deploy_build.yml
-  #  with:
-  #    rack_env: ${{ needs.vars.outputs.rack_env }}
-  #    env_file: ${{ needs.vars.outputs.env_file }}
-  #  secrets:
-  #    s3_bucket: ${{ secrets.STAGE_S3_BUCKET }}
-  #    s3_region: ${{ secrets.STAGE_S3_BUCKET_REGION }}
-  #    cloudfront_distribution_id: ${{ secrets.STAGE_CLOUDFRONT_DISTRIBUTION_ID }}
-
-
-
+  notify:
+    needs: [vars, build, deploy]
+    uses: ./.github/workflows/_notify.yml
+    with:
+      RACK_ENV: ${{ needs.vars.outputs.RACK_ENV }}
+      BRANCH: ${{ needs.vars.outputs.BRANCH }}
+      GIT_SHA: ${{ needs.vars.outputs.GIT_SHA }}
+      GIT_SHA_SHORT: ${{ needs.vars.outputs.GIT_SHA_SHORT }}
+      MESSAGE: ${{ needs.vars.outputs.MESSAGE }}
+      SITE_NAME: ${{ needs.vars.outputs.SITE_NAME }}
+      SITE_URL: ${{ needs.vars.outputs.SITE_URL }}
+    secrets:
+      SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
