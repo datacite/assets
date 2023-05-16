@@ -21,7 +21,7 @@ jobs:
       GIT_SHA: ${{ steps.extract_variables.outputs.GIT_SHA }}
       GIT_SHA_SHORT: ${{ steps.extract_variables.outputs.GIT_SHA_SHORT }}
       MESSAGE: ${{ steps.extract_variables.outputs.MESSAGE }}
-      LATEST_RELEASE: ${{ steps.extract_variables.outputs.outputs.tag }}
+      LATEST_RELEASE: ${{ steps.extract_variables.outputs.LATEST_RELEASE }}
       SITE_URL: ${{ steps.extract_variables.outputs.SITE_URL }}
       SITE_NAME: ${{ steps.extract_variables.outputs.SITE_NAME }}
     steps:
