@@ -7,19 +7,30 @@
 # Ignore bundler config
 /.bundle
 
-# Ignore the build directory
+# Ignore build directories
 /build
+/.tmp
+/node_modules
+/vendor/bundle/*
+/vendor/node_modules/*
 
 # Ignore cache
 /.sass-cache
 /.cache
 
-# Ignore .DS_store file
+
+# Ignore .env
+.env
+
+# Ignore platform-specific files
 .DS_Store
+._.DS_Store
 
 # Ignore service images
 /source/images/services/*
 !/source/images/services/.keep
+/source/images/members/*
+!/source/images/members/.keep
 
 # ignore vendored assets and Ruby gems
 /vendor/bower_components

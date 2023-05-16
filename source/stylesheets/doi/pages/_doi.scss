@@ -18,7 +18,7 @@ h2.member {
 h2.doi {
   font-weight: $font-weight-bold;
   color: $turquoise;
-  margin: 0 10px 2F0px 0;
+  margin: 0 10px 2f0px 0;
 }
 
 h2.search {
@@ -52,4 +52,18 @@ ul.checkbox {
   .checkbox-list {
     margin-left: 22px;
   }
+}
+
+form .opt-in {
+  margin-left: 15px;
+  margin-right: 15px;
+  a {
+    color: #88939a;
+  }
+}
+
+#contact-missing {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 15px;
 }

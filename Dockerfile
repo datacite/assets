@@ -1,48 +1,21 @@
-FROM phusion/passenger-full:0.9.22
-MAINTAINER Martin Fenner "mfenner@datacite.org"
+# Dockerfile
 
-# Set correct environment variables
-ENV HOME /home/app
-ENV LC_ALL en_US.UTF-8
-ENV LANG en_US.UTF-8
-ENV RACK_ENV development
+FROM ruby:2.6.3
 
-# Allow app user to read /etc/container_environment
-RUN usermod -a -G docker_env app
+WORKDIR /app
 
-# Use baseimage-docker's init process
-# CMD ["/sbin/my_init"]
+# Can use npm or yarn.
+RUN curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh  && \
+    bash nodesource_setup.sh && \
+    apt install nodejs && \
+    apt-get install -y pandoc && \
+    npm install -g yarn
 
-# Install Ruby 2.4.1
-RUN bash -lc 'rvm --default use ruby-2.4.1'
+# Copy Ruby and Node dependencies
+#COPY Gemfile Gemfile.lock package.json package-lock.json ./
+COPY . .
 
-# Update installed APT packages, clean up when done
-RUN apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold" && \
-    apt-get install pandoc -y && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+# Install dependencies
+RUN bundle install --without debug && npm install
 
-# Install bundler
-RUN gem install bundler -v 1.7.3
-
-# Prepare app folder
-RUN mkdir /home/app/webapp
-ADD . /home/app/webapp
-RUN chown -R app:app /home/app/webapp && \
-    chmod -R 755 /home/app/webapp
-
-# Install npm and bower packages
-WORKDIR /home/app/webapp/vendor
-RUN sudo -u app npm install
-
-# Install Ruby gems via bundler, run as app user
-WORKDIR /home/app/webapp
-RUN sudo -u app bundle install --path vendor/bundle --without development
-
-# Clean up APT when done.
-RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
-CMD ["bundle", "exec", "middleman"]
-
-# Expose web
 EXPOSE 4567

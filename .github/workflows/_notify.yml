@@ -1,0 +1,54 @@
+name: Notify
+on:
+  workflow_call:
+    inputs:
+      RACK_ENV:
+        required: true
+        type: string
+      BRANCH:
+        required: true
+        type: string
+      GIT_SHA:
+        required: true
+        type: string
+      GIT_SHA_SHORT:
+        required: true
+        type: string
+      MESSAGE:
+        required: true
+        type: string
+      SITE_NAME:
+        required: true
+        type: string
+      SITE_URL:
+        required: true
+        type: string
+    secrets:
+      SLACK_WEBHOOK_URL:
+        required: true
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    env:
+      SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}     
+
+    steps:
+    - name: Install Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: '14'
+        
+    - name: Notify Slack
+      uses: edge/simple-slack-notify@master
+      with:
+        channel: '#ops'
+        color: 'good'
+        text: 'A new version of the <${{ inputs.SITE_URL }}|${{ inputs.SITE_NAME }}> has been deployed to ${{ inputs.RACK_ENV }}.'
+        failure_text: 'Workflow: ${{ github.workflow }} (${{ github.run_number }}) - run failed'
+        fields: |
+          [{ "title": "Commit message", "value": "${{ inputs.MESSAGE }}" },
+            { "title": "Committed by", "value": "<https://github.com/${{ github.repository }}/commits?author=${{ github.actor }}|${{ github.actor }}>", "short": true },
+            { "title": "Commit SHA", "value": "<https://github.com/${{ github.repository }}/commit/${{ inputs.GIT_SHA }}|${{ inputs.GIT_SHA_SHORT }}>", "short": true },
+            { "title": "Repository", "value": "<https://github.com/${{ github.repository }}|${{ github.repository }}>", "short": true },
+            { "title": "Branch", "value": "<https://github.com/${{ github.repository }}/tree/${{ inputs.BRANCH }}|${{ inputs.BRANCH }}>", "short": true }]
