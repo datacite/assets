@@ -17,7 +17,6 @@ jobs:
       TAG: ${{ steps.extract_variables.outputs.TAG }}
       GIT_SHA: ${{ steps.extract_variables.outputs.GIT_SHA }}
       GIT_SHA_SHORT: ${{ steps.extract_variables.outputs.GIT_SHA_SHORT }}
-      MESSAGE: ${{ steps.extract_variables.outputs.MESSAGE }}
       LATEST_RELEASE: ${{ steps.extract_variables.outputs.LATEST_RELEASE }}
       SITE_URL: ${{ steps.extract_variables.outputs.SITE_URL }}
       SITE_NAME: ${{ steps.extract_variables.outputs.SITE_NAME }}
@@ -46,7 +45,6 @@ jobs:
         echo "TAG=${{ github.ref_name }}" >> $GITHUB_OUTPUT
         echo "GIT_SHA=${{ github.sha }}" >> $GITHUB_OUTPUT
         echo "GIT_SHA_SHORT=$( git rev-parse --short ${{ github.sha }} )" >> $GITHUB_OUTPUT
-        echo "MESSAGE=$(git log --oneline --format=%B -n 1 HEAD | head -n 1)" >> $GITHUB_OUTPUT
         echo "LATEST_RELEASE=${{ steps.octokit.outputs.tag }}" >> $GITHUB_OUTPUT
         echo "SITE_NAME=${{ steps.dotenv.outputs.SITE_NAME }}" >> $GITHUB_OUTPUT
         echo "SITE_URL=${{ steps.dotenv.outputs.SITE_URL }}" >> $GITHUB_OUTPUT
@@ -58,7 +56,6 @@ jobs:
         echo "REPOSITORY = ${{ steps.extract_variables.outputs.REPOSITORY }}"
         echo "BRANCH = ${{ steps.extract_variables.outputs.BRANCH }}"
         echo "GIT_SHA = ${{ steps.extract_variables.outputs.GIT_SHA }}"
-        echo "MESSAGE = ${{ steps.extract_variables.outputs.MESSAGE}}"
 
   build:
     needs: [vars]

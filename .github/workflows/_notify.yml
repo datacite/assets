@@ -14,9 +14,6 @@ on:
       GIT_SHA_SHORT:
         required: true
         type: string
-      MESSAGE:
-        required: true
-        type: string
       SITE_NAME:
         required: true
         type: string
@@ -47,8 +44,7 @@ jobs:
         text: 'A new version of the <${{ inputs.SITE_URL }}|${{ inputs.SITE_NAME }}> has been deployed to ${{ inputs.RACK_ENV }}.'
         failure_text: 'Workflow: ${{ github.workflow }} (${{ github.run_number }}) - run failed'
         fields: |
-          [{ "title": "Commit message", "value": "${{ inputs.MESSAGE }}" },
-            { "title": "Committed by", "value": "<https://github.com/${{ github.repository }}/commits?author=${{ github.actor }}|${{ github.actor }}>", "short": true },
+          [{ "title": "Committed by", "value": "<https://github.com/${{ github.repository }}/commits?author=${{ github.actor }}|${{ github.actor }}>", "short": true },
             { "title": "Commit SHA", "value": "<https://github.com/${{ github.repository }}/commit/${{ inputs.GIT_SHA }}|${{ inputs.GIT_SHA_SHORT }}>", "short": true },
             { "title": "Repository", "value": "<https://github.com/${{ github.repository }}|${{ github.repository }}>", "short": true },
             { "title": "Branch", "value": "<https://github.com/${{ github.repository }}/tree/${{ inputs.BRANCH }}|${{ inputs.BRANCH }}>", "short": true }]
