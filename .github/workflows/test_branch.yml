@@ -60,12 +60,12 @@ jobs:
         echo "GIT_SHA = ${{ steps.extract_variables.outputs.GIT_SHA }}"
         echo "MESSAGE = ${{ steps.extract_variables.outputs.MESSAGE}}"
 
-  #build:
-  #  needs: [vars]
-  #  uses: ./.github/workflows/_build.yml
-  #  with:
-  #    RACK_ENV: ${{ needs.vars.outputs.RACK_ENV }}
-  #    ENV_FILE: ${{ needs.vars.outputs.ENV_FILE }}
-  #    REPOSITORY: ${{ needs.vars.outputs.REPOSITORY }}
-  #    BRANCH: ${{ needs.vars.outputs.BRANCH }}
-  #    GIT_SHA: ${{ needs.vars.outputs.GIT_SHA }}
+  build:
+    needs: [vars]
+    uses: ./.github/workflows/_build.yml
+    with:
+      RACK_ENV: ${{ needs.vars.outputs.RACK_ENV }}
+      ENV_FILE: ${{ needs.vars.outputs.ENV_FILE }}
+      REPOSITORY: ${{ needs.vars.outputs.REPOSITORY }}
+      BRANCH: ${{ needs.vars.outputs.BRANCH }}
+      GIT_SHA: ${{ needs.vars.outputs.GIT_SHA }}
