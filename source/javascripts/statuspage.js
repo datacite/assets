@@ -1,0 +1,1 @@
+$(document).ready(function(){new StatusPage.page({page:"nmtzsv0smzk5"}).summary({success:function(t){$(".color-description").text(t.status.description),$(".color-dot").addClass(t.status.indicator)}})});
