@@ -1,0 +1,1 @@
+function banner(){var n=$("<div>").attr("id","banner").text("This service is for testing only.");$("body").prepend(n)}$(document).ready(banner);

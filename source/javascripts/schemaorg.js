@@ -1,0 +1,1 @@
+$(document).ready(function(){var t=$("meta[name='DC.identifier']").attr("content");if(t!==undefined){var a=new URL(t),e="https://data.datacite.org/application/vnd.schemaorg.ld+json/"+a.pathname;$.ajax({url:e,dataType:"text",success:function(t){$("<script>").attr("type","application/ld+json").text(t).appendTo("head")},error:function(t){console.log(t.responseJSON)}})}});
