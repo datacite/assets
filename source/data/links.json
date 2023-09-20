@@ -120,7 +120,7 @@
     },
     {
       "name": "Blog",
-      "url": "https://blog.datacite.org",
+      "url": "https://datacite.org/blog/",
       "icon": "rss"
     },
     {
@@ -181,45 +181,67 @@
   "about_links": [
     {
       "name": "What we do",
-      "url": "https://www.datacite.org/value.html"
+      "url": "https://datacite.org/what-we-do/"
     },
     {
       "name": "Governance",
-      "url": "https://www.datacite.org/governance.html"
+      "url": "https://datacite.org/governance/"
     },
     {
-      "name": "Members",
-      "url": "https://www.datacite.org/members.html"
-    },
-    {
-      "name": "Steering groups",
-      "url": "https://www.datacite.org/steering.html"
+      "name": "Steering and Working Groups",
+      "url": "https://datacite.org/#"
     },
     {
       "name": "Team",
-      "url": "https://www.datacite.org/team.html"
+      "url": "https://datacite.org/team/"
     },
     {
-      "name": "Job opportunities",
-      "url": "https://www.datacite.org/jobopportunities.html"
+      "name": "Job Opportunities",
+      "url": "https://datacite.org/job-opportunities/"
+    },
+    {
+      "name": "Projects",
+      "url": "https://datacite.org/projects/"
     }
   ],
   "services_links": [
     {
-      "name": "Create DOIs with Fabrica",
-      "url": "https://doi.datacite.org"
+      "name": "Create DOIs",
+      "url": "https://datacite.org/create-dois/"
     },
     {
-      "name": "Discover metadata with Commons",
-      "url": "https://commons.datacite.org"
+      "name": "Integrate Workflows",
+      "url": "https://datacite.org/integrate-workflows/"
     },
     {
-      "name": "Integrate with APIs",
-      "url": "https://datacite.org/integratorapis.html"
+      "name": "Enable Discovery",
+      "url": "https://datacite.org/enable-discovery/"
     },
     {
-      "name": "Partner Services",
-      "url": "https://datacite.org/partnerservices.html"
+      "name": "Promote Reuse",
+      "url": "https://datacite.org/promote-reuse/"
+    },
+    {
+      "name": "Strategic Initiatives",
+      "url": "https://datacite.org/#"
+    }
+  ],
+  "community_links": [
+    {
+      "name": "Become a Member",
+      "url": "https://datacite.org/become-a-member/"
+    },
+    {
+      "name": "DataCite Fee Model",
+      "url": "https://datacite.org/fee-model/"
+    },
+    {
+      "name": "Membership Enquiry",
+      "url": "https://datacite.org/membership-enquiry/"
+    },
+    {
+      "name": "DataCite Members",
+      "url": "https://datacite.org/members/"
     }
   ],
   "resources_links": [
@@ -230,46 +252,20 @@
     {
       "name": "Support",
       "url": "https://support.datacite.org"
-    },
-    {
-      "name": "Fee Model",
-      "url": "https://datacite.org/feemodel.html"
-    }
-  ],
-  "community_links": [
-    {
-      "name": "Members",
-      "url": "https://www.datacite.org/members.html"
-    },
-    {
-      "name": "Partners",
-      "url": "https://www.datacite.org/partners.html"
-    },
-    {
-      "name": "Steering groups",
-      "url": "https://www.datacite.org/steering.html"
-    },
-    {
-      "name": "Service providers",
-      "url": "https://www.datacite.org/service-providers.html"
-    },
-    {
-      "name": "Roadmap",
-      "url": "https://www.datacite.org/roadmap.html"
     }
   ],
   "contact_links": [
     {
+      "name": "Privacy Policy",
+      "url": "https://datacite.org/privacy-policy/"
+    },
+    {
+      "name": "Terms and Conditions",
+      "url": "https://datacite.org/terms-and-conditions/"
+    },
+    {
       "name": "Imprint",
-      "url": "https://www.datacite.org/imprint.html"
-    },
-    {
-      "name": "Terms and conditions",
-      "url": "https://www.datacite.org/terms.html"
-    },
-    {
-      "name": "Privacy policy",
-      "url": "https://www.datacite.org/privacy.html"
+      "url": "https://datacite.org/imprint/"
     }
   ]
 }
