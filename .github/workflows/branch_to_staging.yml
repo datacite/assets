@@ -82,16 +82,3 @@ jobs:
       CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.STAGE_CLOUDFRONT_DISTRIBUTION_ID }}
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-
-  notify:
-    needs: [vars, build, deploy]
-    uses: ./.github/workflows/_notify.yml
-    with:
-      RACK_ENV: ${{ needs.vars.outputs.RACK_ENV }}
-      BRANCH: ${{ needs.vars.outputs.BRANCH }}
-      GIT_SHA: ${{ needs.vars.outputs.GIT_SHA }}
-      GIT_SHA_SHORT: ${{ needs.vars.outputs.GIT_SHA_SHORT }}
-      SITE_NAME: ${{ needs.vars.outputs.SITE_NAME }}
-      SITE_URL: ${{ needs.vars.outputs.SITE_URL }}
-    secrets:
-      SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
