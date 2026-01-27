@@ -286,8 +286,14 @@
     textWrap.appendChild(body);
 
     if (toast_cta_enabled && toast_cta_label && toast_cta_url) {
+      const toastTitleForAnalytics = (toast_title || "")
+        .toString()
+        .trim()
+        .split(/\s+/)
+        .join("+");
       const cta = document.createElement("a");
-      cta.className = "dc-toast__cta";
+      cta.className =
+        "dc-toast__cta plausible-event-name=Toast+CTA plausible-event-toasttitle=" + toastTitleForAnalytics;
       cta.href = toast_cta_url;
       cta.target = toast_cta_target || "_blank";
       cta.rel = "noopener noreferrer";
