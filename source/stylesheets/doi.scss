@@ -54,6 +54,7 @@ Datacite - Bootstrap 3 theme
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
 
 // Globals
+@import 'shared/datacite_colors';
 @import "doi/globals/colors";
 @import "doi/globals/variables";
 @import "doi/globals/mixins";
