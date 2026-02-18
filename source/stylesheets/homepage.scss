@@ -5,6 +5,7 @@
 @import 'application';
 
 /* Shared between homepage and blog. */
+@import 'shared/datacite_colors';
 @import 'shared/components/_mobile_cookie_bar';
 
 $lighter-gray:               #F4F5F5 !default;
