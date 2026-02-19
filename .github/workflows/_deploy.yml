@@ -34,11 +34,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
-    - name: Install Node
-      uses: actions/setup-node@v4
-      with:
-        node-version: '14'
-
     - name: Get cached build
       uses: actions/cache@v4
       with:
@@ -47,13 +42,9 @@ jobs:
         restore-keys: |
           assets-build-${{ inputs.GIT_SHA }}-${{ inputs.RACK_ENV }}
 
-    # It is important that delete-removed = false for now.
-    - name: Deploy Build
-      uses: reggionick/s3-deploy@master
-      with:
-        folder: build
-        bucket: ${{ secrets.S3_BUCKET }}
-        bucket-region: ${{ secrets.S3_REGION }}
-        dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
-        invalidation: /
-        delete-removed: false
+    # It is important that we do NOT use --delete (matches previous delete-removed: false)
+    - name: Sync build to S3
+      run: aws s3 sync build s3://${{ secrets.S3_BUCKET }} --region ${{ secrets.S3_REGION }}
+
+    - name: Invalidate CloudFront
+      run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
