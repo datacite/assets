@@ -4,24 +4,20 @@ on:
     branches:
       - "master"
 
-env:
-  RACK_ENV: stage
-  ENV_FILE: .env.stage
-
 jobs:
   build:
     uses: ./.github/workflows/_build.yml
     with:
-      RACK_ENV: ${{ env.RACK_ENV }}
-      ENV_FILE: ${{ env.ENV_FILE }}
+      RACK_ENV: stage
+      ENV_FILE: .env.stage
       GIT_SHA: ${{ github.sha }}
 
   deploy:
     needs: [build]
     uses: ./.github/workflows/_deploy.yml
     with:
-      RACK_ENV: ${{ env.RACK_ENV }}
-      ENV_FILE: ${{ env.ENV_FILE }}
+      RACK_ENV: stage
+      ENV_FILE: .env.stage
       GIT_SHA: ${{ github.sha }}
     secrets:
       S3_BUCKET: ${{ secrets.STAGE_S3_BUCKET }}
