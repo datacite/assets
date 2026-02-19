@@ -3,10 +3,6 @@ on:
   release:
     types: [published]
 
-env:
-  RACK_ENV: production
-  ENV_FILE: .env.production
-
 jobs:
   build:
     uses: ./.github/workflows/_build.yml
