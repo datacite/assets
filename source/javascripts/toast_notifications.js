@@ -3,7 +3,9 @@
     endpoint: "https://datacite.org/wp-json/wp/v2/toast/",
     site: "",
     storageKey: "datacite_toasts_dismissed",
+    maxVisible: 3,
   };
+
   const SCRIPT_OPTIONS = (() => {
     const script = document.currentScript;
     if (!script || !script.dataset) return {};
@@ -29,11 +31,11 @@
       min-width: 500px;
       max-width: 500px;
       padding: 20px;
-      border-color: rgba(36, 59, 84, 0.08);
+      border-color: rgba(36, 59, 84, 0.32);
       border-width: 1px;
       border-style: solid;
       background-color: #ffffff;
-      box-shadow: 0px 28px 36px -10px rgba(13, 96, 212, 0.08);
+      box-shadow: 0px 28px 36px -10px rgba(13, 96, 212, 0.48);
       display: flex;
       flex-direction: column;
       gap: 6px;
@@ -179,7 +181,6 @@
       const arr = Array.isArray(parsed) ? parsed : [];
       return new Set(arr.map((value) => String(value)));
     } catch (err) {
-      console.warn("[DataCiteToasts] Failed to read dismissed set", err);
       return new Set();
     }
   }
@@ -189,25 +190,16 @@
     try {
       localStorage.setItem(key, JSON.stringify(Array.from(set)));
     } catch (err) {
-      console.warn("[DataCiteToasts] Failed to persist dismissed set", err);
+      return;
     }
   }
 
-  function markToastDismissed(id, options) {
-    if (!id || !options?.storageKey) return;
-    const set =
-      options._dismissedSet ||
-      (options._dismissedSet = readDismissedSet(options.storageKey));
+  function markToastDismissed(id, dismissedSet, storageKey) {
+    if (!id || !dismissedSet || !storageKey) return;
     const entry = String(id);
-    if (set.has(entry)) return;
-    set.add(entry);
-    writeDismissedSet(set, options.storageKey);
-  }
-
-  function htmlDecode(str) {
-    const div = document.createElement("div");
-    div.innerHTML = str;
-    return div.textContent || str;
+    if (dismissedSet.has(entry)) return;
+    dismissedSet.add(entry);
+    writeDismissedSet(dismissedSet, storageKey);
   }
 
   function isActiveToast(acf, now) {
@@ -222,14 +214,28 @@
     return true;
   }
 
-  function matchesSite(acf, site) {
-    if (!site) return true;
-    return (acf.toast_site || [])
-      .map((s) => s.toLowerCase())
-      .includes(site.toLowerCase());
+  function isSafeHttpsUri(value) {
+    if (typeof value !== "string") return false;
+    const trimmed = value.trim();
+    if (!trimmed) return false;
+
+    try {
+      const parsed = new URL(trimmed);
+      if (parsed.protocol !== "https:") return false;
+      return true;
+    } catch (err) {
+      return false;
+    }
   }
 
-  function createToast(notice, options) {
+  function matchesSite(acf, site) {
+    const currentSite = site.toLowerCase();
+    const sites = acf.toast_site;
+
+    return sites.some((value) => String(value).toLowerCase() === currentSite);
+  }
+
+  function createToast(notice, dismissedSet, storageKey) {
     const {
       toast_type,
       toast_title,
@@ -241,7 +247,6 @@
     } = notice.acf;
     const toast = document.createElement("div");
     toast.className = "dc-toast";
-    toast.dataset.type = toast_type || "info";
     const toastId = notice.id;
     toast.dataset.toastId = toastId;
 
@@ -252,7 +257,9 @@
     dismissBtn.className = "dc-toast__dismiss";
     dismissBtn.setAttribute("aria-label", "Dismiss notification");
     dismissBtn.innerHTML = "&times;";
-    dismissBtn.addEventListener("click", () => dismissToast(toast, options));
+    dismissBtn.addEventListener("click", () =>
+      dismissToast(toast, dismissedSet, storageKey),
+    );
 
     const content = document.createElement("div");
     content.className = "dc-toast__content";
@@ -280,12 +287,12 @@
 
     const body = document.createElement("div");
     body.className = "dc-toast__body";
-    body.textContent = toast_message ? htmlDecode(toast_message) : "";
+    body.textContent = toast_message || "";
 
     textWrap.appendChild(title);
     textWrap.appendChild(body);
 
-    if (toast_cta_enabled && toast_cta_label && toast_cta_url) {
+    if (toast_cta_enabled && toast_cta_url && toast_cta_label) {
       const toastTitleForAnalytics = (toast_title || "")
         .toString()
         .trim()
@@ -312,45 +319,48 @@
     return toast;
   }
 
-  function dismissToast(node, options) {
+  function dismissToast(node, dismissedSet, storageKey) {
     if (!node || node.dataset.dismissed === "true") return;
     node.dataset.dismissed = "true";
     const toastId = node.dataset.toastId;
-    markToastDismissed(toastId, options);
-    setTimeout(() => node.remove(), 200);
+    markToastDismissed(toastId, dismissedSet, storageKey);
+    node.remove();
   }
 
   async function fetchToasts(endpoint) {
     const res = await fetch(endpoint);
-    if (!res.ok) throw new Error(`Toast fetch failed (${res.status})`);
+    if (!res.ok) return [];
     return res.json();
   }
 
   async function init() {
-    const options = { ...DEFAULTS, ...SCRIPT_OPTIONS };
+    const { endpoint, site, storageKey, maxVisible } = {
+      ...DEFAULTS,
+      ...SCRIPT_OPTIONS,
+    };
 
     try {
       ensureStyles();
-      const data = await fetchToasts(options.endpoint);
+      const data = await fetchToasts(endpoint);
       const now = new Date();
-      const dismissedSet = readDismissedSet(options.storageKey);
-      options._dismissedSet = dismissedSet;
-      const relevant = (Array.isArray(data) ? data : []).filter((item) => {
+      const dismissedSet = readDismissedSet(storageKey);
+      const relevantPosts = (Array.isArray(data) ? data : []).filter((item) => {
         if (!item?.acf) return false;
         if (!isActiveToast(item.acf, now)) return false;
-        if (!matchesSite(item.acf, options.site)) return false;
+        if (!matchesSite(item.acf, site)) return false;
+        if (item.acf.toast_cta_url && !isSafeHttpsUri(item.acf.toast_cta_url)) return false;
         return !dismissedSet.has(String(item.id));
       });
-
-      if (!relevant.length) return;
+      const postsToRender = relevantPosts.slice(0, maxVisible);
+      if (!postsToRender.length) return;
 
       const wrapper = ensureWrapper();
 
-      relevant.forEach((notice) =>
-        wrapper.appendChild(createToast(notice, options)),
+      postsToRender.forEach((notice) =>
+        wrapper.appendChild(createToast(notice, dismissedSet, storageKey)),
       );
     } catch (err) {
-      console.error("[DataCiteToasts]", err);
+        return;
     }
   }
 
